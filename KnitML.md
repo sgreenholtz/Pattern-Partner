@@ -15,7 +15,14 @@ Referenced from: http://www.knitml.com/docs/users-guide.html
 | from-stitch-holder | Follow instructions following the stitch holder | |
 | gauge | Instructions for the gauge | `<gauge type="stockinette">...</gauge>` |
 | general-information | General information about the pattern | |
-| increase | Increase using stitch of specified type | `<increase type="yo" />`|
+| increase | Increase using stitch of specified type | `<increase type="yo" />` |
 | knit | Knit specified stitches or until end | `<knit>50</knit>` | 
 |      |                                      | `<repeat until="end"><knit /></repeat>` |
 | needle | Needle for use in pattern, size attribute in US numbers or mm | `<needle size="4mm" />` |
+| purl | Purl specified stitches or until end | `<purl>2</purl>` |
+| pattern | Pattern written in specified ISO language code | `<pattern xsl:lang="em">...</pattern>` |
+| pick-up-stitches | Pick up stitches in indicated direction | `<pick-up-stitches type="purlwise">10</pick-up-stitches>` |
+| place-marker | Place a stitch marker | `<place-marker />` |
+| remove-marker| Remove a stitch marker | `<remove-marker />` |
+| repeat | Repeat enclosed instructions specified number of times or until end | `<repeat until="times" value="3">...</repeat>`|
+
