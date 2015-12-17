@@ -24,14 +24,14 @@ Referenced from: http://www.knitml.com/docs/users-guide.html
   <tr>
     <td>ball-weight<td>
     <td>The weight of a single ball of yarn</td>
-    <td>`<ball-weight unit='g'>50</ball-weight>`</td>
+    <td><pre><ball-weight unit='g'>50</ball-weight></pre></td>
   </tr>
   <tr>
     <td>knit</td>
     <td>Knit specified stitches or until end</td>
     <td rowspan="2">
-      `<knit>50</knit>`
-      `<repeat until="end"><knit /></repeat>`
+      <pre><knit>50</knit></pre>
+      <pre><repeat until="end"><knit /></repeat></pre>
     </td>
   </tr>
 </table>
