@@ -4,6 +4,7 @@ Referenced from: http://www.knitml.com/docs/users-guide.html
 
 | Tag | Description | Etc. |
 | --- | ----------- | ---------- | 
+| author | The name (or username) of pattern author | `<author>Sebastian Greenholtz</author>` |
 | ball-weight | The weight of a single ball of yarn. | `<ball-weight unit='g'>50</ball-weight>` | 
 | bind-off | Bind off specificed number of stitches | `<bind-off>50</bind-off>` |
 | bind-off-all | Bind off all stitches on needles | `<bind-off-all />` |
@@ -18,11 +19,18 @@ Referenced from: http://www.knitml.com/docs/users-guide.html
 | increase | Increase using stitch of specified type | `<increase type="yo" />` |
 | knit | Knit specified stitches or until end | `<knit>50</knit>` | 
 |      |                                      | `<repeat until="end"><knit /></repeat>` |
-| needle | Needle for use in pattern, size attribute in US numbers or mm | `<needle size="4mm" />` |
+| materials | Materials needed to completed the pattern | |
+| needle | Needle for use in pattern, specify type circular or default to flat | `<needle type="circular" />` |
 | purl | Purl specified stitches or until end | `<purl>2</purl>` |
 | pattern | Pattern written in specified ISO language code | `<pattern xsl:lang="em">...</pattern>` |
 | pick-up-stitches | Pick up stitches in indicated direction | `<pick-up-stitches type="purlwise">10</pick-up-stitches>` |
 | place-marker | Place a stitch marker | `<place-marker />` |
 | remove-marker| Remove a stitch marker | `<remove-marker />` |
 | repeat | Repeat enclosed instructions specified number of times or until end | `<repeat until="times" value="3">...</repeat>`|
-
+| row | A single row of a pattern, given a number identifyer | `<row number="1">...</row>` |
+| size | For use with needle, specify unit US or mm | `<size unit="US">6</size>` |
+| slip | Slip the specified number of stitches, specify knitwise or purlwise | `<slip type="knitwise>2</slip>` |
+| stitch-gauge | The number of stitches (horizontally) per unit of measurement | `<stitch-gauge unit="st/in">3.5</stitch-gauge>` |
+| title | The pattern or project title | |
+| yarn | A yarn used in the pattern. Typeref must be already define in yarn-type | `<yarn id="y1" label="Main Color" symbol="MC" typeref="wool"> ... </yarn>` |
+| yarn-type | Define a type of yarn for use in the project | `<yarn-type id="wool" brand="Lorna's Laces" weight="fingering"/>...</yarn-type>` |
