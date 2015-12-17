@@ -15,6 +15,6 @@ Referenced from: http://www.knitml.com/docs/users-guide.html
 | gauge | Instructions for the gauge | `<gauge type="stockinette">...</gauge>` |
 | general-information | General information about the pattern | |
 | knit | Knit specified stitches or until end | `<knit>50</knit>` | 
-|      |                                      | `<repeat until="end">
+|      |                                      | ```<repeat until="end">
                                                   <knit />
-                                                </repeat>` |
+                                                </repeat>``` |
