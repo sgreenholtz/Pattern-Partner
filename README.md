@@ -1,4 +1,4 @@
-# Pattern-Partner
+# Pattern Partner
 Source code  and documentation for knit and crochet pattern application, called Pattern Partner
 
 ### Problem: 
