@@ -6,13 +6,15 @@
   <row num="1">
     <knit>2</knit>
     <repeat until="end">
-      <purl />
+      <purl>2</purl>
+      <knit>2</knit>
     </repeat>
   </row>
   <row num="2">
     <purl>2</purl>
     <repeat until="end">
-      <knit />
+      <knit>2</knit>
+      <purl>2</purl>
     </repeat>
   </row>
   <repeat until="end>
