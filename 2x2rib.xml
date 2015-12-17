@@ -2,23 +2,25 @@
 <author>Sebastian Greenholtz</author>
 
 <pattern>
-  <cast-on>Multiple of 2, plus 2</cast-on>
-  <row num="1">
-    <knit>2</knit>
-    <repeat until="end">
-      <purl>2</purl>
+  <instructions>
+    <cast-on>Multiple of 2, plus 2</cast-on>
+    <row num="1">
       <knit>2</knit>
-    </repeat>
-  </row>
-  <row num="2">
-    <purl>2</purl>
-    <repeat until="end">
-      <knit>2</knit>
+      <repeat until="end">
+        <purl>2</purl>
+        <knit>2</knit>
+      </repeat>
+    </row>
+    <row num="2">
       <purl>2</purl>
+      <repeat until="end">
+        <knit>2</knit>
+        <purl>2</purl>
+      </repeat>
+    </row>
+    <repeat until="end>
+      <row num="1" />
+      <row num="2" />
     </repeat>
-  </row>
-  <repeat until="end>
-    <row num="1" />
-    <row num="2" />
-  </repeat>
+  </instructions>
 <pattern>
