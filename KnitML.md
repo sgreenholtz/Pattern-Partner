@@ -14,24 +14,5 @@ Referenced from: http://www.knitml.com/docs/users-guide.html
 | from-stitch-holder | Follow instructions following the stitch holder | |
 | gauge | Instructions for the gauge | `<gauge type="stockinette">...</gauge>` |
 | general-information | General information about the pattern | |
-| knit | Knit specified stitches or until end | `<knit>50</knit>` | `<repeat until="end"><knit /></repeat>` |
-<table>
-  <tr>
-    <th>Tag</th>
-    <th>Decsription</th>
-    <th>Etc</th>
-  </tr>
-  <tr>
-    <td>ball-weight<td>
-    <td>The weight of a single ball of yarn</td>
-    <td><pre><ball-weight unit='g'>50</ball-weight></pre></td>
-  </tr>
-  <tr>
-    <td>knit</td>
-    <td>Knit specified stitches or until end</td>
-    <td rowspan="2">
-      <pre><knit>50</knit></pre>
-      <pre><repeat until="end"><knit /></repeat></pre>
-    </td>
-  </tr>
-</table>
+| knit | Knit specified stitches or until end | `<knit>50</knit>` | 
+|      |                                      | `<repeat until="end"><knit /></repeat>` |
