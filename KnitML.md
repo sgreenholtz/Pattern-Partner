@@ -37,4 +37,5 @@ Referenced from: http://www.knitml.com/docs/users-guide.html
 | stitch-gauge | The number of stitches (horizontally) per unit of measurement | `<stitch-gauge unit="st/in">3.5</stitch-gauge>` |
 | title | The pattern or project title | |
 | yarn | A yarn used in the pattern. Typeref must be already define in yarn-type | `<yarn id="y1" label="Main Color" symbol="MC" typeref="wool"> ... </yarn>` |
+| yarn-over | Yarn over the crochet hook | |
 | yarn-type | Define a type of yarn for use in the project | `<yarn-type id="wool" brand="Lorna's Laces" weight="fingering"/>...</yarn-type>` |
