@@ -8,7 +8,7 @@ Knit and crochet patterns are created by professional pattern writers and hobbyi
 A mobile-friendly application that takes patterns in a variety of file types (PDF, HTML web page, Word document) and formats the text in a standard, easy to read way, while preserving any charts and images. The files are saved into a library for users to use and reuse. The application supports row highlighting and has a row counter to keep track of repeats.
 
 ### What will I learn: 
-Java processing of XML, creating an application that reads from and writes to files, possibly Android app development, using library files
+Java processing of XML, creating an application that reads from and writes to files, possibly Android app development, using library files, application deployment, web server hosting
 
 ### Rough Outline:
 - Create an XML schema based on the KnitML schema for crochet patterns and clean up the KnitML documentation
