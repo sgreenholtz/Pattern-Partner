@@ -18,6 +18,7 @@ Standard crochet pattern symbols can be found here: http://www.craftyarncouncil.
 | hook | Hook for use in pattern, specify size | `<hook size="3.25mm/D" />` |
 | in-stitch | Do a stitch in specified stitch location | `<in-stitch location="4ch space"><double-crochet>10</double-crochet></in-stitch>` |
 | | Also works with back loop | `<in-stitch location="fl><half-double-crochet>20</half-double-crochet>` |
+| magic-circle | Make a "magic circle" loop for crochetting in the round | |
 | materials | Materials needed to completed the pattern | |
 | notion | Any notion withotu a specific tag | `<notion type="button" quantity="3" />` |
 | repeat | Repeat the instructions a number of times or to the end | `<repeat until="end"><single-crochet /></repeat>` |
