@@ -10,7 +10,7 @@
             <chain>2</chain>
             <in-stitch location="magic-circle">
                 <double-crochet>2</double-crochet>
-                <repeat type="times" value="3>
+                <repeat type="times" value="3">
                     <chain>1</chain>
                     <double-crochet>3</double-crochet>
                 </repeat>
