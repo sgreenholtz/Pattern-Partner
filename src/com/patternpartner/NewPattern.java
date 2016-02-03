@@ -3,7 +3,9 @@ import java.io.*;
 
 /**
  * This class is responsible for getting the file choice from the user and
- * creating a new file based on inputted file name from user.
+ * setting information about the file.
+ *
+ * TO DO : add additional fields other than name
  *
  * Created by Kolya on 2016-01-31.
  */
@@ -14,12 +16,14 @@ public class NewPattern {
     private String name;
 
     /**
-     * This method runs the file choice menu
+     * This is the no argument constructor
      */
-    public void run() {
-        chooseInputFile();
-        chooseName();
+    public NewPattern() {
+        path = chooseInputFile();
+        name = chooseName();
     }
+
+
 
     /**
      * This method asks the user for a file to process. Works best with full path of the file.
@@ -41,5 +45,15 @@ public class NewPattern {
 
         return fileName;
     }
+
+    /**
+     * This method prints out a human readable string about the pattern
+     * @return display the string to display
+     */
+    public String toString() {
+        String display = "Pattern Name: " + name + System.lineSeparator() + "File Path: " + path;
+        return display;
+    }
+
 
 }
