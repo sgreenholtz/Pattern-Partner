@@ -11,13 +11,6 @@ public class AddNewLine {
     private NewPattern pattern;
 
     /**
-     * This method writes the new file with new line characters
-     */
-    public void writeNewFile() {
-
-    }
-
-    /**
      * This method sets the instance variable pattern.
      */
     public void setPattern() {
@@ -26,13 +19,33 @@ public class AddNewLine {
 
     /**
      * This method reads through the file and adds a new line whenever it sees the word "row"
-     * @return
+     * then writes that row to the new file
      */
-    public String addNewLine() {
+    public void addNewLine() {
         String line = null;
         String newLine = null;
 
-        try (BufferedReader in = new BufferedReader(new FileReader(pattern.getPath())))
+        try (BufferedReader in = new BufferedReader(new FileReader(pattern.getPath()));
+             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(pattern.getName() + ".txt")))) {
+            while (in.ready()) {
+                line = in.readLine();
+                if (line.startsWith("Row")) {
+                    newLine = NEW_LINE + line;
+                    writer.write(newLine);
+                } else {
+                    writer.write(line);
+                }
+            }
+        } catch (FileNotFoundException fnfEx) {
+            System.out.println("You have encountered a file-not-found error.");
+            fnfEx.printStackTrace();
+        } catch (IOException ioEx) {
+            System.out.println("You have encountered an IO error.");
+            ioEx.printStackTrace();
+        } catch (Exception ex) {
+            System.out.println("You have encountered a not-otherwise-specificed error.");
+            ex.printStackTrace();
+        }
 
     }
 }

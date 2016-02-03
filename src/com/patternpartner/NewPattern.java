@@ -23,7 +23,21 @@ public class NewPattern {
         name = chooseName();
     }
 
+    /**
+     * Gets the values for path
+     * @return path
+     */
+    public String getPath() {
+        return path;
+    }
 
+    /**
+     * Gets the values for name
+     * @return name
+     */
+    public String getName() {
+        return name;
+    }
 
     /**
      * This method asks the user for a file to process. Works best with full path of the file.

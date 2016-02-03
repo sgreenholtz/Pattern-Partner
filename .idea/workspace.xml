@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0eb8982-d7d9-455c-9cd2-3c60b50632bc" name="Default" comment="Created class to communicate on the command line.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/patternpartner/NewPatternTester.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Pattern-Partner/com/patternpartner/FilePicker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Pattern-Partner/com/patternpartner/FilePickerTester.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/library/Sample.txt" afterPath="$PROJECT_DIR$/src/com/patternpartner/Sample.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pattern-Partner/com/patternpartner/AddNewLine.class" afterPath="$PROJECT_DIR$/out/production/Pattern-Partner/com/patternpartner/AddNewLine.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/AddNewLine.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/AddNewLine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/NewPattern.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/NewPattern.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/NewPatternTester.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/NewPatternTester.java" />
     </list>
     <ignored path="Pattern-Partner.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,25 +36,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddNewLine.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AddNewLine.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/AddNewLine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="84" selection-start-line="34" selection-start-column="84" selection-end-line="34" selection-end-column="84" />
+            <state vertical-scroll-proportion="0.21232876">
+              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
               <folding>
-                <element signature="e#501#502#0" expanded="true" />
-                <element signature="e#543#544#0" expanded="true" />
+                <element signature="e#380#381#0" expanded="true" />
+                <element signature="e#422#423#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewPattern.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewPatternTester.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/patternpartner/NewPatternTester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewPattern.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/NewPattern.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.06849315">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="24" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+              <folding>
+                <element signature="e#636#637#0" expanded="true" />
+                <element signature="e#663#664#0" expanded="true" />
+                <element signature="e#762#763#0" expanded="true" />
+                <element signature="e#789#790#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,9 +105,9 @@
         <option value="$PROJECT_DIR$/src/com/patternpartner/FilePickerTester.java" />
         <option value="$PROJECT_DIR$/src/library/Sample.txt" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/FilePicker.java" />
+        <option value="$PROJECT_DIR$/src/com/patternpartner/Sample.txt" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/NewPattern.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/NewPatternTester.java" />
-        <option value="$PROJECT_DIR$/src/com/patternpartner/Sample.txt" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/AddNewLine.java" />
       </list>
     </option>
@@ -544,7 +554,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2496318" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -652,14 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/NewPatternTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30821916">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Sample.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -668,22 +670,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/AddNewLine.java">
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/NewPattern.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="84" selection-start-line="34" selection-start-column="84" selection-end-line="34" selection-end-column="84" />
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
           <folding>
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/NewPattern.java">
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/NewPatternTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06849315">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/AddNewLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21232876">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+          <folding>
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

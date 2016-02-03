@@ -7,7 +7,8 @@ package com.patternpartner;
 public class NewPatternTester {
 
     public static void main(String[] args) {
-        NewPattern demo = new NewPattern();
-        System.out.println(demo);
+        AddNewLine demo = new AddNewLine();
+        demo.setPattern();
+        demo.addNewLine();
     }
 }
