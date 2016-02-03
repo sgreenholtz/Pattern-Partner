@@ -20,16 +20,17 @@ public class AddNewLine {
     /**
      * This method reads through the file and adds a new line whenever it sees the word "row"
      * then writes that row to the new file
+     * @return newFileName the name of the newly created file
      */
-    public void addNewLine() {
+    public String addNewLine() {
         String line = null;
-        System.out.println(RECORD_SEPARATOR);
+        String newFileName = pattern.getName().replaceAll("\\s+","");
 
         try (BufferedReader in = new BufferedReader(new FileReader(pattern.getPath()));
-             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("lib/" + pattern.getName() + ".txt")))) {
+             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("lib/" + newFileName + ".txt")))) {
             while (in.ready()) {
                 line = in.readLine();
-                if (line.startsWith("Row")) {
+                if (line.startsWith(pattern.getRowDelimiter())) {
                     writer.println(RECORD_SEPARATOR + line);
                 } else {
                     writer.println(line);
@@ -46,5 +47,8 @@ public class AddNewLine {
             ex.printStackTrace();
         }
 
+        return newFileName + ".txt";
+
     }
+
 }

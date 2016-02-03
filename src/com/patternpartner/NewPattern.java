@@ -14,6 +14,7 @@ public class NewPattern {
     private CMDHelper helper = new CMDHelper();
     private String path;
     private String name;
+    private String rowDelimiter;
 
     /**
      * This is the no argument constructor
@@ -21,6 +22,7 @@ public class NewPattern {
     public NewPattern() {
         path = chooseInputFile();
         name = chooseName();
+        rowDelimiter = chooseRowDelimiter();
     }
 
     /**
@@ -37,6 +39,14 @@ public class NewPattern {
      */
     public String getName() {
         return name;
+    }
+
+    /**
+     * Gets the value for rowDelimiter
+     * @return rowDelimiter
+     */
+    public String getRowDelimiter() {
+        return rowDelimiter;
     }
 
     /**
@@ -58,6 +68,17 @@ public class NewPattern {
         String fileName = helper.getUserInput("What do you want to name the pattern?");
 
         return fileName;
+    }
+
+    /**
+     * This method asks the user what word is used to delimit rows
+     * @return delimiter the word used for rows
+     */
+    public String chooseRowDelimiter() {
+        System.out.println("What word is used to mark off rows?");
+        String delimiter = helper.getUserInput("For example, \"row\", \"round\", numbers: ");
+
+        return delimiter;
     }
 
     /**
