@@ -7,7 +7,7 @@ import java.io.*;
  */
 public class AddNewLine {
 
-    static String NEW_LINE = System.lineSeparator();
+    static char RECORD_SEPARATOR = '\u241E';
     private NewPattern pattern;
 
     /**
@@ -23,17 +23,16 @@ public class AddNewLine {
      */
     public void addNewLine() {
         String line = null;
-        String newLine = null;
+        System.out.println(RECORD_SEPARATOR);
 
         try (BufferedReader in = new BufferedReader(new FileReader(pattern.getPath()));
-             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(pattern.getName() + ".txt")))) {
+             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("lib/" + pattern.getName() + ".txt")))) {
             while (in.ready()) {
                 line = in.readLine();
                 if (line.startsWith("Row")) {
-                    newLine = NEW_LINE + line;
-                    writer.write(newLine);
+                    writer.println(RECORD_SEPARATOR + line);
                 } else {
-                    writer.write(line);
+                    writer.println(line);
                 }
             }
         } catch (FileNotFoundException fnfEx) {

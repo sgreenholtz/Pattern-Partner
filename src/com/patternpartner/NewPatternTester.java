@@ -8,7 +8,6 @@ public class NewPatternTester {
 
     public static void main(String[] args) {
         AddNewLine demo = new AddNewLine();
-        //System.out.println(System.getProperty("user.dir"));
         demo.setPattern();
         demo.addNewLine();
     }

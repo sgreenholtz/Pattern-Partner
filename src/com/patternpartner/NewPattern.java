@@ -47,7 +47,7 @@ public class NewPattern {
         System.out.println("Tip: If your file is not in the same directory, include a full path.");
         String inputPath = helper.getUserInput("What file would you like to add?");
 
-        return inputPath;
+        return "lib/" + inputPath;
     }
 
     /**
