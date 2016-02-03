@@ -1,0 +1,32 @@
+package com.patternpartner;
+import java.io.*;
+
+/**
+ * This class is responsible for getting the file choice from the user and creating a new file based on
+ * inputted file name from user.
+ *
+ * Created by Kolya on 2016-01-31.
+ */
+public class FilePicker {
+
+    private CMDHelper helper = new CMDHelper();
+
+    /**
+     * This method asks the user for a file to process and creates a new
+     * File object to represent that file. Works best with full path of the file.
+     * @returns File
+     */
+    public File chooseInputFile() {
+        System.out.println("Tip: If your file is not in the same directory, include a full path.");
+        String fName = helper.getUserInput("What file would you like to add?");
+
+        File inputFile = new File(fName);
+
+        if (inputFile.isFile()) {
+            return inputFile;
+        } else {
+            return null;
+        }
+
+    }
+}
