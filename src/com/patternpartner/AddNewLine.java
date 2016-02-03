@@ -43,7 +43,7 @@ public class AddNewLine {
             System.out.println("You have encountered an IO error.");
             ioEx.printStackTrace();
         } catch (Exception ex) {
-            System.out.println("You have encountered a not-otherwise-specificed error.");
+            System.out.println("You have encountered a not-otherwise-specified error.");
             ex.printStackTrace();
         }
 
