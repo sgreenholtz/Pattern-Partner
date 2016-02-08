@@ -9,21 +9,27 @@ import java.util.*;
 public class PatternPreview {
 
     static char RECORD_SEPARATOR = '\u241E';
-    private ArrayList<String> lines = new ArrayList<String>();
+    static String LINE_SEPARATOR = System.lineSeparator();
+    private ArrayList<String> lines;
+
     /**
-     * This method displays the entire pattern as formatted on the command line
+     * No argument constructor
+     */
+    public PatternPreview() {}
+
+    /**
+     * Constructor that creates the lines ArrayList by reading through the file
+     * at path indicated by param
      * @param path the path to the file (if saved in lib folder just type file name)
      */
-    public void showPattern(String path) {
-        int lineCount = 0;
-
+    public PatternPreview(String path) {
+        lines = new ArrayList<String>();
         String line = null;
+
         try (BufferedReader in = new BufferedReader(new FileReader(path))) {
             while (in.ready()) {
                 line = in.readLine();
                 lines.add(line);
-                System.out.println(lineCount + ". " + line);
-                lineCount++;
             }
         } catch (FileNotFoundException fnfEx) {
             System.out.println("You have encountered a file-not-found error.");
@@ -34,6 +40,39 @@ public class PatternPreview {
         } catch (Exception ex) {
             System.out.println("You have encountered a not-otherwise-specified error.");
             ex.printStackTrace();
+        }
+    }
+
+    /**
+     * This method shows the pattern and asks the user to add record separator, adds it, then shows
+     * the pattern again, until the user enters the quit symbol
+     */
+    public void editLineSeparators() {
+        CMDHelper helper = new CMDHelper();
+        String input = "";
+
+        while (!(input.equals("q"))) {
+            showPattern();
+            System.out.println(LINE_SEPARATOR + "What line would you like to add a record separator to?");
+            input = helper.getUserInput("Type 'q' to quit: ");
+
+            if (!(input.equals("q"))) {
+                Integer index = Integer.parseInt(input);
+                addRecordSeparatorToLine(index);
+            }
+        }
+    }
+
+    /**
+     * This method displays the entire pattern as formatted on the command line,
+     * with line numbers to help with adding additional record separator symbols
+     */
+    public void showPattern() {
+        int lineCount = 0;
+
+        for (String line : lines) {
+            System.out.println(lineCount + ". " + line);
+            lineCount++;
         }
     }
 
