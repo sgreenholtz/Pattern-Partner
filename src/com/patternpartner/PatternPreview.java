@@ -59,6 +59,7 @@ public class PatternPreview {
             if (!(input.equals("q"))) {
                 Integer index = Integer.parseInt(input);
                 addRecordSeparatorToLine(index);
+                System.out.println(LINE_SEPARATOR);
             }
         }
     }
