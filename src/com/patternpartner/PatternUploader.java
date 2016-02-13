@@ -11,7 +11,7 @@ public class PatternUploader {
     static String USERNAME = "root";
     static String PASSWORD = "student";
 
-    private NewPattern pattern;
+    private Pattern pattern;
 
     /**
      * No argument constructor
@@ -21,7 +21,7 @@ public class PatternUploader {
     /**
      * Constructor to initiate with a pattern instance variable
      */
-    public PatternUploader (NewPattern newPattern) {
+    public PatternUploader (Pattern newPattern) {
         pattern = newPattern;
     }
 

@@ -31,6 +31,12 @@ public class AddNewPattern {
         path = setInputFile();
         rowDelimiter = setRowDelimiter();
         newPattern = constructPattern();
+
+        while(reviewPatternParts()) {
+            newPattern = constructPattern();
+        }
+
+        new PatternUploader(newPattern);
     }
 
     /**
@@ -116,7 +122,7 @@ public class AddNewPattern {
      * Shows the parts of the pattern on the command line for user to confirm before upload to database
      * @return true if ready to upload to database, false if more changes are needed
      */
-    public boolean confirmPatternParts() {
+    public boolean reviewPatternParts() {
 
         System.out.println("Name: " + newPattern.getName());
 
@@ -138,9 +144,9 @@ public class AddNewPattern {
         System.out.println(System.lineSeparator() + "Are you ready to upload to the database?");
         String input = helper.getUserInput("Type 'Y' to upload or type 'N' to make more changes: ");
         if (input.equals("Y")) {
-            return true; // upload pattern
+            return false; // upload pattern
         } else {
-            return false; // go back to construction
+            return true; // go back to construction
         }
     }
 
