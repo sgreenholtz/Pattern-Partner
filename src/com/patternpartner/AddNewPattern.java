@@ -3,8 +3,17 @@ import java.io.*;
 import java.util.*;
 
 /**
- * This class facilitates the adding of a new pattern
- * Created by Kolya on 2016-02-07.
+ * This class facilitates the adding of a new pattern. When this class is invoked, the user is asked for the file to
+ * read from, the delimiter to use to separate out the lines of the pattern, and a new Pattern object is created using
+ * the PatternPreivew class to create the ArrayLists for the components of the pattern (name, materials, description, rows).
+ * <br />
+ * Once the user has confirmed the Pattern has the correct component parts of the pattern, the PatternUploader is called to
+ * upload the pattern to the database.
+ *
+ * @author Sebastian Greenholtz
+ * @see <a href="Pattern.html">Pattern</a>
+ * @see <a href="PatternPreview.html">PatternPreview</a>
+ * @see <a href="PatternUploader.html">PatternUploader</a>
  */
 public class AddNewPattern {
 
@@ -94,12 +103,45 @@ public class AddNewPattern {
 
     /**
      * Creates a Pattern object from the file after new lines and preview
-     * @return newPattern Pattern with pieces processed
+     * @returns new Pattern object (for constructor)
      */
     public Pattern constructPattern() {
         PatternPreview preview = new PatternPreview(addRecordSeparator());
-        newPattern = new Pattern(preview.setName(), preview.setDescription(), preview.setMaterials(), preview.setRows());
+        newPattern = new Pattern(preview.setName(), preview.setDescription(),
+                preview.setMaterials(), preview.setRows());
         return newPattern;
+    }
+
+    /**
+     * Shows the parts of the pattern on the command line for user to confirm before upload to database
+     * @return true if ready to upload to database, false if more changes are needed
+     */
+    public boolean confirmPatternParts() {
+
+        System.out.println("Name: " + newPattern.getName());
+
+        System.out.println("Materials:");
+        for (String line : newPattern.getMaterials()) {
+            System.out.println(line);
+        }
+
+        System.out.println("Description:");
+        for (String line : newPattern.getDescription()) {
+            System.out.println(line);
+        }
+
+        System.out.println("Pattern Rows:");
+        for (String line : newPattern.getPatternRows()) {
+            System.out.println(line);
+        }
+
+        System.out.println(System.lineSeparator() + "Are you ready to upload to the database?");
+        String input = helper.getUserInput("Type 'Y' to upload or type 'N' to make more changes: ");
+        if (input.equals("Y")) {
+            return true; // upload pattern
+        } else {
+            return false; // go back to construction
+        }
     }
 
 

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0eb8982-d7d9-455c-9cd2-3c60b50632bc" name="Default" comment="Created class to communicate on the command line.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/AddNewPattern.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/AddNewPattern.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/PatternPreview.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/PatternPreview.java" />
     </list>
     <ignored path="Pattern-Partner.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,42 +35,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddNewPattern.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AddNewPattern.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/AddNewPattern.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="100" column="101" selection-start-line="100" selection-start-column="101" selection-end-line="100" selection-end-column="101" />
+            <state vertical-scroll-proportion="0.33733132">
+              <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setRowDelimiter#0;class#AddNewPattern#0" expanded="false" />
                 <element signature="method#setInputFile#0;class#AddNewPattern#0" expanded="false" />
                 <element signature="method#addRecordSeparator#0;class#AddNewPattern#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PatternPreview.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/patternpartner/PatternPreview.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5502249">
-              <caret line="196" column="80" selection-start-line="196" selection-start-column="80" selection-end-line="196" selection-end-column="80" />
-              <folding>
-                <element signature="docComment;method#PatternPreview#0;class#PatternPreview#0" expanded="false" />
-                <element signature="e#700#701#0" expanded="true" />
-                <element signature="e#740#741#0" expanded="true" />
-                <element signature="docComment;method#PatternPreview#1;class#PatternPreview#0" expanded="false" />
-                <element signature="method#PatternPreview#1;class#PatternPreview#0" expanded="false" />
-                <element signature="docComment;method#PatternPreview#2;class#PatternPreview#0" expanded="false" />
-                <element signature="method#PatternPreview#2;class#PatternPreview#0" expanded="false" />
-                <element signature="method#showPattern#0;class#PatternPreview#0" expanded="false" />
-                <element signature="method#editLineSeparators#0;class#PatternPreview#0" expanded="false" />
-                <element signature="docComment;method#addRecordSeparatorToLine#0;class#PatternPreview#0" expanded="false" />
-                <element signature="method#addRecordSeparatorToLine#0;class#PatternPreview#0" expanded="false" />
-                <element signature="method#setRows#0;class#PatternPreview#0" expanded="false" />
-                <element signature="e#3756#3764#0" expanded="true" />
-                <element signature="e#5234#5242#0" expanded="true" />
-                <element signature="e#6480#6488#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,9 +89,16 @@
         <option value="$PROJECT_DIR$/src/com/patternpartner/NewPattern.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/AddNewLine.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/Pattern.java" />
-        <option value="$PROJECT_DIR$/src/com/patternpartner/AddNewPattern.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/PatternPreview.java" />
+        <option value="$PROJECT_DIR$/src/com/patternpartner/AddNewPattern.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -851,30 +832,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Pattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/AddNewPattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="101" selection-start-line="100" selection-start-column="101" selection-end-line="100" selection-end-column="101" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setRowDelimiter#0;class#AddNewPattern#0" expanded="false" />
-            <element signature="method#setInputFile#0;class#AddNewPattern#0" expanded="false" />
-            <element signature="method#addRecordSeparator#0;class#AddNewPattern#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/patternpartner/PatternPreview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5502249">
+        <state vertical-scroll-proportion="2.833583">
           <caret line="196" column="80" selection-start-line="196" selection-start-column="80" selection-end-line="196" selection-end-column="80" />
           <folding>
             <element signature="docComment;method#PatternPreview#0;class#PatternPreview#0" expanded="false" />
@@ -892,6 +852,27 @@
             <element signature="e#3756#3764#0" expanded="true" />
             <element signature="e#5234#5242#0" expanded="true" />
             <element signature="e#6480#6488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Pattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/AddNewPattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33733132">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setRowDelimiter#0;class#AddNewPattern#0" expanded="false" />
+            <element signature="method#setInputFile#0;class#AddNewPattern#0" expanded="false" />
+            <element signature="method#addRecordSeparator#0;class#AddNewPattern#0" expanded="false" />
           </folding>
         </state>
       </provider>
