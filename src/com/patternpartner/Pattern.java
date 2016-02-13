@@ -2,11 +2,15 @@ package com.patternpartner;
 import java.util.*;
 
 /**
- * This class represents a pattern
- *
+ * This class represents a pattern. Patterns are read into the program from files, so the processing goes by line. The
+ * Pattern object handles the line reading through ArrayList instance variables to hold each line of the text.
+ * <br />
+ * Method listToString creates a single String for the parts of the pattern that will not be saved as individual lines
+ * in the database, materials and description.
+ * <br />
  * TO DO : implement image handling
  *
- * Created by Kolya on 2016-01-31.
+ * @author Sebastian Greenholtz
  */
 public class Pattern {
 
@@ -23,6 +27,17 @@ public class Pattern {
         description = new ArrayList<String>();
         materials = new ArrayList<String>();
         patternRows = new ArrayList<String>();
+    }
+
+    /**
+     * Constructor sets each of the instance variables
+     */
+    public Pattern(String name, ArrayList<String> descriptionList,
+                   ArrayList<String> materialList, ArrayList<String> rowList) {
+        this.name = name;
+        description = descriptionList;
+        materials = materialList;
+        patternRows = rowList;
     }
 
     /**

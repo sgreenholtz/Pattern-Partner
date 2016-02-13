@@ -12,6 +12,7 @@ public class PatternPreview {
     static char RECORD_SEPARATOR = '\u241E';
     static String LINE_SEPARATOR = System.lineSeparator();
     private ArrayList<String> lines;
+    private Pattern newPattern = new Pattern();
 
     /**
      * No argument constructor
@@ -76,7 +77,7 @@ public class PatternPreview {
         while (!(input.equals("q"))) {
             showPattern();
             System.out.println(LINE_SEPARATOR + "What line would you like to add a record separator to?");
-            input = helper.getUserInput("Type 'q' to quit: ");
+            input = helper.getUserInput("Type 'q' to finish: ");
 
             if (!(input.equals("q"))) {
                 Integer index = Integer.parseInt(input);
