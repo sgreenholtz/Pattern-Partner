@@ -3,8 +3,9 @@ import java.io.*;
 import java.util.*;
 
 /**
- * This class allows the user to preview the pattern txt file and make changes before sending the pattern to the database
- * Created by Kolya on 2016-02-02.
+ * This class allows the user to preview the pattern and make changes before sending the pattern to the database. Methods
+ * set the title, materials, and description lines to add to database.
+ * @author Sebatian Greenholtz
  */
 public class PatternPreview {
 
@@ -20,7 +21,7 @@ public class PatternPreview {
     /**
      * Constructor that creates the lines ArrayList by reading through the file
      * at path indicated by param
-     * @param path the path to the file (if saved in lib folder just type file name)
+     * @param path the path to the file
      */
     public PatternPreview(String path) {
         lines = new ArrayList<String>();
@@ -44,6 +45,27 @@ public class PatternPreview {
     }
 
     /**
+     * Constructor to set instance variable lines to a pre-formatted ArrayList
+     * @param list ArrayList of pre-formatted lines
+     */
+    public PatternPreview (ArrayList<String> list) {
+        lines = list;
+    }
+
+    /**
+     * This method displays the entire pattern as formatted on the command line,
+     * with line numbers to help with adding additional record separator symbols
+     */
+    public void showPattern() {
+        int lineCount = 0;
+
+        for (String line : lines) {
+            System.out.println(lineCount + ". " + line);
+            lineCount++;
+        }
+    }
+
+    /**
      * This method shows the pattern and asks the user to add record separator, adds it, then shows
      * the pattern again, until the user enters the quit symbol
      */
@@ -61,19 +83,6 @@ public class PatternPreview {
                 addRecordSeparatorToLine(index);
                 System.out.println(LINE_SEPARATOR);
             }
-        }
-    }
-
-    /**
-     * This method displays the entire pattern as formatted on the command line,
-     * with line numbers to help with adding additional record separator symbols
-     */
-    public void showPattern() {
-        int lineCount = 0;
-
-        for (String line : lines) {
-            System.out.println(lineCount + ". " + line);
-            lineCount++;
         }
     }
 
