@@ -21,7 +21,7 @@ public class AddNewPattern {
         helper = new CMDHelper();
         path = setInputFile();
         rowDelimiter = setRowDelimiter();
-        newPattern = new Pattern();
+        newPattern = constructPattern();
     }
 
     /**
@@ -56,22 +56,9 @@ public class AddNewPattern {
      * @returns inputPath The path of the file to add
      */
     public String setInputFile() {
-        System.out.println("Tip: If your file is not in the same directory, include a full path.");
         String inputPath = helper.getUserInput("What file would you like to add?");
 
-        return "lib/" + inputPath;
-    }
-
-    /**
-     * Creates a Pattern object from the file after new lines and preview
-     * @return newPattern Pattern with pieces processed
-     */
-    public Pattern processPattern() {
-
-
-
-
-        return newPattern;
+        return inputPath;
     }
 
     /**
@@ -104,4 +91,16 @@ public class AddNewPattern {
 
         return lines;
     }
+
+    /**
+     * Creates a Pattern object from the file after new lines and preview
+     * @return newPattern Pattern with pieces processed
+     */
+    public Pattern constructPattern() {
+        PatternPreview preview = new PatternPreview(addRecordSeparator());
+        newPattern = new Pattern(preview.setName(), preview.setDescription(), preview.setMaterials(), preview.setRows());
+        return newPattern;
+    }
+
+
 }
