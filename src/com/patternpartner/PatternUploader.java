@@ -11,17 +11,37 @@ public class PatternUploader {
     static String USERNAME = "root";
     static String PASSWORD = "student";
 
+    private NewPattern pattern;
+
+    /**
+     * No argument constructor
+     */
+    public PatternUploader() {}
+
+    /**
+     * Constructor to initiate with a pattern instance variable
+     */
+    public PatternUploader (NewPattern newPattern) {
+        pattern = newPattern;
+    }
+
     /**
      * Makes a connection with the PatternPartner database
      * @return conn Active connection
      */
     public Connection makeConnection() {
+        Connection conn = null;
         try {
-            Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
-            return conn;
+            conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
         } catch (SQLException sqlEx) {
             sqlEx.printStackTrace();
+        } finally {
+            return conn;
         }
     }
+
+    /**
+     *
+     */
 
 }
