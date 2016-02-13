@@ -1,5 +1,6 @@
 package com.patternpartner;
 import java.io.*;
+import java.util.*;
 
 /**
  * This class reads through a file and adds a new line before the word "row"
@@ -22,9 +23,9 @@ public class AddNewLine {
      * then writes that row to the new file
      * @return newFileName the name of the newly created file
      */
-    public String addNewLine() {
+    public ArrayList<String> addNewLine() {
         String line = null;
-        String newFileName = pattern.getName().replaceAll("\\s+","");
+        ArrayList<String> lines = new ArrayList<String>();
 
         try (BufferedReader in = new BufferedReader(new FileReader(pattern.getPath()));
              PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("lib/" + newFileName + ".txt")))) {
