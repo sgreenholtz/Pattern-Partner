@@ -8,8 +8,7 @@ import java.util.*;
  */
 public class AddNewLine {
 
-    static char RECORD_SEPARATOR = '\u241E';
-    private NewPattern pattern;
+
 
     /**
      * This method sets the instance variable pattern.

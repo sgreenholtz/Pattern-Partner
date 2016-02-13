@@ -1,4 +1,6 @@
 package com.patternpartner;
+import java.io.*;
+import java.util.*;
 
 /**
  * This class facilitates the adding of a new pattern
@@ -6,16 +8,20 @@ package com.patternpartner;
  */
 public class AddNewPattern {
 
-    private CMDHelper helper = new CMDHelper();
+    static char RECORD_SEPARATOR = '\u241E';
+    private CMDHelper helper;
     private String path;
     private String rowDelimiter;
+    private Pattern newPattern;
 
     /**
      * This is the no argument constructor
      */
     public AddNewPattern() {
+        helper = new CMDHelper();
         path = setInputFile();
         rowDelimiter = setRowDelimiter();
+        newPattern = new Pattern();
     }
 
     /**
@@ -57,13 +63,45 @@ public class AddNewPattern {
     }
 
     /**
-     *
+     * Creates a Pattern object from the file after new lines and preview
      * @return newPattern Pattern with pieces processed
      */
     public Pattern processPattern() {
-        Pattern newPattern = new Pattern();
+
+
+
 
         return newPattern;
     }
 
+    /**
+     * Adds record separator characters in front of the lines with specified delimiter
+     * @return lines
+     */
+    public ArrayList<String> addRecordSeparator() {
+        String line = null;
+        ArrayList<String> lines = new ArrayList<String>();
+
+        try (BufferedReader in = new BufferedReader(new FileReader(path))) {
+            while (in.ready()) {
+                line = in.readLine();
+                if (line.startsWith(getRowDelimiter())) {
+                    lines.add(RECORD_SEPARATOR + line);
+                } else {
+                    lines.add(line);
+                }
+            }
+        } catch (FileNotFoundException fnfEx) {
+            System.out.println("You have encountered a file-not-found error.");
+            fnfEx.printStackTrace();
+        } catch (IOException ioEx) {
+            System.out.println("You have encountered an IO error.");
+            ioEx.printStackTrace();
+        } catch (Exception ex) {
+            System.out.println("You have encountered a not-otherwise-specified error.");
+            ex.printStackTrace();
+        }
+
+        return lines;
+    }
 }

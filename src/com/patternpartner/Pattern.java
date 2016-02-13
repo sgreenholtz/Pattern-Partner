@@ -58,43 +58,35 @@ public class Pattern {
     }
 
     /**
-     * Sets value of patternRows
-     * @param patternRows value to set as patternRows
-     * @return patternRows
+     * Adds value to patternRows
+     * @param row value to add to patternRows
      */
-    public Pattern setPatternRows(ArrayList<String> patternRows) {
-        this.patternRows = patternRows;
-        return this;
+    public void setPatternRows(String row) {
+        patternRows.add(row);
     }
 
     /**
      * Sets value of name
      * @param name value to set as name
-     * @return name
      */
-    public Pattern setName(String name) {
+    public void setName(String name) {
         this.name = name;
-        return this;
     }
 
     /**
-     * Sets value of description
-     * @param description value to set as description
-     * @return description
+     * Adds value to description
+     * @param descriptionRow value to add to description
      */
-    public Pattern setDescription(ArrayList<String> description) {
-        this.description = description;
-        return this;
+    public void setDescription(String descriptionRow) {
+        description.add(descriptionRow);
     }
 
     /**
-     * Sets value of materials
-     * @param materials value to set as materials
-     * @return materials
+     * Adds value to materials
+     * @param materialRow value to set as materials
      */
-    public Pattern setMaterials(ArrayList<String> materials) {
-        this.materials = materials;
-        return this;
+    public void setMaterials(String materialRow) {
+        materials.add(materialRow);
     }
 
     /**
