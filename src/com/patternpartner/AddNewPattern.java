@@ -35,8 +35,8 @@ public class AddNewPattern {
         while(reviewPatternParts()) {
             newPattern = constructPattern();
         }
-
-        new PatternUploader(newPattern);
+        System.out.println("Successful pattern adding.");
+        //new PatternUploader(newPattern);
     }
 
     /**
@@ -113,6 +113,8 @@ public class AddNewPattern {
      */
     public Pattern constructPattern() {
         PatternPreview preview = new PatternPreview(addRecordSeparator());
+        preview.editLineSeparators();
+
         newPattern = new Pattern(preview.setName(), preview.setDescription(),
                 preview.setMaterials(), preview.setRows());
         return newPattern;
@@ -126,24 +128,28 @@ public class AddNewPattern {
 
         System.out.println("Name: " + newPattern.getName());
 
+        System.out.println(System.lineSeparator());
         System.out.println("Materials:");
         for (String line : newPattern.getMaterials()) {
             System.out.println(line);
         }
 
+        System.out.println(System.lineSeparator());
         System.out.println("Description:");
         for (String line : newPattern.getDescription()) {
             System.out.println(line);
         }
 
+        System.out.println(System.lineSeparator());
         System.out.println("Pattern Rows:");
         for (String line : newPattern.getPatternRows()) {
             System.out.println(line);
         }
 
+        System.out.println(System.lineSeparator());
         System.out.println(System.lineSeparator() + "Are you ready to upload to the database?");
         String input = helper.getUserInput("Type 'Y' to upload or type 'N' to make more changes: ");
-        if (input.equals("Y")) {
+        if (input.equals("Y") || input.equals("y")) {
             return false; // upload pattern
         } else {
             return true; // go back to construction

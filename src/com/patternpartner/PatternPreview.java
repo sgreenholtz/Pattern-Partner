@@ -15,7 +15,7 @@ public class PatternPreview {
     static String LINE_SEPARATOR = System.lineSeparator();
 
     private ArrayList<String> lines;
-    private CMDHelper helper;
+    private CMDHelper helper = new CMDHelper();
 
     // Constructors
 
@@ -23,7 +23,6 @@ public class PatternPreview {
      * No argument constructor. Initiates CMDHelper for later use.
      */
     public PatternPreview() {
-        helper = new CMDHelper();
     }
 
     /**
@@ -71,10 +70,12 @@ public class PatternPreview {
     public void showPattern() {
         int lineCount = 0;
 
+        System.out.println(System.lineSeparator());
         for (String line : lines) {
             System.out.println(lineCount + ". " + line);
             lineCount++;
         }
+        System.out.println(System.lineSeparator());
     }
 
     /**
@@ -131,11 +132,11 @@ public class PatternPreview {
      */
     public String setName() {
         String output = "";
-
+        String input = "";
         showPattern();
 
         System.out.println("Which line represents the TITLE of the pattern?");
-        String input = helper.getUserInput("Type line number or a name for the pattern: ");
+        input = helper.getUserInput("Type line number or a name for the pattern: ");
 
         if (input.matches("\\d+")) {
             Integer lineNum = new Integer(input);
@@ -168,10 +169,14 @@ public class PatternPreview {
             Integer intStart = new Integer(start);
             Integer intEnd = new Integer(end);
             if (testNullPointer(intStart) && testNullPointer(intEnd)) {
-                int lineCounter = intStart;
-                while (lineCounter <= intEnd) {
-                    output.add(lines.get(lineCounter));
-                    lineCounter++;
+                if (intStart == intEnd) {
+                    output.add(lines.get(intStart));
+                } else {
+                    int lineCounter = intStart;
+                    while (lineCounter <= intEnd) {
+                        output.add(lines.get(lineCounter));
+                        lineCounter++;
+                    }
                 }
             } else {
                 setMaterials();
@@ -194,16 +199,20 @@ public class PatternPreview {
         showPattern();
 
         String start = helper.getUserInput("What line is the start of the description section?: ");
-        String end = helper.getUserInput("What line is the end of the desciption section?: ");
+        String end = helper.getUserInput("What line is the end of the description section?: ");
 
         if (start.matches("\\d+") && end.matches("\\d+")) {
             Integer intStart = new Integer(start);
             Integer intEnd = new Integer(end);
             if (testNullPointer(intStart) && testNullPointer(intEnd)) {
-                int lineCounter = intStart;
-                while (lineCounter <= intEnd) {
-                    output.add(lines.get(lineCounter));
-                    lineCounter++;
+                if (intStart == intEnd) {
+                    output.add(lines.get(intStart));
+                } else {
+                    int lineCounter = intStart;
+                    while (lineCounter <= intEnd) {
+                        output.add(lines.get(lineCounter));
+                        lineCounter++;
+                    }
                 }
             } else {
                 setMaterials();
