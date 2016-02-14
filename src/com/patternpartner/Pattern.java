@@ -44,10 +44,10 @@ public class Pattern {
 
     /**
      * Gets the values for name
-     * @return name
+     * @return name with quotation marks around it for single quote preservation
      */
     public String getName() {
-        return name;
+        return "\"" + name + "\"";
     }
 
     /**
@@ -90,6 +90,7 @@ public class Pattern {
         for (String line : list) {
             output += line + " ";
         }
+        output = "\"" + output + "\"";
         return output;
     }
 

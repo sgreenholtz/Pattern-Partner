@@ -57,14 +57,13 @@ public class AddNewPattern {
      */
     public String setRowDelimiter() {
         System.out.println("What word is used to mark off rows?");
-        String delimiter = helper.getUserInput("For example, \"row\", \"round\", numbers: ");
-
-        return delimiter;
+        String input = helper.getUserInput("For example, \"row\", \"round\", numbers: ");
+        return input.toLowerCase();
     }
 
     /**
      * This method asks the user for a file to process. Works best with full path of the file.
-     * @returns inputPath The path of the file to add
+     * @return inputPath The path of the file to add
      */
     public String setInputFile() {
         String inputPath = helper.getUserInput("What file would you like to add?");
@@ -83,7 +82,7 @@ public class AddNewPattern {
         try (BufferedReader in = new BufferedReader(new FileReader(path))) {
             while (in.ready()) {
                 line = in.readLine();
-                if (line.startsWith(getRowDelimiter())) {
+                if (line.toLowerCase().startsWith(getRowDelimiter())) {
                     lines.add(RECORD_SEPARATOR + line);
                 } else {
                     lines.add(line);
@@ -161,7 +160,7 @@ public class AddNewPattern {
             newPattern = constructPattern();
         } else {
             PatternUploader uploader = new PatternUploader(newPattern);
-            uploader.viewStatements();
+//            uploader.viewStatements();
             uploader.upload();
         }
     }

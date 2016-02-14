@@ -1,4 +1,5 @@
 package com.patternpartner;
+import org.apache.commons.lang3.StringEscapeUtils;
 
 /**
  * This class tests the NewPattern class
@@ -7,6 +8,9 @@ package com.patternpartner;
 public class NewPatternTester {
 
     public static void main(String[] args) {
+        UserVerification verify = new UserVerification();
+        verify.login();
+
         AddNewPattern demo = new AddNewPattern();
     }
 

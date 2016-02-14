@@ -8,7 +8,7 @@ import java.util.*;
  */
 public class PatternUploader {
 
-    static String DB_URL = "jdbc:mysql://localhost:3306/PatternPartner";
+    static String DB_URL = "jdbc:mysql://localhost:3306/PatternPartner?useSSL=false";
     static String USERNAME = "root";
     static String PASSWORD = "student";
 
@@ -21,10 +21,11 @@ public class PatternUploader {
     public PatternUploader() {}
 
     /**
-     * Constructor to initiate with a pattern instance variable
+     * Constructor to initiate with a pattern instance variable and username
      */
-    public PatternUploader (Pattern newPattern) {
+    public PatternUploader (Pattern newPattern, String user) {
         pattern = newPattern;
+        username = user;
     }
 
     /**
@@ -43,40 +44,25 @@ public class PatternUploader {
     }
 
     /**
-     * Creates SQL statement for users table
-     * @return SQL statement to insert data into Users table
-     */
-    public String createUsersStatement() {
-        CMDHelper helper = new CMDHelper();
-        username = helper.getUserInput("Username: ");
-        String password = helper.getUserInput("Password: ");
-        String email = helper.getUserInput("Email: ");
-
-        return "insert into Users"
-                + " (username, password, email)"
-                + " values (" + username + ", 'SHA1(" + password + ")', " + email + ")";
-    }
-
-    /**
      * Creates SQL statement for Patterns table
      * @return SQL statement to insert data into Patterns table
      */
     public String createPatternsStatement() {
         return "insert into Patterns"
                 + " (username, title, description, materials)"
-                + " values ("
-                + username + ", " + pattern.getName() + ", "
+                + " values ('"
+                + username + "', " + pattern.getName() + ", "
                 + pattern.listToString(pattern.getDescription()) + ", "
                 + pattern.listToString(pattern.getMaterials()) + ")";
     }
 
     /**
      * Creates SQL statement for Patterns table
+     * @param patternID patternID from the newly-created item in Patterns table
      * @return ArrayList of SQL statements to insert each row into Patterns table
      */
-    public ArrayList<String> createPatternRowsStatement() {
+    public ArrayList<String> createPatternRowsStatement(String patternID) {
         String table = "CrochetPatternRows";
-        String patternID = "0";
         int lineNumber = 0;
         ArrayList<String> statements = new ArrayList<String>();
 
@@ -84,27 +70,15 @@ public class PatternUploader {
             table = "KnitPatternRows";
         }
 
-        /*
-        try {
-            Statement getPatternID = makeConnection().createStatement();
-            ResultSet patternIDResult = getPatternID.executeQuery("SELECT LAST_INSERT_ID();");
-            while (patternIDResult.next()) {
-                patternID = patternIDResult.getString("LAST_INSERT_ID()");
-            }
-        } catch (SQLException sqlEx) {
-            sqlEx.printStackTrace();
-        }
-        */
-
         while (lineNumber < pattern.getPatternRows().size()) {
 
             String statement = "insert into " + table
                     + " (patternID, lineID, lineText, isActive, isRepeat)"
                     + " values ("
                     + patternID + ", "
-                    + lineNumber + ", "
+                    + lineNumber + ", \""
                     + pattern.getPatternRows().get(lineNumber).substring(1)
-                    + ", 0, 0)";
+                    + "\", 0, 0)";
 
             statements.add(statement);
             lineNumber++;
@@ -114,13 +88,15 @@ public class PatternUploader {
     }
 
     /**
-     * Prints the statements on the command line for verification
+     * Prints the statements on the command line for verification.
+     * Note: PatternID is created dynamically as the pattern is inserted into the database, so
+     * this value is represented in this method by the string ID.
      */
     public void viewStatements() {
-        System.out.println(createUsersStatement() + System.lineSeparator());
-        System.out.println(createPatternsStatement() + System.lineSeparator());
-        for (String statement : createPatternRowsStatement()) {
-            System.out.println(statement + System.lineSeparator());
+//        System.out.println(createUsersStatement() + ";" + System.lineSeparator());
+        System.out.println(createPatternsStatement() + ";" + System.lineSeparator());
+        for (String statement : createPatternRowsStatement("ID")) {
+            System.out.println(statement + ";" + System.lineSeparator());
         }
     }
 
@@ -130,25 +106,28 @@ public class PatternUploader {
      */
     public void upload() {
         try {
-            Statement insertStatement = makeConnection().createStatement();
+            Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
 
-            insertStatement.executeUpdate(createUsersStatement());
-            System.out.println("Users insert successful.");
-
+            Statement insertStatement = conn.createStatement();
             insertStatement.executeUpdate(createPatternsStatement());
             System.out.println("Patterns insert successful.");
 
+            ResultSet patternIDResult = insertStatement.executeQuery("SELECT LAST_INSERT_ID();");
+            String patternID = "";
+            while (patternIDResult.next()) {
+                patternID = patternIDResult.getString("LAST_INSERT_ID()");
+            }
+
             int lineCounter = 0;
-            for (String statement : createPatternRowsStatement()) {
+            for (String statement : createPatternRowsStatement(patternID)) {
                 insertStatement.executeUpdate(statement);
                 System.out.println("Line " + lineCounter + "insert successful.");
                 lineCounter++;
             }
         } catch (SQLException sqlEx) {
             sqlEx.printStackTrace();
-        } catch (Exception ex) {
-            ex.printStackTrace();
         }
+
     }
 
 
