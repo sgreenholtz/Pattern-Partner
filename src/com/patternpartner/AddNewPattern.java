@@ -22,16 +22,18 @@ public class AddNewPattern {
     private String path;
     private String rowDelimiter;
     private Pattern newPattern;
+    private String username;
 
     /**
-     * This is the no argument constructor
+     * Constructor with the username from the UserVerification class
+     * @param user to set to Username
      */
-    public AddNewPattern() {
+    public AddNewPattern(String user) {
         helper = new CMDHelper();
         path = setInputFile();
         rowDelimiter = setRowDelimiter();
         newPattern = constructPattern();
-
+        username = user;
         editOrUpload();
     }
 
@@ -159,7 +161,7 @@ public class AddNewPattern {
         if (reviewPatternParts()) {
             newPattern = constructPattern();
         } else {
-            PatternUploader uploader = new PatternUploader(newPattern);
+            PatternUploader uploader = new PatternUploader(newPattern, username);
 //            uploader.viewStatements();
             uploader.upload();
         }

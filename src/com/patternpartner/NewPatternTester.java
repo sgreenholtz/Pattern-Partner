@@ -11,7 +11,7 @@ public class NewPatternTester {
         UserVerification verify = new UserVerification();
         verify.login();
 
-        AddNewPattern demo = new AddNewPattern();
+        AddNewPattern demo = new AddNewPattern(verify.getUsername());
     }
 
 }
