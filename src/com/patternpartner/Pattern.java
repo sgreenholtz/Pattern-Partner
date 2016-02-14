@@ -18,6 +18,7 @@ public class Pattern {
     private ArrayList<String> description;
     private ArrayList<String> materials;
     private ArrayList<String> patternRows;
+    private String knitOrCrochet;
     // private Image image;
 
     /**
@@ -33,11 +34,12 @@ public class Pattern {
      * Constructor sets each of the instance variables
      */
     public Pattern(String name, ArrayList<String> descriptionList,
-                   ArrayList<String> materialList, ArrayList<String> rowList) {
+                   ArrayList<String> materialList, ArrayList<String> rowList, String kOrC) {
         this.name = name;
         description = descriptionList;
         materials = materialList;
         patternRows = rowList;
+        knitOrCrochet = kOrC;
     }
 
     /**
@@ -73,36 +75,10 @@ public class Pattern {
     }
 
     /**
-     * Adds value to patternRows
-     * @param row value to add to patternRows
+     * Gets the values for knitOrCrochet
+     * @return knitOrCrochet
      */
-    public void setPatternRows(String row) {
-        patternRows.add(row);
-    }
-
-    /**
-     * Sets value of name
-     * @param name value to set as name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * Adds value to description
-     * @param descriptionRow value to add to description
-     */
-    public void setDescription(String descriptionRow) {
-        description.add(descriptionRow);
-    }
-
-    /**
-     * Adds value to materials
-     * @param materialRow value to set as materials
-     */
-    public void setMaterials(String materialRow) {
-        materials.add(materialRow);
-    }
+    public String getKnitOrCrochet() { return knitOrCrochet; }
 
     /**
      * Converts array lists to a single string with a space delimiter

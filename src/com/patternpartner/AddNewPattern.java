@@ -36,7 +36,7 @@ public class AddNewPattern {
             newPattern = constructPattern();
         }
         System.out.println("Successful pattern adding.");
-        //new PatternUploader(newPattern);
+        new PatternUploader(newPattern);
     }
 
     /**
@@ -116,7 +116,7 @@ public class AddNewPattern {
         preview.editLineSeparators();
 
         newPattern = new Pattern(preview.setName(), preview.setDescription(),
-                preview.setMaterials(), preview.setRows());
+                preview.setMaterials(), preview.setRows(), preview.setKnitOrCrochet());
         return newPattern;
     }
 

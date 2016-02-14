@@ -153,6 +153,25 @@ public class PatternPreview {
     }
 
     /**
+     * Asks user if the pattern is a knit or crochet pattern and returns either "k" for knit or "c" for crochet.
+     * For use with constructPattern in AddNewPattern
+     * @return knit "k" or crochet "c"
+     */
+    public String setKnitOrCrochet() {
+        String input = helper.getUserInput("Is this a knit or crochet patter? ");
+
+        if (input.equals("knit") || input.equals("k")) {
+            input = "k";
+        } else if (input.equals("crochet") || input.equals("c")) {
+            input = "c";
+        } else {
+            System.out.println("That is not a valid answer.");
+            setKnitOrCrochet();
+        }
+        return input;
+    }
+
+    /**
      * Asks user what line represents the start line and end line for the materials section returns an ArrayList with
      * the lines for the materials section. For use with constructPattern in AddNewPattern
      * @return ArrayList of materials section rows of the pattern
