@@ -14,18 +14,11 @@ public class PatternUploader {
 
     private Pattern pattern;
     private String username;
-    private String password;
-    private String email;
 
     /**
      * No argument constructor, asks user for username, password and email
      */
-    public PatternUploader() {
-        CMDHelper helper = new CMDHelper();
-        username = helper.getUserInput("Username: ");
-        password = helper.getUserInput("Password: ");
-        email = helper.getUserInput("Email: ");
-    }
+    public PatternUploader() {}
 
     /**
      * Constructor to initiate with a pattern instance variable
@@ -54,6 +47,11 @@ public class PatternUploader {
      * @return SQL statement to insert data into Users table
      */
     public String createUsersStatement() {
+        CMDHelper helper = new CMDHelper();
+        username = helper.getUserInput("Username: ");
+        String password = helper.getUserInput("Password: ");
+        String email = helper.getUserInput("Email: ");
+
         return "insert into Users"
                 + " (username, password, email)"
                 + " values (" + username + ", 'SHA1(" + password + ")', " + email + ")";
@@ -78,7 +76,7 @@ public class PatternUploader {
      */
     public ArrayList<String> createPatternRowsStatement() {
         String table = "CrochetPatternRows";
-        String patternID = "";
+        String patternID = "0";
         int lineNumber = 0;
         ArrayList<String> statements = new ArrayList<String>();
 
@@ -86,6 +84,7 @@ public class PatternUploader {
             table = "KnitPatternRows";
         }
 
+        /*
         try {
             Statement getPatternID = makeConnection().createStatement();
             ResultSet patternIDResult = getPatternID.executeQuery("SELECT LAST_INSERT_ID();");
@@ -95,6 +94,7 @@ public class PatternUploader {
         } catch (SQLException sqlEx) {
             sqlEx.printStackTrace();
         }
+        */
 
         while (lineNumber < pattern.getPatternRows().size()) {
 
@@ -103,7 +103,7 @@ public class PatternUploader {
                     + " values ("
                     + patternID + ", "
                     + lineNumber + ", "
-                    + pattern.getPatternRows().get(lineNumber)
+                    + pattern.getPatternRows().get(lineNumber).substring(1)
                     + ", 0, 0)";
 
             statements.add(statement);
@@ -119,7 +119,37 @@ public class PatternUploader {
     public void viewStatements() {
         System.out.println(createUsersStatement() + System.lineSeparator());
         System.out.println(createPatternsStatement() + System.lineSeparator());
-        System.out.println(createPatternRowsStatement() + System.lineSeparator());
+        for (String statement : createPatternRowsStatement()) {
+            System.out.println(statement + System.lineSeparator());
+        }
     }
+
+    /**
+     * Executes the update for Users, Patterns, and PatternRows, with a printed success
+     * statement for each.
+     */
+    public void upload() {
+        try {
+            Statement insertStatement = makeConnection().createStatement();
+
+            insertStatement.executeUpdate(createUsersStatement());
+            System.out.println("Users insert successful.");
+
+            insertStatement.executeUpdate(createPatternsStatement());
+            System.out.println("Patterns insert successful.");
+
+            int lineCounter = 0;
+            for (String statement : createPatternRowsStatement()) {
+                insertStatement.executeUpdate(statement);
+                System.out.println("Line " + lineCounter + "insert successful.");
+                lineCounter++;
+            }
+        } catch (SQLException sqlEx) {
+            sqlEx.printStackTrace();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
 
 }

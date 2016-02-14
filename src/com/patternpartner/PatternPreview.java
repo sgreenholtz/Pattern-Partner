@@ -158,7 +158,7 @@ public class PatternPreview {
      * @return knit "k" or crochet "c"
      */
     public String setKnitOrCrochet() {
-        String input = helper.getUserInput("Is this a knit or crochet patter? ");
+        String input = helper.getUserInput("Is this a knit or crochet pattern? ");
 
         if (input.equals("knit") || input.equals("k")) {
             input = "k";

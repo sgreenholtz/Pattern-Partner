@@ -86,7 +86,7 @@ public class Pattern {
      * @return completed string
      */
     public String listToString(ArrayList<String> list) {
-        String output = null;
+        String output = "";
         for (String line : list) {
             output += line + " ";
         }

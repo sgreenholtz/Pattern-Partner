@@ -32,11 +32,7 @@ public class AddNewPattern {
         rowDelimiter = setRowDelimiter();
         newPattern = constructPattern();
 
-        while(reviewPatternParts()) {
-            newPattern = constructPattern();
-        }
-        System.out.println("Successful pattern adding.");
-        new PatternUploader(newPattern);
+        editOrUpload();
     }
 
     /**
@@ -125,7 +121,7 @@ public class AddNewPattern {
      * @return true if ready to upload to database, false if more changes are needed
      */
     public boolean reviewPatternParts() {
-
+        System.out.println(System.lineSeparator());
         System.out.println("Name: " + newPattern.getName());
 
         System.out.println(System.lineSeparator());
@@ -153,6 +149,20 @@ public class AddNewPattern {
             return false; // upload pattern
         } else {
             return true; // go back to construction
+        }
+    }
+
+    /**
+     * Allows user to review the pattern, then if they confirm the changes, the execution of
+     * the upload starts here.
+     */
+    public void editOrUpload() {
+        if (reviewPatternParts()) {
+            newPattern = constructPattern();
+        } else {
+            PatternUploader uploader = new PatternUploader(newPattern);
+            uploader.viewStatements();
+            uploader.upload();
         }
     }
 
