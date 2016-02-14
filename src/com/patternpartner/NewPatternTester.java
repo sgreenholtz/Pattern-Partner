@@ -1,14 +1,17 @@
 package com.patternpartner;
+import org.apache.commons.lang3.StringEscapeUtils;
 
 /**
  * This class tests the NewPattern class
- * Created by Kolya on 2016-02-02.
+ * @author Sebastian Greenholtz
  */
 public class NewPatternTester {
 
     public static void main(String[] args) {
-        AddNewPattern demo = new AddNewPattern();
-        demo.addNewPattern();
+        UserVerification verify = new UserVerification();
+        verify.login();
+
+        AddNewPattern demo = new AddNewPattern(verify.getUsername());
     }
 
 }
