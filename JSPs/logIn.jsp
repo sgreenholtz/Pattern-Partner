@@ -1,8 +1,5 @@
 <%@ include file="header.jsp" >
 
-    <title>Log In</title>
-
-    <body>
     <form class="form-horizontal" method="post" action="Home.jsp">
         <fieldset>
             <legend>Log In</legend>
