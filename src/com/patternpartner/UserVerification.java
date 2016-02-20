@@ -15,6 +15,15 @@ public class UserVerification {
     private String firstName;
 
     /**
+     * Constructor uses username and password from the table to
+     * set instance variables
+     */
+    public UserVerification(String user, String pass) {
+        username = user;
+        password = pass;
+    }
+
+    /**
      * Gets value of username
      * @return value of username
      */
@@ -23,24 +32,8 @@ public class UserVerification {
     }
 
     /**
-     * Allows a registered user to login on the command line. If the
-     * user is not already registered, runs the registration methodgit
-     */
-    public void login() {
-        CMDHelper helper = new CMDHelper();
-        System.out.println("Please log in.");
-        username = helper.getUserInput("Username: ");
-        password = helper.getUserInput("Password: ");
-
-        if (checkExistingUser()) {
-            registerUser();
-        }
-        System.out.println("You are logged in as " + firstName);
-    }
-
-    /**
      * Checks if user is in the Users table
-     * @return false if user is in the table
+     * @return true if user is in the table
      */
     public boolean checkExistingUser() {
         try {
@@ -53,7 +46,7 @@ public class UserVerification {
             ResultSet users = findUser.executeQuery(query);
 
             if (!users.isBeforeFirst()) {
-                return true;
+                return false;
             } else {
                 users.next();
                 firstName = users.getString("first_name");
@@ -62,7 +55,7 @@ public class UserVerification {
         } catch (SQLException sqlEx) {
             sqlEx.printStackTrace();
         }
-        return false;
+        return true;
     }
 
     /**
