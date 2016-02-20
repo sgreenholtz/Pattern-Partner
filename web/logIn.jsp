@@ -63,7 +63,7 @@
         </div>
     </nav>
 
-    <form class="form-horizontal" method="post" action="success.jsp">
+    <form class="form-horizontal" method="post" action="loginAttempt.jsp">
         <fieldset>
             <legend>Log In</legend>
             <div class="form-group">

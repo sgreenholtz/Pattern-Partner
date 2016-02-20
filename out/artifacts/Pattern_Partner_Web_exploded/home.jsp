@@ -6,7 +6,6 @@
   Time: 11:00 AM
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
 
