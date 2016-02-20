@@ -6,7 +6,7 @@ import java.sql.*;
  * @author Sebastian Greenholtz
  */
 public class UserVerification {
-    static String DB_URL = "jdbc:mysql://localhost:3306/PatternPartner?useSSL=false";
+    static String DB_URL = "jdbc:mysql://localhost:3306/PatternPartner";
     static String USERNAME = "root";
     static String PASSWORD = "student";
 
@@ -41,6 +41,7 @@ public class UserVerification {
                     "username='" + username + "' AND " +
                     "password=SHA1('" + password + "')";
 
+            Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
             Statement findUser = conn.createStatement();
             ResultSet users = findUser.executeQuery(query);
@@ -51,7 +52,8 @@ public class UserVerification {
                 users.next();
                 firstName = users.getString("first_name");
             }
-
+        } catch (ClassNotFoundException cNFex) {
+            cNFex.printStackTrace();
         } catch (SQLException sqlEx) {
             sqlEx.printStackTrace();
         }
