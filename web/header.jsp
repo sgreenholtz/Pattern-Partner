@@ -54,6 +54,7 @@
             <li><a class="navbar-brand" href="home.jsp">Home</a></li>
             <li><a href="patternLibrary.jsp">Pattern Library</a></li>
             <li><a href="addPattern.jsp">Add Pattern</a></li>
+            <li><a href="logIn.jsp">Log In</a></li>
             <li><a href="faqComments.jsp">FAQ and Comments</a></li>
           </ul>
         </div>

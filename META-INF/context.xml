@@ -1,0 +1,21 @@
+<Context>
+
+    <Resource name="jdbc/PatternPartner"
+
+              auth="Container"
+
+              type="javax.sql.DataSource"
+
+              username="root"
+
+              password="student"
+
+              driverClassName="com.mysql.jdbc.Driver"
+
+              url="jdbc:mysql:/localhost:3306/PatternPartner?useSSL=false"
+
+              maxActive="15"
+
+              maxIdle="3"/>
+
+</Context>

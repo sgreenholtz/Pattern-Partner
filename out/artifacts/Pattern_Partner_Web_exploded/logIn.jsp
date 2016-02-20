@@ -1,4 +1,5 @@
-<%@ include file="header.jsp" >
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ include file="header.jsp" %>
 
     <form class="form-horizontal" method="post" action="Home.jsp">
         <fieldset>
@@ -25,4 +26,4 @@
         </fieldset>
     </form>
 
-<%@ include file="footer.jsp" >
+<%@ include file="footer.jsp" %>
