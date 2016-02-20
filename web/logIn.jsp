@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="header.jsp" %>
 
-    <form class="form-horizontal" method="post" action="Home.jsp">
+    <form class="form-horizontal" method="post" action="success.jsp">
         <fieldset>
             <legend>Log In</legend>
             <div class="form-group">
