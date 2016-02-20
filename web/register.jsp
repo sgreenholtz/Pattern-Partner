@@ -1,4 +1,5 @@
-<%@ include file="header.jsp" >
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ include file="header.jsp" %>
     <form class="form-horizontal" method="post" action="index.jsp">
         <fieldset>
             <legend>Register</legend>
@@ -29,7 +30,7 @@
             <div class="form-group">
                 <label for="email" class="col-lg-2 control-label">Email</label>
                 <div class="col-lg-10">
-                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                    <input type="text" class="form-control" id="email" placeholder="Email">
                 </div>
             </div>
 
@@ -42,4 +43,4 @@
             </div>
         </fieldset>
     </form>
-<%@ include file="footer.jsp" >
+<%@ include file="footer.jsp" %>

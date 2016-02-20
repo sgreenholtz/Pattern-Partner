@@ -1,9 +1,9 @@
 <%--
-  Created by IntelliJ IDEA.
+  Pattern Partner
+  
   User: Kolya
   Date: 2016-02-20
-  Time: 11:00 AM
-  To change this template use File | Settings | File Templates.
+  Time: 11:16 AM
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ include file="header.jsp" %>

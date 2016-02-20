@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
 
     <meta charset="utf-8">
@@ -36,10 +36,10 @@
         <div class="row">
             <h1>Pattern Partner</h1>
         </div>
-    </div>
 
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
+
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
             <span class="sr-only">Toggle navigation</span>
@@ -47,16 +47,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <ul class="nav navbar-nav">
-            <li><a class="navbar-brand" href="index.jsp">Home</a></li>
+            <li><a class="navbar-brand" href="home.jsp">Home</a></li>
             <li><a href="patternLibrary.jsp">Pattern Library</a></li>
             <li><a href="addPattern.jsp">Add Pattern</a></li>
             <li><a href="faqComments.jsp">FAQ and Comments</a></li>
           </ul>
         </div>
+
       </div>
     </nav>
