@@ -62,6 +62,7 @@
 
         </div>
     </nav>
+    <% if ((session.getAttribute("userid") == null) || (session.getAttribute("userid") == "")) {%>
 
     <form class="form-horizontal" method="post" action="loginAttempt.jsp">
         <fieldset>
@@ -87,5 +88,11 @@
             </div>
         </fieldset>
     </form>
+
+    <% } else { %>
+
+    <a href="logOut.jsp" class="btn btn-primary btn-lg">Log Out</a>
+
+    <% } %>
 
 <%@ include file="footer.jsp" %>
