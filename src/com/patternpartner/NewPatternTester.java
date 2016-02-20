@@ -1,5 +1,4 @@
 package com.patternpartner;
-import org.apache.commons.lang3.StringEscapeUtils;
 
 /**
  * This class tests the NewPattern class
