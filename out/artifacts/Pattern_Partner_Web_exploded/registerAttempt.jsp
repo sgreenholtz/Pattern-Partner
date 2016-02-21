@@ -1,5 +1,5 @@
 <%--
-  Pattern Partner
+  Pattern Partner: Registration Attempt
   
   User: Kolya
   Date: 2016-02-20
