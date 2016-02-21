@@ -17,7 +17,7 @@
     UserVerification verify = new UserVerification();
 
     verify.registerUser(username, password, email, firstName, lastName);
-    session.setAttribute("user", username);
+    session.setAttribute("username", username);
     response.sendRedirect("home.jsp");
 
 %>
