@@ -40,7 +40,6 @@
 <body>
 
 <div class="container">
-    <% out.print(session.getAttribute("username")); %>
     <div class="row">
         <h1>Pattern Partner</h1>
     </div>
@@ -62,13 +61,13 @@
                     <li><a class="navbar-brand" href="home.jsp">Home</a></li>
                     <li><a href="patternLibrary.jsp">Pattern Library</a></li>
                     <li><a href="addPattern.jsp">Add Pattern</a></li>
-                    <%--<% if (session.getAttribute("username").equals("") ||--%>
-                            <%--session.getAttribute("username") == null ||--%>
-                            <%--session.isNew()) { %>--%>
+                    <% if (session.getAttribute("username").equals("") ||
+                            session.getAttribute("username") == null ||
+                            session.isNew()) { %>
                     <li><a href="logIn.jsp">Log In</a></li>
-                    <%--<% } else { %>--%>
-                    <%--<li><a href="logOut.jsp">Log Out</a></li>--%>
-                    <%--<% } %>--%>
+                    <% } else { %>
+                    <li><a href="logOut.jsp">Log Out</a></li>
+                    <% } %>
                     <li><a href="faqComments.jsp">FAQ and Comments</a></li>
                     <%--<li>Logged in as: <% session.getAttribute("username"); %></li>--%>
                 </ul>
