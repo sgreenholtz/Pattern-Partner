@@ -76,7 +76,7 @@
 
         UserVerification verify = new UserVerification(username, password);
         if (verify.checkExistingUser()) {
-            session.setAttribute("user", username);
+            session.setAttribute("username", username);
             response.sendRedirect("home.jsp");
         } else {
           %>
