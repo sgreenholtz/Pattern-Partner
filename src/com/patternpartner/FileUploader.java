@@ -14,7 +14,7 @@ import org.apache.commons.fileupload.disk.*;
  * This class implements the FileUploader API to assist in file uploads
  * @author Sebastian Greenholtz
  */
-public class FileUploader {
+public class FileUploader extends HttpServlet {
 
     /**
      * Loads the file into memory and creates a list of submitted items to process.
@@ -87,10 +87,10 @@ public class FileUploader {
                 String line = input.readLine();
                 lines.add(line);
             }
-            PatternPreview preview = new PatternPreview(lines);
-            return preview;
+            return new PatternPreview(lines);
         } catch (IOException ex) {
             ex.printStackTrace();
         }
+        return new PatternPreview();
     }
 }
