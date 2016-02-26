@@ -5,11 +5,11 @@
   Date: 2016-02-21
   Time: 3:10 PM
 --%>
-<%@ page import="org.apache.commons.fileupload.FileItem,org.apache.commons.fileupload.disk.DiskFileItemFactory" %>
-<%@ page import="org.apache.commons.fileupload.servlet.ServletFileUpload" %>
-<%@ page import="java.io.File" %>
-<%@ page import="java.util.Iterator" %>
-<%@ page import="java.util.List" %>
+<%@ page import="java.io.*,java.util.*" %>
+<%@ page import="org.apache.commons.fileupload.*" %>
+<%@ page import="org.apache.commons.fileupload.disk.*" %>
+<%@ page import="org.apache.commons.fileupload.servlet.*" %>
+<%@ page import="org.apache.commons.io.output.*" %>
 
 <%
     File file ;
