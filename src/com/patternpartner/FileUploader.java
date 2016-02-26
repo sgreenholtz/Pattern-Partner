@@ -72,22 +72,25 @@ public class FileUploader {
      * @return String value of input field
      */
     public String processFormField(FileItem item) {
-        if (item.isFormField()) {
-            return item.getString();
-        }
+        return item.getString();
     }
 
     /**
-     * Extracts information from a file field in a form
+     * Extracts information from a file field in a form and returns a preview of the pattern
      * @param item FileItem to process
+     * @return pattern preview set up with lines from file
      */
-    public void processUploadedFile(FileItem item) {
-        if (!item.isFormField()) {
-            String fieldName = item.getFieldName();
-            String fileName = item.getName();
-            String contentType = item.getContentType();
-            boolean isInMemory = item.isInMemory();
-            long sizeInBytes = item.getSize();
+    public PatternPreview processUploadedFile(FileItem item) {
+        ArrayList<String> lines = new ArrayList<>();
+        try (BufferedReader input = new BufferedReader(new InputStreamReader(item.getInputStream()))) {
+            while (input.ready()) {
+                String line = input.readLine();
+                lines.add(line);
+            }
+            PatternPreview preview = new PatternPreview(lines);
+            return preview;
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
     }
 }
