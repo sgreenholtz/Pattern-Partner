@@ -10,20 +10,32 @@
 <%
     ArrayList<String> lines = (ArrayList<String>) session.getAttribute("lines");
     ArrayList<String> lineClass = (ArrayList<String>) session.getAttribute("lineClass");
+    String title = (String) session.getAttribute("title");
 %>
 <table class="table table-hover ">
     <thead>
     <tr>
-        <th><%= session.getAttribute("title") %></th>
+        <th><% out.print(title); %></th>
     </tr>
     </thead>
     <tbody>
-    <%  int i = 0;
-        for (String line : lines) { %>
-    <tr class="<%= lineClass.get(i) %>">
-        <td><% out.print(line); %></td>
+    <% int i = 0;
+        for (i=0; i<lines.size(); i++) { %>
+    <tr class="<%= lineClass.get(i) %>" id="<%= i %>" onclick="setRow(<%= i %>)">
+        <td><% out.print(lines.get(i)); %></td>
     </tr>
-    <%   i++;
+    <%
     } %>
     </tbody>
 </table>
+
+<script>
+    function setRow(i) {
+        if (document.getElementById(i).className == "") {
+            document.getElementById(i).className = "<%= session.getAttribute("classSet") %>";
+        } else {
+            document.getElementById(i).className = "";
+        }
+        <%--<% lineClass.set(i, (String) session.getAttribute("classSet")); %>--%>
+    }
+</script>

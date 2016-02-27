@@ -13,4 +13,6 @@
     session.setAttribute("lines", uploader.getPreviewer().getLines());
     session.setAttribute("lineClass", uploader.getPreviewer().getLineClass());
     session.setAttribute("title", uploader.getPreviewer().getTitle());
+
+    response.sendRedirect("setMaterials.jsp");
 %>
