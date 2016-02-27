@@ -20,6 +20,10 @@ public class PatternPreview extends HttpServlet {
 
     // Getters and Setters
 
+    public String getTitle() {
+        return title;
+    }
+
     public ArrayList<String> getLines() {
         return lines;
     }

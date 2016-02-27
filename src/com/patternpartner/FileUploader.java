@@ -89,7 +89,9 @@ public class FileUploader extends HttpServlet {
         try (BufferedReader input = new BufferedReader(new InputStreamReader(item.getInputStream()))) {
             while (input.ready()) {
                 String line = input.readLine();
-                lines.add(line);
+                if (!(line.isEmpty() || line.trim().isEmpty())) {
+                    lines.add(line);
+                }
             }
             previewer.setLines(lines);
         } catch (IOException ex) {
