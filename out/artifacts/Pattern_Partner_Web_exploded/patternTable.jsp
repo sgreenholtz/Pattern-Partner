@@ -10,14 +10,8 @@
 <%
     ArrayList<String> lines = (ArrayList<String>) session.getAttribute("lines");
     ArrayList<String> lineClass = (ArrayList<String>) session.getAttribute("lineClass");
-    String title = (String) session.getAttribute("title");
 %>
 <table class="table table-hover ">
-    <thead>
-    <tr>
-        <th><% out.print(title); %></th>
-    </tr>
-    </thead>
     <tbody>
     <% int i = 0;
         for (i=0; i<lines.size(); i++) { %>

@@ -10,7 +10,7 @@
 <h2>Confirm Changes</h2>
 <jsp:include page="patternTable.jsp"/>
 <ul class="pager">
-    <li class="previous"><a href="setPatternRows.jsp.jsp">&larr; Back</a></li>
+    <li class="previous"><a href="setPatternRows.jsp">&larr; Back</a></li>
     <li class="next disabled"><a href="#">Submit &rarr;</a></li>
 </ul>
 <jsp:include page="footer.jsp"/>

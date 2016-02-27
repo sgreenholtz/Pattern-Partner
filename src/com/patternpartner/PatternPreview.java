@@ -10,7 +10,6 @@ import java.util.*;
  */
 public class PatternPreview extends HttpServlet {
 
-    static char RECORD_SEPARATOR = '\u241E';
     static String LINE_SEPARATOR = System.lineSeparator();
 
     private String title;
@@ -50,20 +49,6 @@ public class PatternPreview extends HttpServlet {
     }
 
     // Methods
-
-    /**
-     * This method displays the entire pattern as formatted on the command line,
-     * with line numbers to help with adding additional record separator symbols
-     */
-    public void showPattern() {
-        int lineCount = 0;
-
-        for (String line : lines) {
-            System.out.println(lineCount + ". " + line);
-            lineCount++;
-        }
-        System.out.println(System.lineSeparator());
-    }
 
     @Override
     public String toString() {
