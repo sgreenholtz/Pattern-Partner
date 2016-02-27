@@ -14,7 +14,13 @@
 
 %>
 <jsp:include page="header.jsp" />
-<%
-    out.print(uploader.getPreviewer().toString());
-%>
+<table class="table table-striped table-hover ">
+    <tbody>
+<%  for (String line : uploader.getPreviewer().getLines()) { %>
+        <tr>
+            <td><% out.print(line); %></td>
+        </tr>
+   <% } %>
+    </tbody>
+</table>
 <jsp:include page="footer.jsp" />
