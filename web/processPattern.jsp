@@ -16,11 +16,13 @@
 <jsp:include page="header.jsp" />
 <table class="table table-striped table-hover ">
     <tbody>
-<%  for (String line : uploader.getPreviewer().getLines()) { %>
-        <tr>
+<%  int i = 0;
+    for (String line : uploader.getPreviewer().getLines()) { %>
+        <tr class="<%= uploader.getPreviewer().getLineClass().get(i) %>">
             <td><% out.print(line); %></td>
         </tr>
-   <% } %>
+   <%   i++;
+       } %>
     </tbody>
 </table>
 <jsp:include page="footer.jsp" />

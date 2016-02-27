@@ -7,7 +7,6 @@ import java.util.*;
  * <br />
  * Methods set the title, materials, and description lines to add to database.
  * @author Sebatian Greenholtz
- * @see <a href="AddNewPattern.html">AddNewPattern</a>
  */
 public class PatternPreview extends HttpServlet {
 
@@ -17,7 +16,6 @@ public class PatternPreview extends HttpServlet {
     private String title;
     private ArrayList<String> lines;
     private ArrayList<String> lineClass;
-    private CMDHelper helper = new CMDHelper();
 
 
     // Getters and Setters
@@ -37,8 +35,9 @@ public class PatternPreview extends HttpServlet {
      */
     public void setLines(ArrayList<String> lines) {
         this.lines = lines;
-        for (int i=0; i<lines.size(); i++) {
-            lineClass.add(i, "");
+        lineClass = new ArrayList<>();
+        for (String line : lines) {
+            lineClass.add("");
         }
     }
 
