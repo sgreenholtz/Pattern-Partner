@@ -11,6 +11,7 @@ import java.util.*;
  * upload the pattern to the database.
  *
  * @author Sebastian Greenholtz
+ * @deprecated in web release
  * @see <a href="Pattern.html">Pattern</a>
  * @see <a href="PatternPreview.html">PatternPreview</a>
  * @see <a href="PatternUploader.html">PatternUploader</a>
@@ -109,7 +110,7 @@ public class AddNewPattern {
      * @returns new Pattern object (for constructor)
      */
     public Pattern constructPattern() {
-        PatternPreview preview = new PatternPreview(addRecordSeparator());
+        PatternPreview preview = new PatternPreview();
         preview.editLineSeparators();
 
         newPattern = new Pattern(preview.setName(), preview.setDescription(),

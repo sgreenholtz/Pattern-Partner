@@ -16,6 +16,8 @@ import org.apache.commons.fileupload.disk.*;
  */
 public class FileUploader extends HttpServlet {
 
+    PatternPreview previewer = new PatternPreview();
+
     /**
      * Loads the file into memory and creates a list of submitted items to process.
      * @param request HttpServletRequest from submitted form
@@ -53,13 +55,12 @@ public class FileUploader extends HttpServlet {
      * @param items List of FileItems to process
      */
     public void processFile(List<FileItem> items) {
-        // Process the uploaded items
         Iterator<FileItem> iter = items.iterator();
         while (iter.hasNext()) {
             FileItem item = iter.next();
 
             if (item.isFormField()) {
-                processFormField(item);
+                processTitle(item);
             } else {
                 processUploadedFile(item);
             }
@@ -67,30 +68,29 @@ public class FileUploader extends HttpServlet {
     }
 
     /**
-     * Extracts information from a regular text field in a form
+     * Extracts information from a regular text field in a form, in this case the title, and sets the title
+     * in the PatternPreview object
      * @param item FileItem to process
-     * @return String value of input field
      */
-    public String processFormField(FileItem item) {
-        return item.getString();
+    public void processTitle(FileItem item) {
+        previewer.setTitle(item.getString());
     }
 
     /**
-     * Extracts information from a file field in a form and returns a preview of the pattern
+     * Extracts information from a file field in a form and sets the lines as the instance variable
+     * in the PatternPreview
      * @param item FileItem to process
-     * @return pattern preview set up with lines from file
      */
-    public PatternPreview processUploadedFile(FileItem item) {
+    public void processUploadedFile(FileItem item) {
         ArrayList<String> lines = new ArrayList<>();
         try (BufferedReader input = new BufferedReader(new InputStreamReader(item.getInputStream()))) {
             while (input.ready()) {
                 String line = input.readLine();
                 lines.add(line);
             }
-            return new PatternPreview(lines);
+            previewer.setLines(lines);
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-        return new PatternPreview();
     }
 }

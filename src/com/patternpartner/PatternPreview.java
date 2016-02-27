@@ -14,51 +14,16 @@ public class PatternPreview {
     static char RECORD_SEPARATOR = '\u241E';
     static String LINE_SEPARATOR = System.lineSeparator();
 
+    private String title;
     private ArrayList<String> lines;
     private CMDHelper helper = new CMDHelper();
 
-    // Constructors
-
-    /**
-     * No argument constructor. Initiates CMDHelper for later use.
-     */
-    public PatternPreview() {
+    public void setLines(ArrayList<String> lines) {
+        this.lines = lines;
     }
 
-    /**
-     * Constructor that creates the lines ArrayList by reading through the file
-     * at path indicated by param
-     * @param path the path to the file
-     */
-    public PatternPreview(String path) {
-        new PatternPreview();
-        lines = new ArrayList<String>();
-        String line = null;
-
-        try (BufferedReader in = new BufferedReader(new FileReader(path))) {
-            while (in.ready()) {
-                line = in.readLine();
-                lines.add(line);
-            }
-        } catch (FileNotFoundException fnfEx) {
-            System.out.println("You have encountered a file-not-found error.");
-            fnfEx.printStackTrace();
-        } catch (IOException ioEx) {
-            System.out.println("You have encountered an IO error.");
-            ioEx.printStackTrace();
-        } catch (Exception ex) {
-            System.out.println("You have encountered a not-otherwise-specified error.");
-            ex.printStackTrace();
-        }
-    }
-
-    /**
-     * Constructor to set instance variable lines to a pre-formatted ArrayList
-     * @param list ArrayList of pre-formatted lines
-     */
-    public PatternPreview (ArrayList<String> list) {
-        new PatternPreview();
-        lines = list;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     // Methods
