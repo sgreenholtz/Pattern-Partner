@@ -6,7 +6,10 @@
   Time: 3:00 PM
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.patternpartner.*" %>
-<jsp:include page="header.jsp"/>
+<%@ page import="com.patternpartner.FileUploader" %>
+<%
 
-<jsp:include page="footer.jsp"/>
+    FileUploader uploader = new FileUploader();
+    uploader.uploadFile(request);
+    uploader.getPreviewer().toString();
+%>

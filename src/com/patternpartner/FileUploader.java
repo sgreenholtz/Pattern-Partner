@@ -18,11 +18,15 @@ public class FileUploader extends HttpServlet {
 
     PatternPreview previewer = new PatternPreview();
 
+    public PatternPreview getPreviewer() {
+        return previewer;
+    }
+
     /**
      * Loads the file into memory and creates a list of submitted items to process.
      * @param request HttpServletRequest from submitted form
      */
-    public void uploadFile(HttpServletRequest request) {
+    public void uploadFile(HttpServletRequest request, ServletContext context) {
 
         // Check that we have a file upload request
         boolean isMultipart = ServletFileUpload.isMultipartContent(request);
@@ -32,8 +36,7 @@ public class FileUploader extends HttpServlet {
             DiskFileItemFactory factory = new DiskFileItemFactory();
 
             // Configure a repository (to ensure a secure temp location is used)
-            ServletContext servletContext = this.getServletConfig().getServletContext();
-            File repository = (File) servletContext.getAttribute("javax.servlet.context.tempdir");
+            File repository = (File) context.getAttribute("javax.servlet.context.tempdir");
             factory.setRepository(repository);
 
             // Create a new file upload handler

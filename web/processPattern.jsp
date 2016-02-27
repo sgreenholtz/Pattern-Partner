@@ -10,6 +10,6 @@
 <%
 
     FileUploader uploader = new FileUploader();
-    uploader.uploadFile(request);
-
+    uploader.uploadFile(request, application);
+    uploader.getPreviewer().toString();
 %>

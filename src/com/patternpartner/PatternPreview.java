@@ -1,5 +1,5 @@
 package com.patternpartner;
-import java.io.*;
+import javax.servlet.http.HttpServlet;
 import java.util.*;
 
 /**
@@ -9,7 +9,7 @@ import java.util.*;
  * @author Sebatian Greenholtz
  * @see <a href="AddNewPattern.html">AddNewPattern</a>
  */
-public class PatternPreview {
+public class PatternPreview extends HttpServlet {
 
     static char RECORD_SEPARATOR = '\u241E';
     static String LINE_SEPARATOR = System.lineSeparator();
@@ -225,4 +225,12 @@ public class PatternPreview {
         }
     }
 
+    @Override
+    public String toString() {
+        String output = "";
+        for (String line : lines) {
+            output += line + LINE_SEPARATOR;
+        }
+        return output;
+    }
 }
