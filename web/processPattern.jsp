@@ -11,5 +11,10 @@
 
     FileUploader uploader = new FileUploader();
     uploader.uploadFile(request, application);
-    uploader.getPreviewer().toString();
+
 %>
+<jsp:include page="header.jsp" />
+<%
+    out.print(uploader.getPreviewer().toString());
+%>
+<jsp:include page="footer.jsp" />
