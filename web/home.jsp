@@ -1,12 +1,12 @@
 <%--
-  Created by IntelliJ IDEA.
+  Home page: Pattern Partner
+
   User: Kolya
   Date: 2016-02-20
   Time: 11:00 AM
-  To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="header.jsp" %>
+<jsp:include page="header.jsp" />
 
 <div class="jumbotron">
     <h1>Add a Pattern</h1>
@@ -20,4 +20,4 @@
     <p><a href="patternLibrary.jsp" class="btn btn-primary btn-lg">View</a></p>
 </div>
 
-<%@ include file="footer.jsp" %>
+<jsp:include page="footer.jsp" />
