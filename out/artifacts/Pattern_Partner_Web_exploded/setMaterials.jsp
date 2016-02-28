@@ -7,9 +7,8 @@
 --%>
 <jsp:include page="header.jsp"/>
 <% session.setAttribute("classSet", "info"); %>
+<% session.setAttribute("nextPage", "setDescription.jsp"); %>
+<% session.setAttribute("lastPage", "#"); %>
 <h2>Select Materials</h2>
 <jsp:include page="patternTable.jsp"/>
-<ul class="pager">
-    <li class="next"><a href="setDescription.jsp">Next &rarr;</a></li>
-</ul>
 <jsp:include page="footer.jsp"/>
