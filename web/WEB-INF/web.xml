@@ -21,12 +21,12 @@
     </context-param>
 
     <servlet>
-        <servlet-name>PatternPreview</servlet-name>
-        <servlet-class>com.patternpartner.PatternPreview</servlet-class>
+        <servlet-name>PatternPreviewUpdateHandler</servlet-name>
+        <servlet-class>com.patternpartner.PatternPreviewUpdateHandler</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>PatternPreview</servlet-name>
-        <url-pattern>/PatternPreview</url-pattern>
+        <servlet-name>PatternPreviewUpdateHandler</servlet-name>
+        <url-pattern>/PatternPreviewUpdateHandler</url-pattern>
     </servlet-mapping>
 
 </web-app>

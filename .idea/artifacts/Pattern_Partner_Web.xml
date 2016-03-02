@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Pattern-Partner:Web">
+    <output-path>$PROJECT_DIR$/out/artifacts/Pattern_Partner_Web</output-path>
+    <root id="archive" name="Pattern-Partner_Web.war">
+      <element id="artifact" artifact-name="Pattern-Partner:Web exploded" />
+    </root>
+  </artifact>
+</component>

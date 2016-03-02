@@ -7,12 +7,13 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="com.patternpartner.FileUploader" %>
+<%@ page import="com.patternpartner.PatternPreviewUpdateHandler" %>
 <%
     FileUploader uploader = new FileUploader();
     uploader.uploadFile(request, application);
-    session.setAttribute("lines", uploader.getPreviewer().getLines());
-    session.setAttribute("lineClass", uploader.getPreviewer().getLineClass());
-    session.setAttribute("title", uploader.getPreviewer().getTitle());
+    session.setAttribute("preview", uploader.getPreviewer());
+//    session.setAttribute("lineClass", uploader.getPreviewer().getLineClass());
+//    session.setAttribute("title", uploader.getPreviewer().getTitle());
 
     response.sendRedirect("setMaterials.jsp");
 %>

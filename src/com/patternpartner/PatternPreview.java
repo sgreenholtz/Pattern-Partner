@@ -1,8 +1,5 @@
 package com.patternpartner;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.*;
-import java.io.*;
 import java.util.*;
 
 /**
@@ -11,7 +8,7 @@ import java.util.*;
  * Methods set the title, materials, and description lines to add to database.
  * @author Sebatian Greenholtz
  */
-public class PatternPreview extends HttpServlet {
+public class PatternPreview {
 
     static String LINE_SEPARATOR = System.lineSeparator();
 
@@ -51,19 +48,6 @@ public class PatternPreview extends HttpServlet {
     }
 
     // Methods
-
-    /**
-     *  Handles HTTP GET requests.
-     *
-     * @param  request                   the HttpServletRequest object
-     * @param  response                   the HttpServletResponse object
-     * @exception ServletException  if there is a Servlet failure
-     * @exception IOException       if there is an IO failure
-     */
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        lineClass.add(Integer.getInteger(request.getParameter("id")), request.getParameter("class"));
-    }
 
     @Override
     public String toString() {
