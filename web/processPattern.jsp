@@ -7,7 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="com.patternpartner.FileUploader" %>
-<%@ page import="com.patternpartner.PatternPreviewUpdateHandler" %>
 <%
     FileUploader uploader = new FileUploader();
     uploader.uploadFile(request, application);
