@@ -2,6 +2,7 @@ package com.patternpartner;
 
 import org.mozilla.javascript.*;
 import java.util.*;
+import javax.script.*;
 
 /**
  * Simple command line app to test Rhino package
@@ -34,7 +35,11 @@ public class RhinoTest {
         return lineClass;
     }
 
-    public static void main(String[] args) {
+    /**
+     * Rhino script testing
+     * @param args
+     */
+    /*public static void main(String[] args) {
         Context cx = Context.enter();
         try {
             Scriptable scope = cx.initStandardObjects();
@@ -53,5 +58,21 @@ public class RhinoTest {
         } finally {
             Context.exit();
         }
+    }*/
+
+    /**
+     * Javax.script testing
+     */
+    public static void main(String[] args) throws ScriptException, NoSuchMethodException {
+        ScriptEngineManager scriptEngineMgr = new ScriptEngineManager();
+        ScriptEngine jsEngine = scriptEngineMgr.getEngineByName("JavaScript");
+
+        if (jsEngine == null) {
+            System.err.println("No script engine found for JavaScript");
+            System.exit(1);
+        }
+
+        jsEngine.eval("function ");
     }
+
 }

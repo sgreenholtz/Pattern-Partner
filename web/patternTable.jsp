@@ -11,7 +11,6 @@
 <%@ page import="com.patternpartner.JavascriptHandler" %>
 <%
     PatternPreview previewer = (PatternPreview) session.getAttribute("previewer");
-    JavascriptHandler.parseJsToInteger();
 %>
 <table class="table table-hover ">
     <tbody>

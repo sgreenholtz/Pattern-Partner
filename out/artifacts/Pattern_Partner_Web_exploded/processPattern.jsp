@@ -11,8 +11,6 @@
     FileUploader uploader = new FileUploader();
     uploader.uploadFile(request, application);
     session.setAttribute("preview", uploader.getPreviewer());
-//    session.setAttribute("lineClass", uploader.getPreviewer().getLineClass());
-//    session.setAttribute("title", uploader.getPreviewer().getTitle());
 
     response.sendRedirect("setMaterials.jsp");
 %>
