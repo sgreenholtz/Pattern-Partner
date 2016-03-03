@@ -8,6 +8,19 @@ import org.mozilla.javascript.*;
  * @author Sebastian Greenholtz
  */
 public class JavascriptHandler {
+    private Scriptable scope;
+
+    /**
+     * Creates a Context and Scope variable and sets it to
+     * scope instance
+     */
+    public JavascriptHandler() {
+        scope = Context.enter().initStandardObjects();
+    }
+
+    public Scriptable getScope() {
+        return scope;
+    }
 
     /**
      * Takes a String representing a number value in javascript and returns an
@@ -15,7 +28,7 @@ public class JavascriptHandler {
      * @param script Javascript value to parse
      * @return Integer of required value
      */
-    public Integer parseJavascriptToInteger(String script) {
+    public static Integer parseJsToInteger(String script) {
         Context cx = Context.enter();
         Integer intValue = -1;
         try {

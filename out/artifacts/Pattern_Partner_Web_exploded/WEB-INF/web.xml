@@ -20,13 +20,4 @@
         </param-value>
     </context-param>
 
-    <servlet>
-        <servlet-name>PatternPreviewUpdateHandler</servlet-name>
-        <servlet-class>com.patternpartner.PatternPreviewUpdateHandler</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>PatternPreviewUpdateHandler</servlet-name>
-        <url-pattern>/PatternPreviewUpdateHandler</url-pattern>
-    </servlet-mapping>
-
 </web-app>

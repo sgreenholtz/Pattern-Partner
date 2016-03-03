@@ -7,16 +7,18 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.*" %>
+<%@ page import="com.patternpartner.PatternPreview" %>
+<%@ page import="com.patternpartner.JavascriptHandler" %>
 <%
-    ArrayList<String> lines = (ArrayList<String>) session.getAttribute("lines");
-    ArrayList<String> lineClass = (ArrayList<String>) session.getAttribute("lineClass");
+    PatternPreview previewer = (PatternPreview) session.getAttribute("previewer");
+    JavascriptHandler.parseJsToInteger();
 %>
 <table class="table table-hover ">
     <tbody>
     <% int i = 0;
-        for (i=0; i<lines.size(); i++) { %>
-    <tr class="<%= lineClass.get(i) %>" id="<%= i %>" onclick="setRow(<%= i %>)">
-        <td><% out.print(lines.get(i)); %></td>
+        for (i=0; i<previewer.getLines().size(); i++) { %>
+    <tr class="<%= previewer.getLineClass().get(i) %>" id="<%= i %>" onclick="setRow(<%= i %>)">
+        <td><% out.print(previewer.getLines().get(i)); %></td>
     </tr>
     <%
     } %>
@@ -25,27 +27,16 @@
 
 <script>
 
-    function init() {
-        if (window.XMLHttpRequest) {
-            req = new XMLHttpRequest();
-        } else if (window.ActiveXObject) {
-            req = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        var url = "/PatternPartner/PatternPreview";
-        req.open("GET", url, true);
-        req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    }
-
     function setRow(i) {
-        init();
+        importPackage(Packages.org.mozilla.javascript);
+        importClass(Packages.com.patternpartner.PatternPreview);
+        var now = new Packages.java.util.Date();
         if (document.getElementById(i).className == "") {
             document.getElementById(i).className = "<%= session.getAttribute("classSet") %>";
-            req.send("class=", "<%= session.getAttribute("classSet") %>");
-            req.send("id=", i);
+            alert(now);
         } else {
             document.getElementById(i).className = "";
-            req.send("class=", "");
-            req.send("id=", i);
+            // add to lineClass
         }
     }
 
