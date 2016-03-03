@@ -27,27 +27,14 @@
 
 <script>
 
-    function init() {
-        if (window.XMLHttpRequest) {
-            req = new XMLHttpRequest();
-        } else if (window.ActiveXObject) {
-            req = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        var url = "/PatternPartner/PatternPreviewUpdateHandler";
-        req.open("GET", url, true);
-        req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    }
-
     function setRow(i) {
         init();
         if (document.getElementById(i).className == "") {
             document.getElementById(i).className = "<%= session.getAttribute("classSet") %>";
-            req.send("class=", "<%= session.getAttribute("classSet") %>");
-            req.send("id=", i);
+            // add to lineClass
         } else {
             document.getElementById(i).className = "";
-            req.send("class=", "");
-            req.send("id=", i);
+            // add to lineClass
         }
     }
 
