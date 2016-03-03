@@ -6,16 +6,13 @@
   Time: 7:21 AM
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.util.*" %>
 <%@ page import="com.patternpartner.PatternPreview" %>
-<%@ page import="com.patternpartner.JavascriptHandler" %>
 <%
     PatternPreview previewer = (PatternPreview) session.getAttribute("previewer");
 %>
 <table class="table table-hover ">
     <tbody>
-    <% int i = 0;
-        for (i=0; i<previewer.getLines().size(); i++) { %>
+    <% for (int i=0; i<previewer.getLines().size(); i++) { %>
     <tr class="<%= previewer.getLineClass().get(i) %>" id="<%= i %>" onclick="setRow(<%= i %>)">
         <td><% out.print(previewer.getLines().get(i)); %></td>
     </tr>
@@ -27,23 +24,27 @@
 <script>
 
     function setRow(i) {
-        importPackage(Packages.org.mozilla.javascript);
-        importClass(Packages.com.patternpartner.PatternPreview);
-        var now = new Packages.java.util.Date();
+        var idA = "a" + i.toString();
         if (document.getElementById(i).className == "") {
-            document.getElementById(i).className = "<%= session.getAttribute("classSet") %>";
-            alert(now);
+            document.getElementById(i).className = "danger";
+            document.getElementById(idA).value = "danger";
         } else {
             document.getElementById(i).className = "";
-            // add to lineClass
+            document.getElementById(idA).value = "";
         }
     }
 
-
 </script>
 
-<%--<a href="#" class="btn btn-default btn-lg btn-block" onclick="updateClassArray()">Save Changes</a>--%>
+<form action="saveChanges.jsp">
+    <% for (int i=0; i<previewer.getLines().size(); i++) { %>
+    <input type="hidden" id="a<%= i %>" name="a<%= i %>" value="<%= previewer.getLineClass().get(i) %>"/>
+    <%
+        } %>
+    <input type="hidden" name="nextPage" value="<%= session.getAttribute("nextPage") %>" />
+    <input type="submit" value="Save" class="btn btn-default btn-lg btn-block" />
+</form>
+
 <ul class="pager">
     <li class="previous"><a href="<%= session.getAttribute("lastPage") %>">&larr; Back</a></li>
-    <li class="next"><a href="<%= session.getAttribute("nextPage") %>">Next &rarr;</a></li>
 </ul>
