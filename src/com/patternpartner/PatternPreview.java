@@ -10,8 +10,6 @@ import java.util.*;
  */
 public class PatternPreview {
 
-    static String LINE_SEPARATOR = System.lineSeparator();
-
     private String title;
     private String knitOrCrochet;
     private ArrayList<String> lines;
@@ -55,19 +53,36 @@ public class PatternPreview {
     // Methods
 
     /**
-     * Creates a Pattern object from the file after new lines and preview
-     * @returns new Pattern object (for constructor)
+     * Creates a new ArrayList
+     * @param className the class associated with a particular color of line
+     *                  preview
+     * @return new ArrayList with the specified lines
      */
-    public Pattern constructPattern() {
-//        newPattern = new Pattern(preview.setName(), preview.setDescription(),
-//                preview.setMaterials(), preview.setRows(), preview.setKnitOrCrochet());
+    public ArrayList<String> createSectionArrayList(String className) {
+        ArrayList<String> newList = new ArrayList<String>();
+        for (int i = 0; i<lines.size(); i++) {
+            if (lineClass.get(i).equals(className)) {
+                newList.add(lines.get(i));
+            }
+        }
+        return newList;
+    }
+
+    /**
+     * Creates a Pattern object from the array lists of description, materials and rows,
+     * plus title and knitOrCrochet letter saves as instance variables
+     * @return new Pattern object
+     */
+    public Pattern constructPattern(ArrayList<String> description, ArrayList<String> materials,
+                                    ArrayList<String> rows) {
+        return new Pattern(title, description,materials, rows, knitOrCrochet);
     }
 
     @Override
     public String toString() {
         String output = "";
         for (String line : lines) {
-            output += line + LINE_SEPARATOR;
+            output += line + System.lineSeparator();
         }
         return output;
     }

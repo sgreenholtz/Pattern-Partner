@@ -7,10 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0eb8982-d7d9-455c-9cd2-3c60b50632bc" name="Default" comment="Created class to communicate on the command line.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/error.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploadPattern.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/FileUploader.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/FileUploader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/Pattern.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/Pattern.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/PatternPreview.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/PatternPreview.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/addPattern.jsp" afterPath="$PROJECT_DIR$/web/addPattern.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/finalPreview.jsp" afterPath="$PROJECT_DIR$/web/finalPreview.jsp" />
     </list>
     <ignored path="Pattern-Partner.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,9 +40,9 @@
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
+              <caret line="96" column="26" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
               <folding>
-                <marker date="1456664388000" expanded="true" signature="4129:4152" placeholder="SELECT LAST_... " />
+                <marker date="1457217523000" expanded="true" signature="4443:4466" placeholder="SELECT LAST_... " />
               </folding>
             </state>
           </provider>
@@ -49,67 +52,22 @@
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/PatternPreview.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="56" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
+              <caret line="84" column="51" selection-start-line="84" selection-start-column="51" selection-end-line="84" selection-end-column="51" />
               <folding>
-                <element signature="e#1356#1357#0" expanded="true" />
+                <element signature="e#1246#1247#0" expanded="true" />
+                <element signature="e#1296#1297#0" expanded="true" />
+                <element signature="e#1646#1654#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="finalPreview.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/finalPreview.jsp">
+      <file leaf-file-name="uploadPattern.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/uploadPattern.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.875">
-              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.30656934">
+              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Pattern.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Pattern.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="33" />
-              <folding>
-                <element signature="e#2046#2047#0" expanded="true" />
-                <element signature="e#2080#2081#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addPattern.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/addPattern.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.791667">
-              <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="processPattern.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/processPattern.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5">
-              <caret line="12" column="61" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileUploader.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/patternpartner/FileUploader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65585333">
-              <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2464#2465#0" expanded="true" />
-                <element signature="e#2516#2517#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -164,7 +122,6 @@
         <option value="$PROJECT_DIR$/JSPs/logIn.jsp" />
         <option value="$PROJECT_DIR$/JSPs/register.jsp" />
         <option value="$PROJECT_DIR$/JSPs/index.jsp" />
-        <option value="$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java" />
         <option value="$PROJECT_DIR$/web/register.jsp" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/AddNewPattern.java" />
         <option value="$PROJECT_DIR$/web/setPatternRows.xhtml" />
@@ -180,13 +137,17 @@
         <option value="$PROJECT_DIR$/web/setMaterials.jsp" />
         <option value="$PROJECT_DIR$/web/setDescription.jsp" />
         <option value="$PROJECT_DIR$/web/setPatternRows.jsp" />
-        <option value="$PROJECT_DIR$/web/finalPreview.jsp" />
         <option value="$PROJECT_DIR$/web/patternTable.jsp" />
         <option value="$PROJECT_DIR$/web/saveChanges.jsp" />
         <option value="$PROJECT_DIR$/web/addPattern.jsp" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/Pattern.java" />
-        <option value="$PROJECT_DIR$/src/com/patternpartner/PatternPreview.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/FileUploader.java" />
+        <option value="$PROJECT_DIR$/src/com/patternpartner/PatternPreview.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/uploadPattern.jsp" />
+        <option value="$PROJECT_DIR$/web/finalPreview.jsp" />
+        <option value="$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java" />
+        <option value="$PROJECT_DIR$/web/error.jsp" />
+        <option value="$PROJECT_DIR$/web/uploadPattern.jsp" />
       </list>
     </option>
   </component>
@@ -260,7 +221,6 @@
     <panes>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -375,6 +335,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1134,12 +1095,13 @@
       <workItem from="1457040660658" duration="86000" />
       <workItem from="1457053623975" duration="410000" />
       <workItem from="1457185126018" duration="4851000" />
-      <workItem from="1457191283104" duration="617000" />
+      <workItem from="1457191283104" duration="700000" />
+      <workItem from="1457215308809" duration="2357000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50721000" />
+    <option name="totallyTimeSpent" value="53161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="6" />
@@ -1153,7 +1115,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292517" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886985" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23032904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1450,7 +1412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1494,22 +1455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/setMaterials.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/setDescription.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="18" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/patternLibrary.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1534,55 +1479,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/setPatternRows.jsp">
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/FileUploader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5700713">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="18" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
+        <state vertical-scroll-proportion="1.5232722">
+          <caret line="75" column="51" selection-start-line="75" selection-start-column="51" selection-end-line="75" selection-end-column="51" />
           <folding>
-            <marker date="1456664388000" expanded="true" signature="4129:4152" placeholder="SELECT LAST_... " />
+            <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/finalPreview.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.875">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/addPattern.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.791667">
-          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/processPattern.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5">
-          <caret line="12" column="61" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.3941606">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/PatternPreview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="56" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
-          <folding>
-            <element signature="e#1356#1357#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1590,22 +1501,85 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/addPattern.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1167883">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="53" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/finalPreview.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.5">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/setPatternRows.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/setMaterials.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26277372">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/setDescription.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="26" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
           <folding>
-            <element signature="e#2046#2047#0" expanded="true" />
-            <element signature="e#2080#2081#0" expanded="true" />
+            <marker date="1457217523000" expanded="true" signature="4443:4466" placeholder="SELECT LAST_... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/FileUploader.java">
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/PatternPreview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65585333">
-          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="51" selection-start-line="84" selection-start-column="51" selection-end-line="84" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2464#2465#0" expanded="true" />
-            <element signature="e#2516#2517#0" expanded="true" />
+            <element signature="e#1246#1247#0" expanded="true" />
+            <element signature="e#1296#1297#0" expanded="true" />
+            <element signature="e#1646#1654#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24087591">
+          <caret line="11" column="77" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/uploadPattern.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30656934">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>

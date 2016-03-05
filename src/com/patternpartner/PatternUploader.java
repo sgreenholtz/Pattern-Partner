@@ -29,8 +29,12 @@ public class PatternUploader {
     /**
      * Constructor to initiate with a pattern instance variable and username
      */
-    public PatternUploader (Pattern newPattern, String user) {
-        pattern = newPattern;
+    public PatternUploader (PatternPreview previewer, String user) {
+        ArrayList<String> description = previewer.createSectionArrayList("success");
+        ArrayList<String> materials = previewer.createSectionArrayList("info");
+        ArrayList<String> row = previewer.createSectionArrayList("warning");
+
+        pattern = previewer.constructPattern(description, materials, row);
         username = user;
     }
 
@@ -110,7 +114,7 @@ public class PatternUploader {
      * Executes the update for Users, Patterns, and PatternRows, with a printed success
      * statement for each.
      */
-    public void upload() {
+    public void upload() throws SQLException {
         try {
             Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
 

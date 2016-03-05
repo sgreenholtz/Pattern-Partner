@@ -64,7 +64,7 @@ public class FileUploader extends HttpServlet {
             FileItem item = iter.next();
 
             if (item.isFormField()) {
-                processTitle(item);
+                processFieldItem(item);
             } else {
                 processUploadedFile(item);
             }
@@ -72,12 +72,16 @@ public class FileUploader extends HttpServlet {
     }
 
     /**
-     * Extracts information from a regular text field in a form, in this case the title, and sets the title
-     * in the PatternPreview object
+     * Extracts information from a regular text field in a form, in this case the title and knitOrCrochet field, and
+     * sets the instance variable in PatternPreview
      * @param item FileItem to process
      */
-    public void processTitle(FileItem item) {
-        previewer.setTitle(item.getString());
+    public void processFieldItem(FileItem item) {
+        if (item.getFieldName().equals("title")) {
+            previewer.setTitle(item.getString());
+        } else {
+            previewer.setKnitOrCrochet(item.getString());
+        }
     }
 
     /**

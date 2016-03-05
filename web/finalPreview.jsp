@@ -27,7 +27,7 @@
         } %>
     </tbody>
 </table>
-<a href="#" class="btn btn-default btn-lg btn-block">Save and Submit</a>
+<a href="uploadPattern.jsp" class="btn btn-default btn-lg btn-block">Save and Submit</a>
 <ul class="pager">
     <li class="previous"><a href="setPatternRows.jsp">&larr; Back</a></li>
 </ul>
