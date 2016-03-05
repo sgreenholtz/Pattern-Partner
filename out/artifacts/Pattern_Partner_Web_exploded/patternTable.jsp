@@ -9,10 +9,12 @@
 <%@ page import="com.patternpartner.PatternPreview" %>
 <%
     PatternPreview previewer = (PatternPreview) session.getAttribute("previewer");
+    int size = previewer.getLines().size();
 %>
 <table class="table table-hover ">
     <tbody>
-    <% for (int i=0; i<previewer.getLines().size(); i++) { %>
+    <% int i = 0;
+        for (i=0; i<size; i++) { %>
     <tr class="<%= previewer.getLineClass().get(i) %>" id="<%= i %>" onclick="setRow(<%= i %>)">
         <td><% out.print(previewer.getLines().get(i)); %></td>
     </tr>
@@ -37,7 +39,7 @@
 </script>
 
 <form action="saveChanges.jsp">
-    <% for (int i=0; i<previewer.getLines().size(); i++) { %>
+    <% for (i=0; i<previewer.getLines().size(); i++) { %>
     <input type="hidden" id="a<%= i %>" name="a<%= i %>" value="<%= previewer.getLineClass().get(i) %>"/>
     <%
         } %>
