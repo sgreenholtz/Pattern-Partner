@@ -5,7 +5,7 @@
 --%>
 <%@ page import="com.patternpartner.PatternPreview" %>
 <%
-    PatternPreview previewer = (PatternPreview) session.getAttribute("previewer");
+    PatternPreview previewer = (PatternPreview) session.getAttribute("preview");
 %>
 <%
     for (int i=0; i<previewer.getLineClass().size(); i++) {

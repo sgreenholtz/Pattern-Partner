@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="com.patternpartner.PatternPreview" %>
 <%
-    PatternPreview previewer = (PatternPreview) session.getAttribute("previewer");
+    PatternPreview previewer = (PatternPreview) session.getAttribute("preview");
     int size = previewer.getLines().size();
 %>
 <table class="table table-hover ">
@@ -28,8 +28,8 @@
     function setRow(i) {
         var idA = "a" + i.toString();
         if (document.getElementById(i).className == "") {
-            document.getElementById(i).className = "danger";
-            document.getElementById(idA).value = "danger";
+            document.getElementById(i).className = "<%= session.getAttribute("classSet") %>";
+            document.getElementById(idA).value = "<%= session.getAttribute("classSet") %>";
         } else {
             document.getElementById(i).className = "";
             document.getElementById(idA).value = "";
