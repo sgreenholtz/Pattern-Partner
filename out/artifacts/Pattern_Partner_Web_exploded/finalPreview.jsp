@@ -9,6 +9,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="com.patternpartner.PatternPreview" %>
+<% if (session.getAttribute("preview") != null) { %>
 <jsp:include page="header.jsp"/>
 <h2>Confirm Changes</h2>
 <%
@@ -31,3 +32,6 @@
     <li class="previous"><a href="setPatternRows.jsp">&larr; Back</a></li>
 </ul>
 <jsp:include page="footer.jsp"/>
+<% } else {
+    response.sendRedirect("addPattern.jsp");
+} %>

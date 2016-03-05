@@ -6,6 +6,7 @@
   Time: 7:21 AM
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<% if (session.getAttribute("preview") != null) { %>
 <%@ page import="com.patternpartner.PatternPreview" %>
 <%
     PatternPreview previewer = (PatternPreview) session.getAttribute("preview");
@@ -50,3 +51,6 @@
 <ul class="pager">
     <li class="previous"><a href="<%= session.getAttribute("lastPage") %>">&larr; Back</a></li>
 </ul>
+<% } else {
+    response.sendRedirect("addPattern.jsp");
+} %>
