@@ -22,7 +22,7 @@ public class Pattern {
     // private Image image;
 
     /**
-     * No arg constructor, intiates ArrayLists
+     * No arg constructor, initiates ArrayLists
      */
     public Pattern() {
         description = new ArrayList<String>();

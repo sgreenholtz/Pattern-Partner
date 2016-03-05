@@ -13,6 +13,7 @@ public class PatternPreview {
     static String LINE_SEPARATOR = System.lineSeparator();
 
     private String title;
+    private String knitOrCrochet;
     private ArrayList<String> lines;
     private ArrayList<String> lineClass;
 
@@ -47,7 +48,20 @@ public class PatternPreview {
         this.title = title;
     }
 
+    public void setKnitOrCrochet(String knitOrCrochet) {
+        this.knitOrCrochet = knitOrCrochet;
+    }
+
     // Methods
+
+    /**
+     * Creates a Pattern object from the file after new lines and preview
+     * @returns new Pattern object (for constructor)
+     */
+    public Pattern constructPattern() {
+//        newPattern = new Pattern(preview.setName(), preview.setDescription(),
+//                preview.setMaterials(), preview.setRows(), preview.setKnitOrCrochet());
+    }
 
     @Override
     public String toString() {
