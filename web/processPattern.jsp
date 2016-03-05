@@ -7,10 +7,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="com.patternpartner.FileUploader" %>
-<%
+<% if (!(session.getAttribute("username") == null || session.isNew())) {
     FileUploader uploader = new FileUploader();
     uploader.uploadFile(request, application);
     session.setAttribute("preview", uploader.getPreviewer());
 
     response.sendRedirect("setMaterials.jsp");
+
+} else {
+    response.sendRedirect("logIn.jsp");
+}
 %>

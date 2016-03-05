@@ -7,5 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="header.jsp"/>
+<% if (session.getAttribute("sandwich") != null) { out.print("sandwich"); } else { out.print("nully"); } %>
 <image src="images/meme.jpeg" />
 <jsp:include page="footer.jsp"/>
