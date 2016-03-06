@@ -14,9 +14,9 @@ import java.util.*;
  */
 public class PatternUploader {
 
-    static String DB_URL = "jdbc:mysql://localhost:3306/PatternPartner?useSSL=false";
-    static String USERNAME = "root";
-    static String PASSWORD = "student";
+    static String DB_URL = "mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/PatternPartner";
+    static String USERNAME = "adminleYQelJ";
+    static String PASSWORD = "f7MlpDhjXieH";
 
     private Pattern pattern;
     private String username;
