@@ -1,17 +1,16 @@
 package com.patternpartner;
 import java.sql.*;
+import java.util.*;
 
 /**
  * This class logs in the user and checks database for existing user or new user
  * @author Sebastian Greenholtz
  */
 public class UserVerification {
-    static String DB_URL = "jdbc:mysql://localhost:3306/PatternPartner";
-    static String USERNAME = "root";
-    static String PASSWORD = "student";
 
     private String username;
     private String password;
+    private Properties properties;
 
     /**
      * Empty constructor
@@ -25,6 +24,7 @@ public class UserVerification {
     public UserVerification(String user, String pass) {
         username = user;
         password = pass;
+        properties = new LoadProperties().loadProperties("patternpartner.properties");
     }
 
     /**
@@ -46,7 +46,8 @@ public class UserVerification {
                     "password=SHA1('" + password + "')";
 
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+            Connection conn = DriverManager.getConnection(properties.getProperty("db.url"),
+                    properties.getProperty("db.user"), properties.getProperty("db.password"));
             Statement findUser = conn.createStatement();
             ResultSet users = findUser.executeQuery(query);
 
@@ -82,7 +83,8 @@ public class UserVerification {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+            Connection conn = DriverManager.getConnection(properties.getProperty("db.url"),
+                    properties.getProperty("db.user"), properties.getProperty("db.password"));
             Statement newUser = conn.createStatement();
             newUser.executeUpdate(sql);
         } catch (ClassNotFoundException cNFex) {
@@ -91,5 +93,4 @@ public class UserVerification {
             sqlEx.printStackTrace();
         }
     }
-
 }
