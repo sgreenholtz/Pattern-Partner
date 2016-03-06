@@ -19,6 +19,7 @@ CREATE TABLE IF NOT EXISTS Patterns (
     image LONGBLOB,
     description TEXT,
     materials TEXT,
+    knitOrCrochet VARCHAR(1),
     PRIMARY KEY (patternID)
 );
 

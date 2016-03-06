@@ -15,7 +15,8 @@ public class UserVerification {
     /**
      * Empty constructor
      */
-    public UserVerification() {}
+    public UserVerification() {
+    }
 
     /**
      * Constructor uses username and password from the table to
@@ -29,6 +30,7 @@ public class UserVerification {
 
     /**
      * Gets value of username
+     *
      * @return value of username
      */
     public String getUsername() {
@@ -37,6 +39,7 @@ public class UserVerification {
 
     /**
      * Checks if user is in the Users table
+     *
      * @return true if user is in the table
      */
     public boolean checkExistingUser() {
@@ -65,11 +68,12 @@ public class UserVerification {
     /**
      * Creates a new user in the Users table by getting the information from the
      * user for each of the values
-     * @param user username
-     * @param pass password
+     *
+     * @param user  username
+     * @param pass  password
      * @param email email
      * @param first first name
-     * @param last last name
+     * @param last  last name
      */
     public void registerUser(String user, String pass, String email,
                              String first, String last) {
