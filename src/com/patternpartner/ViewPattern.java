@@ -41,6 +41,7 @@ public class ViewPattern {
     public Map<Integer, String> getAllPatternTitles() {
         Map<Integer, String> titles = new HashMap<>();
         try {
+            Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(properties.getProperty("db.url"),
                     properties.getProperty("db.user"), properties.getProperty("db.password"));
 
@@ -53,6 +54,8 @@ public class ViewPattern {
             while (patternsResult.next()) {
                 titles.put(patternsResult.getInt("patternID"), patternsResult.getString("title"));
             }
+        } catch (ClassNotFoundException cNFex) {
+            cNFex.printStackTrace();
         } catch (SQLException sqlEx) {
             sqlEx.printStackTrace();
         }
@@ -67,6 +70,7 @@ public class ViewPattern {
     public Map<Integer, String> getKnitOrCrochet() {
         Map<Integer, String> titles = new HashMap<>();
         try {
+            Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(properties.getProperty("db.url"),
                     properties.getProperty("db.user"), properties.getProperty("db.password"));
 
@@ -79,6 +83,8 @@ public class ViewPattern {
             while (patternsResult.next()) {
                 titles.put(patternsResult.getInt("patternID"), patternsResult.getString("knitOrCrochet"));
             }
+        } catch (ClassNotFoundException cNFex) {
+            cNFex.printStackTrace();
         } catch (SQLException sqlEx) {
             sqlEx.printStackTrace();
         }

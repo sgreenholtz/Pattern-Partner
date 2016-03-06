@@ -23,11 +23,8 @@
             response.sendRedirect("error.jsp");
         }
 
-<<<<<<< HEAD
         response.sendRedirect("home.jsp");
 
-=======
->>>>>>> master
     } else {
         response.sendRedirect("addPattern.jsp");
     }
