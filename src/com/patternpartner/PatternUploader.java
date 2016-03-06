@@ -4,12 +4,6 @@ import java.util.*;
 
 /**
  * This class facilitates uploading the formatted pattern into the database.
- * <p>
- * Root User: admin3pE2m2s <br />
- * Root Password: tl3k5QXfsPNl <br />
- * Database Name: patternpartner <br />
- * Connection URL: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
- * </p>
  * @author Sebastian Greenholtz
  */
 public class PatternUploader {
