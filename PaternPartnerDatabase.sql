@@ -4,6 +4,8 @@ CREATE TABLE IF NOT EXISTS Users (
     username VARCHAR(60),
     password VARCHAR(40),
     email VARCHAR(225),
+    first_name VARCHAR(80),
+    last_name VARCHAR(100),
     PRIMARY KEY (username),
     UNIQUE (email)
 );
@@ -15,6 +17,7 @@ CREATE TABLE IF NOT EXISTS Patterns (
     image LONGBLOB,
     description TEXT,
     materials TEXT,
+    knitOrCrochet VARCHAR(1),
     PRIMARY KEY (patternID)
 );
 

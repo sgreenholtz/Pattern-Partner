@@ -46,9 +46,8 @@ public class ViewPattern {
 
             Statement selectStatement = conn.createStatement();
 
-            String selectSQL = "select patternID, title from Patterns" +
-                                "where username='" + username + "'";
-
+            String selectSQL = "select patternID, title from Patterns where username='" + username + "'";
+//            System.out.println(selectSQL);
             ResultSet patternsResult = selectStatement.executeQuery(selectSQL);
 
             while (patternsResult.next()) {
@@ -73,8 +72,7 @@ public class ViewPattern {
 
             Statement selectStatement = conn.createStatement();
 
-            String selectSQL = "select patternID, knitOrCrochet from Patterns" +
-                    "where username='" + username + "'";
+            String selectSQL = "select patternID, knitOrCrochet from Patterns where username='" + username + "'";
 
             ResultSet patternsResult = selectStatement.executeQuery(selectSQL);
 
@@ -85,6 +83,11 @@ public class ViewPattern {
             sqlEx.printStackTrace();
         }
         return titles;
+    }
+
+    public static void main(String[] args) {
+        ViewPattern patternTest = new ViewPattern("skolya");
+        System.out.println(patternTest.getAllPatternTitles());
     }
 
 
