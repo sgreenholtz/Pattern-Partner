@@ -23,8 +23,6 @@
             response.sendRedirect("error.jsp");
         }
 
-        response.sendRedirect("home.jsp");
-
     } else {
         response.sendRedirect("addPattern.jsp");
     }

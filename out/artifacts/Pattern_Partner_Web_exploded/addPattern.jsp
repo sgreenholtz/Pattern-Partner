@@ -25,6 +25,23 @@
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-lg-2 control-label">What kind of pattern is this?</label>
+                <div class="col-lg-10">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="knitOrCrochet" id="knit" value="knit" checked="">
+                            Knit
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="knitOrCrochet" id="crochet" value="crochet">
+                            Crochet
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
                     <button type="reset" class="btn btn-default">Cancel</button>
                     <button type="submit" class="btn btn-primary">Submit</button>
