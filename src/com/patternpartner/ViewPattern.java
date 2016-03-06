@@ -27,6 +27,14 @@ public class ViewPattern {
     }
 
     /**
+     * Getter for properties
+     * @return properties
+     */
+    public Properties getProperties() {
+        return properties;
+    }
+
+    /**
      * Selects all pattern titles from the database for a specified user
      * @return Map where the patternID is mapped to the title
      */
