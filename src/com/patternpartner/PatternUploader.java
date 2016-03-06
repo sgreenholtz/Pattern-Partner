@@ -4,16 +4,14 @@ import java.util.*;
 
 /**
  * This class facilitates uploading the formatted pattern into the database.
+ *
  * @author Sebastian Greenholtz
  */
 public class PatternUploader {
 
-    static String DB_URL = "jdbc:mysql://localhost:3306/PatternPartner?useSSL=false";
-    static String USERNAME = "root";
-    static String PASSWORD = "student";
-
     private Pattern pattern;
     private String username;
+    private Properties properties;
 
     /**
      * No argument constructor, asks user for username, password and email
@@ -24,27 +22,14 @@ public class PatternUploader {
      * Constructor to initiate with a pattern instance variable and username
      */
     public PatternUploader (PatternPreview previewer, String user) {
-        ArrayList<String> description = previewer.createSectionArrayList("success");
-        ArrayList<String> materials = previewer.createSectionArrayList("info");
-        ArrayList<String> row = previewer.createSectionArrayList("warning");
+
+        properties = new LoadProperties().loadProperties("patternpartner.properties");
+        ArrayList<String> description = previewer.createSectionArrayList(properties.getProperty("description.class"));
+        ArrayList<String> materials = previewer.createSectionArrayList(properties.getProperty("materials.class"));
+        ArrayList<String> row = previewer.createSectionArrayList(properties.getProperty("rows.class"));
 
         pattern = previewer.constructPattern(description, materials, row);
         username = user;
-    }
-
-    /**
-     * Makes a connection with the PatternPartner database
-     * @return conn Active connection
-     */
-    public Connection makeConnection() {
-        Connection conn = null;
-        try {
-            conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
-        } catch (SQLException sqlEx) {
-            sqlEx.printStackTrace();
-        } finally {
-            return conn;
-        }
     }
 
     /**
@@ -92,25 +77,13 @@ public class PatternUploader {
     }
 
     /**
-     * Prints the statements on the command line for verification.
-     * Note: PatternID is created dynamically as the pattern is inserted into the database, so
-     * this value is represented in this method by the string ID.
-     */
-    public void viewStatements() {
-//        System.out.println(createUsersStatement() + ";" + System.lineSeparator());
-        System.out.println(createPatternsStatement() + ";" + System.lineSeparator());
-        for (String statement : createPatternRowsStatement("ID")) {
-            System.out.println(statement + ";" + System.lineSeparator());
-        }
-    }
-
-    /**
      * Executes the update for Users, Patterns, and PatternRows, with a printed success
      * statement for each.
      */
     public void upload() throws SQLException {
         try {
-            Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
+            Connection conn = DriverManager.getConnection(properties.getProperty("db.url"),
+                    properties.getProperty("db.user"), properties.getProperty("db.password"));
 
             Statement insertStatement = conn.createStatement();
             insertStatement.executeUpdate(createPatternsStatement());
