@@ -5,8 +5,12 @@
   Date: 2016-02-27
   Time: 8:19 AM
 --%>
+<%@ page import="com.patternpartner.LoadProperties" %>
+<%@ page import="java.util.Properties" %>
 <% if (session.getAttribute("preview") != null) {
-    session.setAttribute("classSet", "warning");
+
+    Properties properties = new LoadProperties().loadProperties("patternpartner.properties");
+    session.setAttribute("classSet", properties.getProperty("rows.class"));
     session.setAttribute("nextPage", "finalPreview.jsp");
     session.setAttribute("lastPage", "setDescription.jsp"); %>
 
