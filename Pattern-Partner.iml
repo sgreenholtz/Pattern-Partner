@@ -54,5 +54,6 @@
     <orderEntry type="library" name="commons-fileupload-1.3.1" level="project" />
     <orderEntry type="library" name="servlet-api" level="project" />
     <orderEntry type="library" name="rhino-1.7.7.1" level="project" />
+    <orderEntry type="library" name="pdfbox-app-2.0.0-RC3" level="project" />
   </component>
 </module>

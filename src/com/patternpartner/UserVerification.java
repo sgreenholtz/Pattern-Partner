@@ -90,6 +90,8 @@ public class UserVerification {
             Connection conn = DriverManager.getConnection(properties.getProperty("db.url"),
                     properties.getProperty("db.user"), properties.getProperty("db.password"));
             Statement newUser = conn.createStatement();
+            log(newUser);
+            log(sql);
             newUser.executeUpdate(sql);
         } catch (ClassNotFoundException cNFex) {
             cNFex.printStackTrace();
