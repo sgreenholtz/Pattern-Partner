@@ -83,6 +83,7 @@ public class PatternUploader {
      */
     public void upload() throws SQLException {
         try {
+            Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(properties.getProperty("db.url"),
                     properties.getProperty("db.user"), properties.getProperty("db.password"));
 
@@ -102,11 +103,11 @@ public class PatternUploader {
                 System.out.println("Line " + lineCounter + "insert successful.");
                 lineCounter++;
             }
+        } catch (ClassNotFoundException cNFex) {
+            cNFex.printStackTrace();
         } catch (SQLException sqlEx) {
             sqlEx.printStackTrace();
         }
 
     }
-
-
 }
