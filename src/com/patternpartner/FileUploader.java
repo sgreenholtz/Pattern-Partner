@@ -85,11 +85,25 @@ public class FileUploader extends HttpServlet {
     }
 
     /**
-     * Extracts information from a file field in a form and sets the lines as the instance variable
-     * in the PatternPreview
+     * Processes file information and sends file to process based on type
      * @param item FileItem to process
      */
     public void processUploadedFile(FileItem item) {
+        String fileName = item.getName();
+        if (fileName.endsWith(".txt")) {
+            processTxtFile(item);
+        } else if (fileName.endsWith(".pdf")) {
+
+        }
+
+    }
+
+    /**
+     * Extracts information from a txt file field in a form and sets the lines as the instance variable
+     * in the PatternPreview
+     * @param item FileItem to process
+     */
+    public void processTxtFile(FileItem item) {
         ArrayList<String> lines = new ArrayList<>();
         try (BufferedReader input = new BufferedReader(new InputStreamReader(item.getInputStream()))) {
             while (input.ready()) {

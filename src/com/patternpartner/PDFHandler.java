@@ -11,11 +11,17 @@ import java.io.*;
  */
 public class PDFHandler {
 
-    public static void main(String[] args) throws IOException {
-        File pdfFile = new File("dishcloths.pdf");
-        PDDocument pdfdoc = PDDocument.load(pdfFile);
+    /**
+     * Takes in a PDF file and extracts text from it in String form
+     * @param file PDF file to extract text from
+     * @throws IOException if there is an error reading the file
+     */
+    public static void getPDFText(File file) throws IOException {
+        PDDocument pdfdoc = PDDocument.load(file);
         String docText = new PDFTextStripper().getText(pdfdoc);
-        System.out.println(docText);
+
+
+
 
     }
 }
