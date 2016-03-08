@@ -23,9 +23,10 @@ public class UserVerification {
      * set instance variables
      */
     public UserVerification(String user, String pass) {
-        username = user;
-        password = pass;
-        properties = new LoadProperties().loadProperties("patternpartner.properties");
+        this();
+        this.username = user;
+        this.password = pass;
+        this.properties = new LoadProperties().loadProperties("patternpartner.properties");
     }
 
     /**
@@ -77,7 +78,6 @@ public class UserVerification {
      */
     public void registerUser(String user, String pass, String email,
                              String first, String last) {
-
         username = user;
         password = pass;
         String sql = "insert into Users"
@@ -87,11 +87,19 @@ public class UserVerification {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(properties.getProperty("db.url"),
-                    properties.getProperty("db.user"), properties.getProperty("db.password"));
+
+            String host = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
+            String port = System.getenv("OPENSHIFT_MYSQL_DB_PORT");
+            String username = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+            String password = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
+
+            String url = String.format(":mysql://%s:%s/jbossas", host, port);
+            Connection conn = DriverManager.getConnection(url, username, password);
+
+
             Statement newUser = conn.createStatement();
-            log(newUser);
-            log(sql);
+            System.out.println(newUser);
+            System.out.println(sql);
             newUser.executeUpdate(sql);
         } catch (ClassNotFoundException cNFex) {
             cNFex.printStackTrace();
