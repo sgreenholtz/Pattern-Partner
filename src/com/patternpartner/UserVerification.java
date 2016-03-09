@@ -93,7 +93,7 @@ public class UserVerification {
             String username = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
             String password = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
 
-            String url = String.format(":mysql://%s:%s/jbossas", host, port);
+            String url = String.format(":mysql://%s:%s/PatternPartner", host, port);
             Connection conn = DriverManager.getConnection(url, username, password);
 
 

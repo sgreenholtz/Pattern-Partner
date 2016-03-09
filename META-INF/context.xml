@@ -1,21 +1,21 @@
 <Context>
 
-    <Resource name="jdbc/PatternPartner"
+    <!--<Resource name="jdbc/PatternPartner"-->
 
-              auth="Container"
+              <!--auth="Container"-->
 
-              type="javax.sql.DataSource"
+              <!--type="javax.sql.DataSource"-->
 
-              username="root"
+              <!--username="root"-->
 
-              password="student"
+              <!--password="student"-->
 
-              driverClassName="com.mysql.jdbc.Driver"
+              <!--driverClassName="com.mysql.jdbc.Driver"-->
 
-              url="jdbc:mysql:/127.5.147.130:3306/PatternPartner"
+              <!--url="jdbc:mysql://127.5.147.130:3306/PatternPartner"-->
 
-              maxActive="15"
+              <!--maxActive="15"-->
 
-              maxIdle="3"/>
+              <!--maxIdle="3"/>-->
 
 </Context>
