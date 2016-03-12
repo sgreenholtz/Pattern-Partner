@@ -1,5 +1,6 @@
 package com.patternpartner;
 import java.util.*;
+import org.apache.commons.lang3.StringEscapeUtils;
 
 /**
  * This class represents a pattern. Patterns are read into the program from files, so the processing goes by line. The
@@ -88,6 +89,7 @@ public class Pattern {
     public String listToString(ArrayList<String> list) {
         String output = "";
         for (String line : list) {
+            line = StringEscapeUtils.escapeEcmaScript(line);
             output += line + " ";
         }
         output = "\'" + output + "\'";
