@@ -90,7 +90,7 @@ public class Pattern {
         for (String line : list) {
             output += line + " ";
         }
-        output = "\"" + output + "\"";
+        output = "'" + output + "'";
         return output;
     }
 

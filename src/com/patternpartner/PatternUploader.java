@@ -40,10 +40,10 @@ public class PatternUploader {
         return "insert into Patterns"
                 + " (username, title, description, materials, knitOrCrochet)"
                 + " values ('"
-                + username + "', " + pattern.getName() + ", "
-                + pattern.listToString(pattern.getDescription()) + ", "
-                + pattern.listToString(pattern.getMaterials()) + ", "
-                + pattern.getKnitOrCrochet() + ")";
+                + username + "', '" + pattern.getName() + "', '"
+                + pattern.listToString(pattern.getDescription()) + "', '"
+                + pattern.listToString(pattern.getMaterials()) + "', '"
+                + pattern.getKnitOrCrochet() + "')";
     }
 
     /**
@@ -88,7 +88,7 @@ public class PatternUploader {
                     properties.getProperty("db.user"), properties.getProperty("db.password"));
 
             Statement insertStatement = conn.createStatement();
-            insertStatement.executeUpdate(createPatternsStatement());
+            insertStatement.executeUpdate(createPatternsStatement()); // error here
             System.out.println("Patterns insert successful.");
 
             ResultSet patternIDResult = insertStatement.executeQuery("SELECT LAST_INSERT_ID();");
