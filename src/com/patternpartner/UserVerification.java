@@ -10,7 +10,6 @@ public class UserVerification {
 
     private String username;
     private String password;
-    private Properties properties;
 
     /**
      * Empty constructor
@@ -26,7 +25,6 @@ public class UserVerification {
         this();
         this.username = user;
         this.password = pass;
-        this.properties = new LoadProperties().loadProperties("patternpartner.properties");
     }
 
     /**
@@ -50,8 +48,8 @@ public class UserVerification {
                     "password=SHA1('" + password + "')";
 
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(properties.getProperty("db.url"),
-                    properties.getProperty("db.user"), properties.getProperty("db.password"));
+            ConfigureEnvVars vars = new ConfigureEnvVars();
+            Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
             Statement findUser = conn.createStatement();
             ResultSet users = findUser.executeQuery(query);
 
@@ -87,15 +85,8 @@ public class UserVerification {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-
-            String host = System.getenv("OPENSHIFT_MYSQL_DB_HOST");
-            String port = System.getenv("OPENSHIFT_MYSQL_DB_PORT");
-            String username = System.getenv("OPENSHIFT_MYSQL_DB_USERNAME");
-            String password = System.getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
-
-            String url = String.format("jdbc:mysql://%s:%s/tomcat", host, port);
-            Connection conn = DriverManager.getConnection(url, username, password);
-
+            ConfigureEnvVars vars = new ConfigureEnvVars();
+            Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
             Statement newUser = conn.createStatement();
             System.out.println(newUser);
             System.out.println(sql);

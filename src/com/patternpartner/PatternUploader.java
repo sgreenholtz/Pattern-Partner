@@ -84,8 +84,8 @@ public class PatternUploader {
     public void upload() throws SQLException {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(properties.getProperty("db.url"),
-                    properties.getProperty("db.user"), properties.getProperty("db.password"));
+            ConfigureEnvVars vars = new ConfigureEnvVars();
+            Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
 
             Statement insertStatement = conn.createStatement();
             insertStatement.executeUpdate(createPatternsStatement()); // error here
