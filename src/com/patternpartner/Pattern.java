@@ -48,7 +48,7 @@ public class Pattern {
      * @return name with quotation marks around it for single quote preservation
      */
     public String getName() {
-        return "\"" + name + "\"";
+        return "\'" + name + "\'";
     }
 
     /**

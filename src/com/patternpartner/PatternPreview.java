@@ -75,7 +75,7 @@ public class PatternPreview {
      */
     public Pattern constructPattern(ArrayList<String> description, ArrayList<String> materials,
                                     ArrayList<String> rows) {
-        return new Pattern(title, description,materials, rows, knitOrCrochet);
+        return new Pattern(title, description, materials, rows, knitOrCrochet);
     }
 
     @Override

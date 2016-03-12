@@ -42,8 +42,8 @@ public class PatternUploader {
                 + " values ('"
                 + username + "', " + pattern.getName() + ", "
                 + pattern.listToString(pattern.getDescription()) + ", "
-                + pattern.listToString(pattern.getMaterials()) + ", "
-                + pattern.getKnitOrCrochet() + ")";
+                + pattern.listToString(pattern.getMaterials()) + ", '"
+                + pattern.getKnitOrCrochet() + "')";
         System.out.println("***************   " + pat + "  ******");
         return pat;
     }
