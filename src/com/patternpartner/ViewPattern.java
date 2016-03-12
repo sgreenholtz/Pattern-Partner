@@ -42,8 +42,8 @@ public class ViewPattern {
         Map<Integer, String> titles = new HashMap<>();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(properties.getProperty("db.url"),
-                    properties.getProperty("db.user"), properties.getProperty("db.password"));
+            ConfigureEnvVars vars = new ConfigureEnvVars();
+            Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
 
             Statement selectStatement = conn.createStatement();
 
@@ -71,9 +71,8 @@ public class ViewPattern {
         Map<Integer, String> titles = new HashMap<>();
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(properties.getProperty("db.url"),
-                    properties.getProperty("db.user"), properties.getProperty("db.password"));
-
+            ConfigureEnvVars vars = new ConfigureEnvVars();
+            Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
             Statement selectStatement = conn.createStatement();
 
             String selectSQL = "select patternID, knitOrCrochet from Patterns where username='" + username + "'";
@@ -89,11 +88,6 @@ public class ViewPattern {
             sqlEx.printStackTrace();
         }
         return titles;
-    }
-
-    public static void main(String[] args) {
-        ViewPattern patternTest = new ViewPattern("skolya");
-        System.out.println(patternTest.getAllPatternTitles());
     }
 
 

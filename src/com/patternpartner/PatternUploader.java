@@ -37,13 +37,15 @@ public class PatternUploader {
      * @return SQL statement to insert data into Patterns table
      */
     public String createPatternsStatement() {
-        return "insert into Patterns"
+        String pat =  "insert into Patterns"
                 + " (username, title, description, materials, knitOrCrochet)"
                 + " values ('"
                 + username + "', '" + pattern.getName() + "', '"
                 + pattern.listToString(pattern.getDescription()) + "', '"
                 + pattern.listToString(pattern.getMaterials()) + "', '"
                 + pattern.getKnitOrCrochet() + "')";
+        System.out.println("***************   " + pat + "  ******");
+        return pat;
     }
 
     /**
