@@ -7,8 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0eb8982-d7d9-455c-9cd2-3c60b50632bc" name="Default" comment="Created class to communicate on the command line.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java" />
     </list>
     <ignored path="Pattern-Partner.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,14 +31,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PatternUploader.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PatternUploader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.73660713">
+              <caret line="43" column="71" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
               <folding>
-                <element signature="e#2249#2257#0" expanded="true" />
-                <marker date="1457801407000" expanded="true" signature="3597:3620" placeholder="SELECT LAST_... " />
+                <element signature="e#2241#2249#0" expanded="true" />
+                <marker date="1457809423000" expanded="true" signature="3589:3612" placeholder="SELECT LAST_... " />
               </folding>
             </state>
           </provider>
@@ -48,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/UserVerification.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="59" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="59" />
+              <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
               <folding>
                 <marker date="1457800789000" expanded="true" signature="956:1097" placeholder="SELECT * FRO... Users" />
                 <marker date="1457800789000" expanded="true" signature="2214:2444" placeholder="insert into Users... " />
@@ -73,19 +73,6 @@
                 <element signature="e#1005#1006#0" expanded="true" />
                 <element signature="e#1035#1036#0" expanded="true" />
                 <element signature="e#1061#1062#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewPattern.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6651786">
-              <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
-              <folding>
-                <marker date="1457801478000" expanded="true" signature="1407:1478" placeholder="select patte... Patterns" />
-                <marker date="1457801478000" expanded="true" signature="2723:2802" placeholder="select patte... Patterns" />
               </folding>
             </state>
           </provider>
@@ -160,8 +147,8 @@
         <option value="$PROJECT_DIR$/src/com/patternpartner/patternpartner.properties" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/ConfigureEnvVars.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/UserVerification.java" />
-        <option value="$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java" />
+        <option value="$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java" />
       </list>
     </option>
   </component>
@@ -348,6 +335,8 @@
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="pattern-partner" />
     <property name="last_opened_file_path" value="$USER_HOME$/tomcat/diy/tomcat/webapps/ROOT" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.ErrorTester">
     <configuration default="false" name="UserVerificationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -859,12 +848,12 @@
       <workItem from="1457401200029" duration="1647000" />
       <workItem from="1457488604875" duration="2256000" />
       <workItem from="1457579851172" duration="1132000" />
-      <workItem from="1457795583488" duration="5154000" />
+      <workItem from="1457795583488" duration="5884000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76871000" />
+    <option name="totallyTimeSpent" value="77601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="819" extended-state="0" />
@@ -1297,13 +1286,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java">
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+        <state vertical-scroll-proportion="1.1072961">
+          <caret line="86" column="38" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
           <folding>
-            <element signature="e#2249#2257#0" expanded="true" />
-            <marker date="1457801407000" expanded="true" signature="3597:3620" placeholder="SELECT LAST_... " />
+            <marker date="1457801478000" expanded="true" signature="1407:1478" placeholder="select patte... Patterns" />
+            <marker date="1457801478000" expanded="true" signature="2723:2802" placeholder="select patte... Patterns" />
           </folding>
         </state>
       </provider>
@@ -1330,7 +1319,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/patternpartner/UserVerification.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="59" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="59" />
+          <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
           <folding>
             <marker date="1457800789000" expanded="true" signature="956:1097" placeholder="SELECT * FRO... Users" />
             <marker date="1457800789000" expanded="true" signature="2214:2444" placeholder="insert into Users... " />
@@ -1338,13 +1327,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java">
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6651786">
-          <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.73660713">
+          <caret line="43" column="71" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
           <folding>
-            <marker date="1457801478000" expanded="true" signature="1407:1478" placeholder="select patte... Patterns" />
-            <marker date="1457801478000" expanded="true" signature="2723:2802" placeholder="select patte... Patterns" />
+            <element signature="e#2241#2249#0" expanded="true" />
+            <marker date="1457809423000" expanded="true" signature="3589:3612" placeholder="SELECT LAST_... " />
           </folding>
         </state>
       </provider>
