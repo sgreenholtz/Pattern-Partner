@@ -88,6 +88,8 @@ public class Pattern {
     public String listToString(ArrayList<String> list) {
         String output = "";
         for (String line : list) {
+            line = line.replaceAll("%", "\"");
+            line = line.replaceAll("'", "\'");
             output += line + " ";
         }
         output = "'" + output + "'";
