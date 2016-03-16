@@ -19,6 +19,7 @@ public class Pattern {
     private ArrayList<String> description;
     private ArrayList<String> materials;
     private ArrayList<String> patternRows;
+    private ArrayList<Boolean> isActiveRow;
     private String knitOrCrochet;
     // private Image image;
 
@@ -29,6 +30,7 @@ public class Pattern {
         description = new ArrayList<String>();
         materials = new ArrayList<String>();
         patternRows = new ArrayList<String>();
+        isActiveRow = new ArrayList<Boolean>();
     }
 
     /**
@@ -41,6 +43,19 @@ public class Pattern {
         materials = materialList;
         patternRows = rowList;
         knitOrCrochet = kOrC;
+    }
+
+    /**
+     * Sets only the part of the pattern needed for reading the pattern:
+     * description, materials, pattern rows and is Active
+     */
+    public Pattern(String description, String materials, ArrayList<String> patternRows, ArrayList<Boolean> isActiveRow) {
+        this.description = new ArrayList<String>();
+        this.description.add(description);
+        this.materials = new ArrayList<String>();
+        this.materials.add(materials);
+        this.patternRows = patternRows;
+        this.isActiveRow = isActiveRow;
     }
 
     /**

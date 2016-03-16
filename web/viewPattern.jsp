@@ -12,6 +12,8 @@
 <jsp:include page="header.jsp"/>
 <%
     String title = request.getParameter("title");
+    Integer id = Integer.parseInt(request.getParameter("id"));
+    String knitOrCrochet = request.getParameter("korc");
     ViewPattern viewer = new ViewPattern((String) session.getAttribute("username"));
 %>
     <h1><% out.print(title); %></h1>

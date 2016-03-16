@@ -90,5 +90,42 @@ public class ViewPattern {
         return titles;
     }
 
+    /**
+     * Gets the components of a pattern based on the ID and returns a Pattern object
+     * @param patternID ID for the pattern to load
+     * @return pattern object
+     */
+    public Pattern getPattern(Integer patternID, String knitOrCrochet) {
+        Pattern pat = null;
+        ArrayList<String> patternRowsList = new ArrayList<String>();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            ConfigureEnvVars vars = new ConfigureEnvVars();
+            Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
+            Statement selectStatement = conn.createStatement();
+
+            String descriptionAndMaterials = "select description, materials from Patterns where patternID='" + patternID + "'";
+            ResultSet descriptionAndMaterialsResult = selectStatement.executeQuery(descriptionAndMaterials);
+
+            if (knitOrCrochet.equals("k")) {
+                knitOrCrochet = "KnitPatternRows";
+            } else {
+                knitOrCrochet = "CrochetPatternRows";
+            }
+
+            String patternRows = "select lineText, isActive from " + knitOrCrochet + " where patternID='" + patternID + "'";
+            ResultSet patternRowsResult = selectStatement.executeQuery(patternRows);
+
+            while (patternRowsResult.next()) {
+                patternRowsList.add(patternRowsResult)
+            }
+        } catch (ClassNotFoundException cNFex) {
+            cNFex.printStackTrace();
+        } catch (SQLException sqlEx) {
+            sqlEx.printStackTrace();
+        }
+        return pat;
+    }
+
 
 }
