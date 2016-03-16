@@ -21,12 +21,16 @@
             colorClass = viewer.getProperties().getProperty("knit.class");
         }
 %>
-<div class="panel panel-<%= colorClass %>">
-    <div class="panel-heading">
-        <h3 class="panel-title"><% out.print(pattern.getValue()); %></h3>
-    </div>
-    <div class="panel-body">
-        No Photo
+<div class="col-xs-4">
+    <div class="panel panel-<%= colorClass %>">
+        <a href="viewPattern.jsp?title=<%= pattern.getValue() %>">
+            <div class="panel-heading">
+                <h3 class="panel-title"><% out.print(pattern.getValue()); %></h3>
+            </div>
+        </a>
+        <div class="panel-body">
+            No Photo
+        </div>
     </div>
 </div>
 <%
