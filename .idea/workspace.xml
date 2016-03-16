@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0eb8982-d7d9-455c-9cd2-3c60b50632bc" name="Default" comment="Created class to communicate on the command line.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/Pattern.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/Pattern.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java" />
     </list>
     <ignored path="Pattern-Partner.iws" />
@@ -31,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Pattern.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Pattern.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Pattern.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73660713">
+            <state vertical-scroll-proportion="0.0">
               <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
               <folding />
             </state>
@@ -51,18 +50,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewPattern.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ViewPattern.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="132" column="48" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.9141631">
+              <caret line="137" column="39" selection-start-line="137" selection-start-column="39" selection-end-line="137" selection-end-column="39" />
               <folding>
                 <element signature="e#3549#3557#0" expanded="true" />
-                <element signature="e#3612#3621#0" expanded="true" />
-                <marker date="1458170084000" expanded="true" signature="1407:1478" placeholder="select patte... Patterns" />
-                <marker date="1458170084000" expanded="true" signature="2678:2757" placeholder="select patte... Patterns" />
-                <marker date="1458170084000" expanded="true" signature="4150:4238" placeholder="select lineT... missingValue" />
-                <marker date="1458170084000" expanded="true" signature="4690:4758" placeholder="select descr... Patterns" />
+                <element signature="e#3616#3624#0" expanded="true" />
+                <element signature="e#3679#3688#0" expanded="true" />
+                <marker date="1458170351000" expanded="true" signature="1407:1478" placeholder="select patte... Patterns" />
+                <marker date="1458170351000" expanded="true" signature="2678:2757" placeholder="select patte... Patterns" />
+                <marker date="1458170351000" expanded="true" signature="4217:4305" placeholder="select lineT... missingValue" />
+                <marker date="1458170351000" expanded="true" signature="4755:4821" placeholder="select mater... Materials" />
+                <marker date="1458170351000" expanded="true" signature="5074:5142" placeholder="select descr... Patterns" />
               </folding>
             </state>
           </provider>
@@ -139,8 +140,8 @@
         <option value="$PROJECT_DIR$/web/patternLibrary.jsp" />
         <option value="$PROJECT_DIR$/PaternPartnerDatabase.sql" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java" />
-        <option value="$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/Pattern.java" />
+        <option value="$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java" />
       </list>
     </option>
   </component>
@@ -825,12 +826,12 @@
       <workItem from="1457795583488" duration="10022000" />
       <workItem from="1457890528371" duration="369000" />
       <workItem from="1458090250357" duration="4014000" />
-      <workItem from="1458167536814" duration="2214000" />
+      <workItem from="1458167536814" duration="2440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88336000" />
+    <option name="totallyTimeSpent" value="88562000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="819" extended-state="6" />
@@ -844,7 +845,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32789117" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886985" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34525448" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34525448" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23247497" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1279,26 +1280,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java">
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Pattern.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="132" column="48" selection-start-line="132" selection-start-column="48" selection-end-line="132" selection-end-column="48" />
-          <folding>
-            <element signature="e#3549#3557#0" expanded="true" />
-            <element signature="e#3612#3621#0" expanded="true" />
-            <marker date="1458170084000" expanded="true" signature="1407:1478" placeholder="select patte... Patterns" />
-            <marker date="1458170084000" expanded="true" signature="2678:2757" placeholder="select patte... Patterns" />
-            <marker date="1458170084000" expanded="true" signature="4150:4238" placeholder="select lineT... missingValue" />
-            <marker date="1458170084000" expanded="true" signature="4690:4758" placeholder="select descr... Patterns" />
-          </folding>
+          <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Pattern.java">
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73660713">
-          <caret line="55" column="35" selection-start-line="55" selection-start-column="35" selection-end-line="55" selection-end-column="35" />
-          <folding />
+        <state vertical-scroll-proportion="0.9141631">
+          <caret line="137" column="39" selection-start-line="137" selection-start-column="39" selection-end-line="137" selection-end-column="39" />
+          <folding>
+            <element signature="e#3549#3557#0" expanded="true" />
+            <element signature="e#3616#3624#0" expanded="true" />
+            <element signature="e#3679#3688#0" expanded="true" />
+            <marker date="1458170351000" expanded="true" signature="1407:1478" placeholder="select patte... Patterns" />
+            <marker date="1458170351000" expanded="true" signature="2678:2757" placeholder="select patte... Patterns" />
+            <marker date="1458170351000" expanded="true" signature="4217:4305" placeholder="select lineT... missingValue" />
+            <marker date="1458170351000" expanded="true" signature="4755:4821" placeholder="select mater... Materials" />
+            <marker date="1458170351000" expanded="true" signature="5074:5142" placeholder="select descr... Patterns" />
+          </folding>
         </state>
       </provider>
     </entry>
