@@ -49,12 +49,11 @@ public class Pattern {
      * Sets only the part of the pattern needed for reading the pattern:
      * description, materials, pattern rows and is Active
      */
-    public Pattern(String description, String materials, ArrayList<String> patternRows,
+    public Pattern(String description, ArrayList<String> materials, ArrayList<String> patternRows,
                    ArrayList<Boolean> isActiveRow) {
         this.description = new ArrayList<String>();
         this.description.add(description);
-        this.materials = new ArrayList<String>();
-        this.materials.add(materials);
+        this.materials = materials;
         this.patternRows = patternRows;
         this.isActiveRow = isActiveRow;
     }

@@ -48,7 +48,6 @@ public class ViewPattern {
             Statement selectStatement = conn.createStatement();
 
             String selectSQL = "select patternID, title from Patterns where username='" + username + "'";
-//            System.out.println(selectSQL);
             ResultSet patternsResult = selectStatement.executeQuery(selectSQL);
 
             while (patternsResult.next()) {
@@ -123,12 +122,12 @@ public class ViewPattern {
                 }
             }
 
-            String descriptionAndMaterials = "select description, materials from Patterns where patternID='" + patternID + "'";
-            ResultSet descriptionAndMaterialsResult = selectStatement.executeQuery(descriptionAndMaterials);
+            String description = "select description from Patterns where patternID='" + patternID + "'";
+            ResultSet descriptionResult = selectStatement.executeQuery(description);
 
-            while (descriptionAndMaterialsResult.next()) {
-                pat = new Pattern(descriptionAndMaterialsResult.getString("description"),
-                        descriptionAndMaterialsResult.getString("materials"),
+            while (descriptionResult.next()) {
+                pat = new Pattern(descriptionResult.getString("description"),
+                        descriptionResult.getString("materials"),
                         patternRowsList, isActive);
             }
         } catch (ClassNotFoundException cNFex) {
