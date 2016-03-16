@@ -66,13 +66,38 @@ public class PatternUploader {
                     + " values ("
                     + patternID + ", "
                     + lineNumber + ", \""
-                    + pattern.getPatternRows().get(lineNumber).substring(1)
+                    + pattern.getPatternRows().get(lineNumber).substring(0)
                     + "\", 0, 0)";
 
             statements.add(statement);
             lineNumber++;
         }
 
+        return statements;
+    }
+
+    /**
+     * Creates SQL statement for Materials table
+     * @param patternID patternID from the newly-created item in Patterns table
+     * @return ArrayList of SQL statements to insert each row into materials table
+     */
+    public ArrayList<String> createMaterialsStatement(String patternID) {
+        int lineNumber = 0;
+        ArrayList<String> statements = new ArrayList<String>();
+
+        while (lineNumber < pattern.getMaterials().size()) {
+
+            String statement = "insert into Materials"
+                    + " (patternID, materialID, material)"
+                    + " values ("
+                    + patternID + ", "
+                    + lineNumber + ", '"
+                    + pattern.getMaterials().get(lineNumber)
+                    + "')";
+
+            statements.add(statement);
+            lineNumber++;
+        }
         return statements;
     }
 
@@ -88,7 +113,6 @@ public class PatternUploader {
 
             Statement insertStatement = conn.createStatement();
             insertStatement.executeUpdate(createPatternsStatement());
-            System.out.println("Patterns insert successful.");
 
             ResultSet patternIDResult = insertStatement.executeQuery("SELECT LAST_INSERT_ID();");
             String patternID = "";
