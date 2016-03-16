@@ -14,14 +14,24 @@
 <%
     String title = request.getParameter("title");
     Integer id = Integer.valueOf(request.getParameter("id"));
-    System.out.println(request.getParameter("id"));
     String knitOrCrochet = request.getParameter("korc");
+
     ViewPattern viewer = new ViewPattern((String) session.getAttribute("username"));
     Pattern pattern = viewer.getPattern(id, knitOrCrochet);
 %>
     <h1><% out.print(title); %></h1>
     <h5><% out.print(pattern.getDescription().get(0)); %></h5>
-    <%--Right here goes all the lines in a table--%>
+    <table class="table table-hover ">
+        <tbody>
+        <% for (String material : pattern.getMaterials()) { %>
+        <tr>
+            <td>&#149;</td>
+            <td><% out.print(material); %></td>
+        </tr>
+        <%
+            } %>
+        </tbody>
+    </table>
 <jsp:include page="footer.jsp"/>
 <%
 } else {
