@@ -38,11 +38,10 @@ public class PatternUploader {
      */
     public String createPatternsStatement() {
         return  "insert into Patterns"
-                + " (username, title, description, materials, knitOrCrochet)"
+                + " (username, title, description, knitOrCrochet)"
                 + " values ('"
                 + username + "', " + pattern.getName() + ", "
                 + pattern.listToString(pattern.getDescription()) + ", "
-                + pattern.listToString(pattern.getMaterials()) + ", '"
                 + pattern.getKnitOrCrochet() + "')";
     }
 
@@ -88,7 +87,7 @@ public class PatternUploader {
             Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
 
             Statement insertStatement = conn.createStatement();
-            insertStatement.executeUpdate(createPatternsStatement()); // error here
+            insertStatement.executeUpdate(createPatternsStatement());
             System.out.println("Patterns insert successful.");
 
             ResultSet patternIDResult = insertStatement.executeQuery("SELECT LAST_INSERT_ID();");
