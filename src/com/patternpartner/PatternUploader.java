@@ -102,29 +102,33 @@ public class PatternUploader {
     }
 
     /**
-     * Executes the update for Users, Patterns, and PatternRows, with a printed success
-     * statement for each.
+     * Executes the update for Users, Patterns, Materials and PatternRows
      */
     public void upload() throws SQLException {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             ConfigureEnvVars vars = new ConfigureEnvVars();
             Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
-
             Statement insertStatement = conn.createStatement();
+
+            // Adds pattern to Patterns table
             insertStatement.executeUpdate(createPatternsStatement());
 
+            // Gets the patternID for the pattern that was just added
             ResultSet patternIDResult = insertStatement.executeQuery("SELECT LAST_INSERT_ID();");
             String patternID = "";
             while (patternIDResult.next()) {
                 patternID = patternIDResult.getString("LAST_INSERT_ID()");
             }
 
-            int lineCounter = 0;
+            // Uses patternID to create the statements and upload to Pattern Rows table
             for (String statement : createPatternRowsStatement(patternID)) {
                 insertStatement.executeUpdate(statement);
-                System.out.println("Line " + lineCounter + "insert successful.");
-                lineCounter++;
+            }
+
+            // Uses pattern ID to create the statements and upload to Materials table
+            for (String statement : createMaterialsStatement(patternID)) {
+                insertStatement.executeUpdate(statement);
             }
         } catch (ClassNotFoundException cNFex) {
             cNFex.printStackTrace();

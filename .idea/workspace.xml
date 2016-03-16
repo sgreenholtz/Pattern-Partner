@@ -58,10 +58,10 @@
       <file leaf-file-name="PatternUploader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56666666">
-              <caret line="114" column="69" selection-start-line="114" selection-start-column="69" selection-end-line="114" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.8666667">
+              <caret line="129" column="61" selection-start-line="129" selection-start-column="61" selection-end-line="129" selection-end-column="61" />
               <folding>
-                <marker date="1458168396000" expanded="true" signature="4221:4244" placeholder="SELECT LAST_... " />
+                <marker date="1458168618000" expanded="true" signature="4296:4319" placeholder="SELECT LAST_... " />
               </folding>
             </state>
           </provider>
@@ -824,12 +824,12 @@
       <workItem from="1457795583488" duration="10022000" />
       <workItem from="1457890528371" duration="369000" />
       <workItem from="1458090250357" duration="4014000" />
-      <workItem from="1458167536814" duration="777000" />
+      <workItem from="1458167536814" duration="999000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86899000" />
+    <option name="totallyTimeSpent" value="87121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="819" extended-state="6" />
@@ -1298,10 +1298,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56666666">
-          <caret line="114" column="69" selection-start-line="114" selection-start-column="69" selection-end-line="114" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.8666667">
+          <caret line="129" column="61" selection-start-line="129" selection-start-column="61" selection-end-line="129" selection-end-column="61" />
           <folding>
-            <marker date="1458168396000" expanded="true" signature="4221:4244" placeholder="SELECT LAST_... " />
+            <marker date="1458168618000" expanded="true" signature="4296:4319" placeholder="SELECT LAST_... " />
           </folding>
         </state>
       </provider>
