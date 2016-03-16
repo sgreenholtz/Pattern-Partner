@@ -10,6 +10,10 @@ import java.util.*;
 public class LoadProperties {
     private Properties properties;
 
+    public Properties getProperties() {
+        return properties;
+    }
+
     /**
      * Loads properties from properties file
      *
