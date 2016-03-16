@@ -13,7 +13,8 @@
 <jsp:include page="header.jsp"/>
 <%
     String title = request.getParameter("title");
-    Integer id = Integer.parseInt(request.getParameter("id"));
+    Integer id = Integer.valueOf(request.getParameter("id"));
+    System.out.println(request.getParameter("id"));
     String knitOrCrochet = request.getParameter("korc");
     ViewPattern viewer = new ViewPattern((String) session.getAttribute("username"));
     Pattern pattern = viewer.getPattern(id, knitOrCrochet);
