@@ -49,7 +49,8 @@ public class Pattern {
      * Sets only the part of the pattern needed for reading the pattern:
      * description, materials, pattern rows and is Active
      */
-    public Pattern(String description, String materials, ArrayList<String> patternRows, ArrayList<Boolean> isActiveRow) {
+    public Pattern(String description, String materials, ArrayList<String> patternRows,
+                   ArrayList<Boolean> isActiveRow) {
         this.description = new ArrayList<String>();
         this.description.add(description);
         this.materials = new ArrayList<String>();
@@ -95,6 +96,14 @@ public class Pattern {
      * @return knitOrCrochet
      */
     public String getKnitOrCrochet() { return knitOrCrochet; }
+
+    /**
+     * Gets the values for isActiveRow
+     * @return isActiveRow
+     */
+    public ArrayList<Boolean> getIsActiveRow() {
+        return isActiveRow;
+    }
 
     /**
      * Converts array lists to a single string with a space delimiter

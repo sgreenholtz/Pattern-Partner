@@ -98,14 +98,12 @@ public class ViewPattern {
     public Pattern getPattern(Integer patternID, String knitOrCrochet) {
         Pattern pat = null;
         ArrayList<String> patternRowsList = new ArrayList<String>();
+        ArrayList<Boolean> isActive = new ArrayList<Boolean>();
         try {
             Class.forName("com.mysql.jdbc.Driver");
             ConfigureEnvVars vars = new ConfigureEnvVars();
             Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
             Statement selectStatement = conn.createStatement();
-
-            String descriptionAndMaterials = "select description, materials from Patterns where patternID='" + patternID + "'";
-            ResultSet descriptionAndMaterialsResult = selectStatement.executeQuery(descriptionAndMaterials);
 
             if (knitOrCrochet.equals("k")) {
                 knitOrCrochet = "KnitPatternRows";
@@ -117,7 +115,21 @@ public class ViewPattern {
             ResultSet patternRowsResult = selectStatement.executeQuery(patternRows);
 
             while (patternRowsResult.next()) {
-                patternRowsList.add(patternRowsResult)
+                patternRowsList.add(patternRowsResult.getString("lineText"));
+                if (patternRowsResult.getInt("isActive") == 0) {
+                    isActive.add(false);
+                } else {
+                    isActive.add(true);
+                }
+            }
+
+            String descriptionAndMaterials = "select description, materials from Patterns where patternID='" + patternID + "'";
+            ResultSet descriptionAndMaterialsResult = selectStatement.executeQuery(descriptionAndMaterials);
+
+            while (descriptionAndMaterialsResult.next()) {
+                pat = new Pattern(descriptionAndMaterialsResult.getString("description"),
+                        descriptionAndMaterialsResult.getString("materials"),
+                        patternRowsList, isActive);
             }
         } catch (ClassNotFoundException cNFex) {
             cNFex.printStackTrace();
