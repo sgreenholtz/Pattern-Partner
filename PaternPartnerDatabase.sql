@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS Patterns (
     title VARCHAR(225) NOT NULL,
     image LONGBLOB,
     description TEXT,
-    materials TEXT,
+    materialsID INT,
     knitOrCrochet VARCHAR(1),
     PRIMARY KEY (patternID)
 );
@@ -39,4 +39,11 @@ CREATE TABLE IF NOT EXISTS CrochetPatternRows (
     isActive TINYINT,
     isRepeat TINYINT,
     PRIMARY KEY (patternID, lineID)
+);
+
+CREATE TABLE IF NOT EXISTS Materials (
+    materialsID INT,
+    lineID INT,
+    material TEXT,
+    PRIMARY KEY (materialsID, lineID)
 );
