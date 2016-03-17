@@ -9,6 +9,7 @@ import javax.servlet.*;
 import org.apache.commons.fileupload.*;
 import org.apache.commons.fileupload.servlet.*;
 import org.apache.commons.fileupload.util.*;
+import org.apache.commons.io.*;
 
 /**
  * This class implements the FileUploader API to assist in file uploads
@@ -80,7 +81,7 @@ public class FileUploaderStream extends HttpServlet {
         if (fileName.endsWith(".txt")) {
             processTxtFile(stream);
         } else if (fileName.endsWith(".pdf")) {
-            // process PDF
+            processPDF(stream);
         }
 
     }
@@ -118,5 +119,15 @@ public class FileUploaderStream extends HttpServlet {
             ex.printStackTrace();
         }
         return output;
+    }
+
+    public void processPDF(InputStream stream) {
+        try {
+            File targetFile = new File(System.getProperty("java.io.tmpdir") + "targetFile.tmp");
+            FileUtils.copyInputStreamToFile(stream, targetFile);
+            PDFHandler.getPDFTextFromFile(targetFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

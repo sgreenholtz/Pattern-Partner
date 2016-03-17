@@ -1,7 +1,9 @@
 package com.patternpartner;
 
+import org.apache.pdfbox.io.*;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
+import org.apache.pdfbox.pdfparser.PDFStreamParser;
 import java.io.*;
 
 /**
@@ -16,12 +18,15 @@ public class PDFHandler {
      * @param file PDF file to extract text from
      * @throws IOException if there is an error reading the file
      */
-    public static void getPDFText(File file) throws IOException {
+    public static void getPDFTextFromFile (File file) throws IOException {
         PDDocument pdfdoc = PDDocument.load(file);
         String docText = new PDFTextStripper().getText(pdfdoc);
+        String para = new PDFTextStripper().getParagraphStart();
+        System.out.println(docText);
+    }
 
-
-
-
+    public static void getPDFTextFromStream (InputStream stream) throws IOException {
+        RandomAccess raf = new RandomAccessBuffer();
+//        PDFStreamParser parser = new PDFStreamParser(stream, raf);
     }
 }
