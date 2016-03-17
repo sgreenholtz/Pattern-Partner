@@ -9,6 +9,6 @@ import java.io.*;
 public class ErrorTester {
 
     public static void main(String[] args) throws IOException {
-        PDFHandler.getPDFText(new File("dishcloths.pdf"));
+        PDFHandler.getPDFTextFromFile(new File("dishcloths.pdf"));
     }
 }

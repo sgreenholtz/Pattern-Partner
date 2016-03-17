@@ -3,8 +3,8 @@ package com.patternpartner;
 import org.apache.pdfbox.io.*;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
-import org.apache.pdfbox.pdfparser.PDFStreamParser;
 import java.io.*;
+import java.util.ArrayList;
 
 /**
  * This class uses the PDFBox library from Apache to handle the upload of
@@ -21,12 +21,11 @@ public class PDFHandler {
     public static void getPDFTextFromFile (File file) throws IOException {
         PDDocument pdfdoc = PDDocument.load(file);
         String docText = new PDFTextStripper().getText(pdfdoc);
-        String para = new PDFTextStripper().getParagraphStart();
-        System.out.println(docText);
-    }
-
-    public static void getPDFTextFromStream (InputStream stream) throws IOException {
-        RandomAccess raf = new RandomAccessBuffer();
-//        PDFStreamParser parser = new PDFStreamParser(stream, raf);
+        BufferedReader reader = new BufferedReader(new StringReader(docText));
+        ArrayList<String> lines = new ArrayList<String>();
+        while (reader.ready()) {
+            String line = reader.readLine();
+        }
+        pdfdoc.close();
     }
 }
