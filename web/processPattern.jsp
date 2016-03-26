@@ -6,9 +6,9 @@
   Time: 3:00 PM
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.patternpartner.FileUploader" %>
+<%@ page import="com.patternpartner.FileUploaderStream" %>
 <% if (!(session.getAttribute("username") == null || session.isNew())) {
-    FileUploader uploader = new FileUploader();
+    FileUploaderStream uploader = new FileUploaderStream();
     uploader.uploadFile(request, application);
     session.setAttribute("preview", uploader.getPreviewer());
 

@@ -29,31 +29,36 @@ public class FileUploaderStream extends HttpServlet {
      * @param request HttpServletRequest from submitted form
      * @param context HttpServlet Context
      */
-    public void uploadFile(HttpServletRequest request, ServletContext context)
-        throws IOException, FileUploadException {
+    public void uploadFile(HttpServletRequest request, ServletContext context) {
 
-        // Check that we have a file upload request
-        boolean isMultipart = ServletFileUpload.isMultipartContent(request);
+        try {
+            // Check that we have a file upload request
+            boolean isMultipart = ServletFileUpload.isMultipartContent(request);
 
-        if (isMultipart) {
-            // Create a new file upload handler
-            ServletFileUpload upload = new ServletFileUpload();
+            if (isMultipart) {
+                // Create a new file upload handler
+                ServletFileUpload upload = new ServletFileUpload();
 
-            // Parse the request
-            FileItemIterator iter = upload.getItemIterator(request);
-            while (iter.hasNext()) {
-                FileItemStream item = iter.next();
+                // Parse the request
+                FileItemIterator iter = upload.getItemIterator(request);
+                while (iter.hasNext()) {
+                    FileItemStream item = iter.next();
 
-                InputStream stream = item.openStream();
-                if (item.isFormField()) {
-                    String name = item.getFieldName();
-                    processFieldItem(stream, name);
-                } else {
-                    String name = item.getName();
-                    processUploadedFile(stream, name);
+                    InputStream stream = item.openStream();
+                    if (item.isFormField()) {
+                        String name = item.getFieldName();
+                        processFieldItem(stream, name);
+                    } else {
+                        String name = item.getName();
+                        processUploadedFile(stream, name);
+                    }
                 }
-            }
 
+            }
+        } catch (FileUploadException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -122,6 +127,6 @@ public class FileUploaderStream extends HttpServlet {
     }
 
     public void processPDF(InputStream stream) {
-        PDFHandler.getPDFText(stream);
+        previewer.setLines(PDFHandler.getPDFText(stream));
     }
 }
