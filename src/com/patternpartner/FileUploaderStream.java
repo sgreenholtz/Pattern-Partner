@@ -122,12 +122,6 @@ public class FileUploaderStream extends HttpServlet {
     }
 
     public void processPDF(InputStream stream) {
-        try {
-            File targetFile = new File(System.getProperty("java.io.tmpdir") + "targetFile.tmp");
-            FileUtils.copyInputStreamToFile(stream, targetFile);
-            PDFHandler.getPDFTextFromFile(targetFile);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        PDFHandler.getPDFText(stream);
     }
 }

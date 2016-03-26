@@ -1,7 +1,6 @@
 package com.patternpartner;
 
-import org.apache.pdfbox.io.*;
-import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.*;
 import org.apache.pdfbox.text.PDFTextStripper;
 import java.io.*;
 import java.util.ArrayList;
@@ -16,33 +15,52 @@ public class PDFHandler {
     /**
      * Takes in a PDF file and extracts text from it in String form
      * @param file PDF file to extract text from
+     * @return ArrayList of lines in the document
      */
-    public static void getPDFTextFromFile (File file) {
-        try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("temp_file.txt")));
-        BufferedReader reader = new BufferedReader(new FileReader("temp_file.txt"))) {
-            PDDocument pdfdoc = PDDocument.load(file);
-            String docText = new PDFTextStripper().getText(pdfdoc);
+    public static ArrayList<String> getPDFText (File file) {
+        ArrayList<String> lines = null;
+        try {
+            PDDocument document = PDDocument.load(file);
+            lines = getLinesFromPDF(document);
 
-//        BufferedReader reader = new BufferedReader(new StringReader(docText));
-//        ArrayList<String> lines = new ArrayList<String>();
-//        while (reader.ready()) {
-//            String line = reader.readLine();
-//        }
-            writer.print(docText);
-            pdfdoc.close();
-
-            int counter = 0;
-            while (reader.ready()) {
-                String line = reader.readLine();
-                if (line.matches("\\S")) {
-                    System.out.println(counter);
-                } else {
-                    System.out.println(counter);
-                }
-                counter++;
-            }
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return lines;
+    }
+
+    /**
+     * Takes in an InputStream and extracts text from it in String form
+     * @param stream InputStream to read from
+     * @return ArrayList of lines in the document
+     */
+    public static ArrayList<String> getPDFText (InputStream stream) {
+        ArrayList<String> lines = null;
+        try {
+            PDDocument document = PDDocument.load(stream);
+            lines = getLinesFromPDF(document);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return lines;
+    }
+
+    /**
+     * Reads through a PDDocument object and extracts the text line by line
+     * @param document document to read from
+     * @throws IOException
+     * @return ArrayList of lines in the document
+     */
+    private static ArrayList<String> getLinesFromPDF (PDDocument document)
+        throws IOException {
+        String docText = new PDFTextStripper().getText(document);
+        ArrayList<String> lines = new ArrayList<>();
+        for (String line : docText.split("\\n")) {
+            if (line.matches("^.+\\w.*$")) {
+                lines.add(line);
+            }
+        }
+
+        return lines;
     }
 }
