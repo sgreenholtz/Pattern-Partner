@@ -22,16 +22,7 @@ CREATE TABLE IF NOT EXISTS Patterns (
     PRIMARY KEY (patternID)
 );
 
-CREATE TABLE IF NOT EXISTS KnitPatternRows (
-    patternID INT,
-    lineID INT,
-    lineText TEXT,
-    isActive TINYINT,
-    isRepeat TINYINT,
-    PRIMARY KEY (patternID, lineID)
-);
-
-CREATE TABLE IF NOT EXISTS CrochetPatternRows (
+CREATE TABLE IF NOT EXISTS PatternRows (
     patternID INT,
     lineID INT,
     lineText TEXT,
