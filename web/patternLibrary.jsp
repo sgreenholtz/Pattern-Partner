@@ -23,7 +23,7 @@
 %>
 <div class="col-xs-4">
     <div class="panel panel-<%= colorClass %>">
-        <a href="viewPattern.jsp?title=<%= pattern.getValue() %>&id=<%= pattern.getKey() %>&korc=<%= kOrC.get(pattern.getKey()) %>">
+        <a href="viewPattern.jsp?title=<%= pattern.getValue() %>&id=<%= pattern.getKey() %>">
             <div class="panel-heading">
                 <h3 class="panel-title"><% out.print(pattern.getValue()); %></h3>
             </div>
