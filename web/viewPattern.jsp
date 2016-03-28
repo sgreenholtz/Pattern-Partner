@@ -23,6 +23,8 @@
 
     LoadProperties propertiesLoader = new LoadProperties();
     String active = propertiesLoader.loadProperties("patternpartner.properties").getProperty("is.active");
+
+    Integer savedActive = 0;
 %>
     <h1><% out.print(title); %></h1>
     <h5><% out.print(pattern.getDescription().get(0)); %></h5>
@@ -39,14 +41,33 @@
                 String color = "";
                 if (pattern.getIsActiveRow().get(i)) {
                     color = active;
+                    savedActive = i;
                 }
         %>
-        <tr class="<%= color %>" id="<%= i %>" onclick="setRow(<%= i %>)">
+        <tr class="<%= color %>" id="<%= i %>" onclick="setActiveRow(<%= i %>)">
             <td><% out.print(pattern.getPatternRows().get(i)); %></td>
         </tr>
         <% } %>
         </tbody>
     </table>
+
+<script>
+    function setActiveRow(i) {
+        // Reset the no-longer-active row to no highlight
+        var oldID = document.getElementById("active").value;
+        document.getElementById(oldID).className = "";
+
+        // Set the new active row to highlight and save value
+        document.getElementById(i).className = "<%= active %>";
+        document.getElementById("active").value = i;
+    }
+</script>
+
+<form action="saveActive.jsp">
+    <input type="hidden" id="active" name="active" value="<%= savedActive %>"/>
+    <input type="hidden" id="id" name="id" value="<%= id %>"/>
+    <input type="submit" value="Save and Return to Library" class="btn btn-default btn-lg btn-block" />
+</form>
 <jsp:include page="footer.jsp"/>
 <%
 } else {

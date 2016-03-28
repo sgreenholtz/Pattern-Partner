@@ -12,7 +12,7 @@
     Properties properties = new LoadProperties().loadProperties("patternpartner.properties");
     session.setAttribute("classSet", properties.getProperty("materials.class"));
     session.setAttribute("nextPage", "setDescription.jsp");
-    session.setAttribute("lastPage", "#"); %>
+    session.setAttribute("lastPage", "addPattern.jsp"); %>
 
     <jsp:include page="header.jsp"/>
     <h2>Select Materials</h2>
