@@ -51,17 +51,12 @@ public class PatternUploader {
      * @return ArrayList of SQL statements to insert each row into Patterns table
      */
     public ArrayList<String> createPatternRowsStatement(String patternID) {
-        String table = "CrochetPatternRows";
         int lineNumber = 0;
         ArrayList<String> statements = new ArrayList<String>();
 
-        if (pattern.getKnitOrCrochet().equals("k")) {
-            table = "KnitPatternRows";
-        }
-
         while (lineNumber < pattern.getPatternRows().size()) {
 
-            String statement = "insert into " + table
+            String statement = "insert into PatternRows"
                     + " (patternID, lineID, lineText, isActive, isRepeat)"
                     + " values ("
                     + patternID + ", "
