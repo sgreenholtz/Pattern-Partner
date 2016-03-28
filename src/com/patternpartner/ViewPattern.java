@@ -94,7 +94,7 @@ public class ViewPattern {
      * @param patternID ID for the pattern to load
      * @return pattern object
      */
-    public Pattern getPattern(Integer patternID, String knitOrCrochet) {
+    public Pattern getPattern(Integer patternID) {
         Pattern pat = null;
         ArrayList<String> patternRowsList = new ArrayList<String>();
         ArrayList<String> materialsList = new ArrayList<String>();
@@ -105,13 +105,7 @@ public class ViewPattern {
             Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
             Statement selectStatement = conn.createStatement();
 
-            if (knitOrCrochet.equals("k")) {
-                knitOrCrochet = "KnitPatternRows";
-            } else {
-                knitOrCrochet = "CrochetPatternRows";
-            }
-
-            String patternRows = "select lineText, isActive from " + knitOrCrochet + " where patternID='" + patternID + "'";
+            String patternRows = "select lineText, isActive from PatternRows where patternID='" + patternID + "'";
             ResultSet patternRowsResult = selectStatement.executeQuery(patternRows);
 
             while (patternRowsResult.next()) {
@@ -157,7 +151,7 @@ public class ViewPattern {
             Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
             Statement update = conn.createStatement();
 
-            String sql = "UPDATE Pattern"
+            String sql = "UPDATE PatternRows SET ";
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
