@@ -29,8 +29,8 @@
     function setRow(i) {
         var idA = "a" + i.toString();
         if (document.getElementById(i).className == "") {
-            document.getElementById(i).className = "<%= session.getAttribute("classSet") %>";
-            document.getElementById(idA).value = "<%= session.getAttribute("classSet") %>";
+            document.getElementById(i).className = ${classSet};
+            document.getElementById(idA).value = ${classSet};
         } else {
             document.getElementById(i).className = "";
             document.getElementById(idA).value = "";
@@ -44,12 +44,12 @@
     <input type="hidden" id="a<%= i %>" name="a<%= i %>" value="<%= previewer.getLineClass().get(i) %>"/>
     <%
         } %>
-    <input type="hidden" name="nextPage" value="<%= session.getAttribute("nextPage") %>" />
+    <input type="hidden" name="nextPage" value="${nextPage}" />
     <input type="submit" value="Save" class="btn btn-default btn-lg btn-block" />
 </form>
 
 <ul class="pager">
-    <li class="previous"><a href="<%= session.getAttribute("lastPage") %>">&larr; Back</a></li>
+    <li class="previous"><a href="${lastPage}">&larr; Back</a></li>
 </ul>
 <% } else {
     response.sendRedirect("addPattern.jsp");

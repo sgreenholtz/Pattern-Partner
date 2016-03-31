@@ -1,3 +1,4 @@
 /**
- * Pattern Partner
+ * 
+ * @author Sebastian Greenholtz
  */
