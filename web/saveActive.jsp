@@ -16,4 +16,4 @@
     response.sendRedirect("patternLibrary.jsp"); 
 } else { 
     response.sendRedirect("logIn.jsp"); 
-}  %>g
+}  %>
