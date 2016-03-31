@@ -7,13 +7,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %> 
 <%@ page import="com.patternpartner.ViewPattern" %>
-<% if (!(session.getAttribute("username") == null || session.isNew())) {
-    Integer row = new Integer(request.getParameter("active"));
-    Integer patternid = new Integer(request.getParameter("id"));
+<%
+    if (!(session.getAttribute("username") == null || session.isNew())) {
+        Integer row = new Integer(request.getParameter("active"));
+        Integer patternid = new Integer(request.getParameter("id"));
 
-    ViewPattern.updateActiveRowByPatternID(patternid, row);
+        ViewPattern.updateActiveRowByPatternID(patternid, row);
 
-    response.sendRedirect("patternLibrary.jsp"); 
-} else { 
-    response.sendRedirect("logIn.jsp"); 
-}  %>
+        response.sendRedirect("patternLibrary.jsp"); 
+    } else { 
+        response.sendRedirect("logIn.jsp"); 
+    } 
+%>
