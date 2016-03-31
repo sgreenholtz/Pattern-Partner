@@ -7,13 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0eb8982-d7d9-455c-9cd2-3c60b50632bc" name="Default" comment="Created class to communicate on the command line.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pattern-Partner/com/patternpartner/PatternUploader.class" afterPath="$PROJECT_DIR$/out/production/Pattern-Partner/com/patternpartner/PatternUploader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Pattern-Partner/com/patternpartner/ViewPattern.class" afterPath="$PROJECT_DIR$/out/production/Pattern-Partner/com/patternpartner/ViewPattern.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/fileTemplates/includes/ActionScript File Header.as" afterPath="$PROJECT_DIR$/.idea/fileTemplates/includes/ActionScript File Header.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/fileTemplates/j2ee/Jsp File.jsp" afterPath="$PROJECT_DIR$/.idea/fileTemplates/j2ee/Jsp File.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/patternTable.jsp" afterPath="$PROJECT_DIR$/web/patternTable.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/saveActive.jsp" afterPath="$PROJECT_DIR$/web/saveActive.jsp" />
     </list>
     <ignored path="Pattern-Partner.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -779,12 +773,12 @@
       <workItem from="1459205101435" duration="475000" />
       <workItem from="1459205705707" duration="1869000" />
       <workItem from="1459454890889" duration="1119000" />
-      <workItem from="1459463430068" duration="485000" />
+      <workItem from="1459463430068" duration="569000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112836000" />
+    <option name="totallyTimeSpent" value="112920000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="819" extended-state="6" />
