@@ -7,6 +7,8 @@ import java.sql.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
+import org.apache.commons.lang3.*;
+
 /**
  * This servlet handles the form on the editTitle.jsp page
  * @author Sebastian Greenholtz
@@ -27,6 +29,8 @@ public class UpdateTitleServlet extends HttpServlet {
 
         String newTitle = request.getParameter("newTitle");
         Integer id = new Integer(request.getParameter("id"));
+
+        newTitle = StringEscapeUtils.escapeEcmaScript(newTitle);
 
         String sql = "UPDATE Patterns "
                 + "SET title='" + newTitle + "' "

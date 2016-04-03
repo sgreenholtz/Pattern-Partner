@@ -44,6 +44,6 @@ CREATE TABLE IF NOT EXISTS Comments (
     email VARCHAR(225),
     comment TEXT,
     timestamp DATETIME,
-    reviewed TINYINT,
+    reviewed TINYINT DEFAULT '0',
     PRIMARY KEY (commentID)
 );

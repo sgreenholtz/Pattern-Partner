@@ -42,19 +42,19 @@ include multiple images in your pattern, so check back for changes!</p>
     <div class="form-group">
         <label for="name" class="col-lg-2 control-label">Name</label>
         <div class="col-lg-10">
-            <input type="text" class="form-control" id="name" placeholder="Name">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name">
         </div>
     </div>
     <div class="form-group">
         <label for="inputEmail" class="col-lg-2 control-label">Email</label>
         <div class="col-lg-10">
-            <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+            <input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email">
         </div>
     </div>
     <div class="form-group">
-        <label for="textArea" class="col-lg-2 control-label">Comment</label>
+        <label for="comment" class="col-lg-2 control-label">Comment</label>
         <div class="col-lg-10">
-            <textarea class="form-control" rows="3" id="textArea"></textarea>
+            <textarea class="form-control" rows="3" id="comment" name="comment"></textarea>
         </div>
     </div>
     <div class="form-group">

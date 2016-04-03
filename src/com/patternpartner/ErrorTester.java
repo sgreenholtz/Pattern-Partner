@@ -1,6 +1,7 @@
 package com.patternpartner;
 
-import java.io.*;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Command line app for testing errors throughout the code
@@ -8,7 +9,7 @@ import java.io.*;
  */
 public class ErrorTester {
 
-    public static void main(String[] args) throws IOException {
-        PDFHandler.getPDFText(new File("dishcloths.pdf"));
+    public static void main(String[] args) {
+
     }
 }
