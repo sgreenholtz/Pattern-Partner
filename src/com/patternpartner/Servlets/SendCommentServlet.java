@@ -6,7 +6,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
 /**
- * Sends a comment to the developer from the FAQ-Comments page
+ * Adds comment to the Comments table so the developer can use it
  * @author Sebastian Greenholtz
  */
 public class SendCommentServlet extends HttpServlet {
