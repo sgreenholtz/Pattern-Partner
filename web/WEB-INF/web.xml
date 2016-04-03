@@ -33,6 +33,11 @@
     <!-- ********************************************************************* -->
 
     <servlet>
+        <servlet-name>Home</servlet-name>
+        <jsp-file>/home.jsp</jsp-file>
+    </servlet>
+
+    <servlet>
         <servlet-name>FAQAndComments</servlet-name>
         <jsp-file>/faqComments.jsp</jsp-file>
     </servlet>
@@ -45,6 +50,11 @@
     <!-- ********************************************************************* -->
     <!-- Servlet Mappings **************************************************** -->
     <!-- ********************************************************************* -->
+
+    <servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>FAQAndComments</servlet-name>
