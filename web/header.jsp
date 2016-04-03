@@ -58,7 +58,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <ul class="nav navbar-nav">
-            <li><a class="navbar-brand" href="home.jsp">Home</a></li>
+            <li><a class="navbar-brand" href="/">Home</a></li>
             <li><a href="patternLibrary.jsp">Pattern Library</a></li>
             <li><a href="addPattern.jsp">Add Pattern</a></li>
               <% if (session.isNew() || session.getAttribute("username") == null) { %>
@@ -66,7 +66,8 @@
               <% } else { %>
               <li><a href="logOut.jsp">Log Out</a></li>
               <% } %>
-            <li><a href="faqComments.jsp">FAQ and Comments</a></li>
+            <li><a href="faq-comments">FAQ and Comments</a></li>
+            <li><a href="tutorial">Tutorial</a></li>
           </ul>
         </div>
 

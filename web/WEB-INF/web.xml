@@ -43,8 +43,18 @@
     </servlet>
 
     <servlet>
+        <servlet-name>Tutorial</servlet-name>
+        <jsp-file>/tutorial.jsp</jsp-file>
+    </servlet>
+
+    <servlet>
         <servlet-name>UpdateTitle</servlet-name>
         <servlet-class>com.patternpartner.Servlets.UpdateTitleServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SendComment</servlet-name>
+        <servlet-class>com.patternpartner.Servlets.SendCommentServlet</servlet-class>
     </servlet>
 
     <!-- ********************************************************************* -->
@@ -62,8 +72,18 @@
     </servlet-mapping>
 
     <servlet-mapping>
+        <servlet-name>Tutorial</servlet-name>
+        <url-pattern>/tutorial</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
         <servlet-name>UpdateTitle</servlet-name>
         <url-pattern>/updateTitle</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SendComment</servlet-name>
+        <url-pattern>/sentComment</url-pattern>
     </servlet-mapping>
 
     <!-- ********************************************************************* -->
