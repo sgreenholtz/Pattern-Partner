@@ -2,6 +2,8 @@
   
   Pattern Partner: View Pattern
 
+  View pattern, click to save the active line and it will be saved
+
   User: Kolya
   Date: 2016-03-12
   Time: 1:50 PM
@@ -24,7 +26,7 @@
     Integer savedActive = 0;
 %>
     <h1>${param.title}</h1>
-    <a href="editTitle.jsp?title=${param.title}&id=${param.id}" class="btn btn-default">Edit</a>
+    <a href="editTitle.jsp?title=${param.title}&id=${param.id}" class="btn btn-default">Edit Title</a>
     <h5><% out.print(pattern.getDescription().get(0)); %></h5>
     <table class="table table-hover ">
         <tbody>

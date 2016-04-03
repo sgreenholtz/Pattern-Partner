@@ -1,18 +1,16 @@
 package com.patternpartner.Servlets;
 
+import com.patternpartner.ConfigureEnvVars;
+
 import java.io.*;
+import java.sql.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 
 /**
  * This servlet handles the form on the editTitle.jsp page
  * @author Sebastian Greenholtz
  */
-//@WebServlet(
-//        name = "updateTitle",
-//        urlPatterns = {"/updateTitle"}
-//)
 public class UpdateTitleServlet extends HttpServlet {
 
     /**
@@ -34,15 +32,19 @@ public class UpdateTitleServlet extends HttpServlet {
                 + "SET title='" + newTitle + "' "
                 + "WHERE patternID='" + id + "'";
 
-        response.setContentType("text/html");
-        PrintWriter  out  = response.getWriter();
-        out.print("<HTML>");
-        out.print("<HEAD></HEAD>");
-        out.print("<BODY>");
-        out.print(sql);
-        out.print("</BODY>");
-        out.print("</HTML>");
-        out.close();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            ConfigureEnvVars vars = new ConfigureEnvVars();
+            Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
+            Statement updateStatement = conn.createStatement();
+            updateStatement.executeUpdate(sql);
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (SQLException exS) {
+            exS.printStackTrace();
+        } finally {
+            response.sendRedirect("patternLibrary.jsp");
+        }
     }
 
 
