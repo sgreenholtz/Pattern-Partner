@@ -10,7 +10,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="header.jsp" />
 <% if (!(session.getAttribute("username") == null || session.isNew())) { %>
-<form class="form-horizontal" action="updateTitle">
+<form class="form-horizontal" action="updateTitle" method="post">
     <div class="form-group">
         <label class="col-lg-2 control-label">Current Title</label>
         <div class="col-lg-10">

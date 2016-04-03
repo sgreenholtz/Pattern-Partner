@@ -37,6 +37,11 @@
         <jsp-file>/faqComments.jsp</jsp-file>
     </servlet>
 
+    <servlet>
+        <servlet-name>UpdateTitle</servlet-name>
+        <servlet-class>com.patternpartner.Servlets.UpdateTitleServlet</servlet-class>
+    </servlet>
+
     <!-- ********************************************************************* -->
     <!-- Servlet Mappings **************************************************** -->
     <!-- ********************************************************************* -->
@@ -46,6 +51,10 @@
         <url-pattern>/faq-comments</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>UpdateTitle</servlet-name>
+        <url-pattern>/updateTitle</url-pattern>
+    </servlet-mapping>
 
     <!-- ********************************************************************* -->
     <!-- Home Page *********************************************************** -->

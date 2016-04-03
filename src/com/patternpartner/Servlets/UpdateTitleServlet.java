@@ -9,10 +9,10 @@ import javax.servlet.annotation.*;
  * This servlet handles the form on the editTitle.jsp page
  * @author Sebastian Greenholtz
  */
-@WebServlet(
-        name = "updateTitle",
-        urlPatterns = {"/updateTitle"}
-)
+//@WebServlet(
+//        name = "updateTitle",
+//        urlPatterns = {"/updateTitle"}
+//)
 public class UpdateTitleServlet extends HttpServlet {
 
     /**
@@ -34,7 +34,15 @@ public class UpdateTitleServlet extends HttpServlet {
                 + "SET title='" + newTitle + "' "
                 + "WHERE patternID='" + id + "'";
 
-        System.out.println("*****" + sql + "******");
+        response.setContentType("text/html");
+        PrintWriter  out  = response.getWriter();
+        out.print("<HTML>");
+        out.print("<HEAD></HEAD>");
+        out.print("<BODY>");
+        out.print(sql);
+        out.print("</BODY>");
+        out.print("</HTML>");
+        out.close();
     }
 
 
