@@ -7,12 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0eb8982-d7d9-455c-9cd2-3c60b50632bc" name="Default" comment="Created class to communicate on the command line.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/patternpartner/Servlets/SendCommentServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/tutorial.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/faqComments.jsp" afterPath="$PROJECT_DIR$/web/faqComments.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/header.jsp" afterPath="$PROJECT_DIR$/web/header.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PaternPartnerDatabase.sql" afterPath="$PROJECT_DIR$/PaternPartnerDatabase.sql" />
     </list>
     <ignored path="Pattern-Partner.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="faqComments.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="faqComments.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/faqComments.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43925235">
+            <state vertical-scroll-proportion="-10.625">
               <caret line="44" column="81" selection-start-line="44" selection-start-column="81" selection-end-line="44" selection-end-column="81" />
               <folding />
             </state>
@@ -70,6 +66,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaternPartnerDatabase.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PaternPartnerDatabase.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9302326">
+              <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -126,7 +132,6 @@
         <option value="$PROJECT_DIR$/src/com/patternpartner/PDFHandler.java" />
         <option value="$PROJECT_DIR$/web/processPattern.jsp" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/FileUploaderStream.java" />
-        <option value="$PROJECT_DIR$/PaternPartnerDatabase.sql" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java" />
         <option value="$PROJECT_DIR$/web/patternLibrary.jsp" />
@@ -148,6 +153,7 @@
         <option value="$PROJECT_DIR$/web/faqComments.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/Servlets/SendCommentServlet.java" />
+        <option value="$PROJECT_DIR$/PaternPartnerDatabase.sql" />
       </list>
     </option>
   </component>
@@ -927,12 +933,12 @@
       <workItem from="1459205705707" duration="1869000" />
       <workItem from="1459454890889" duration="1119000" />
       <workItem from="1459463430068" duration="4818000" />
-      <workItem from="1459697705253" duration="5528000" />
+      <workItem from="1459697705253" duration="5694000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122697000" />
+    <option name="totallyTimeSpent" value="122863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="819" extended-state="6" />
@@ -947,7 +953,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886985" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35763413" sideWeight="0.49701938" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3397524" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3397524" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2267525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1226,13 +1232,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PaternPartnerDatabase.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1388,6 +1387,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/faqComments.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.625">
+          <caret line="44" column="81" selection-start-line="44" selection-start-column="81" selection-end-line="44" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Servlets/SendCommentServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1396,10 +1403,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/faqComments.jsp">
+    <entry file="file://$PROJECT_DIR$/PaternPartnerDatabase.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43925235">
-          <caret line="44" column="81" selection-start-line="44" selection-start-column="81" selection-end-line="44" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.9302326">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
           <folding />
         </state>
       </provider>

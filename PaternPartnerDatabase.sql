@@ -37,3 +37,11 @@ CREATE TABLE IF NOT EXISTS Materials (
     material TEXT,
     PRIMARY KEY (materialID, patternID)
 );
+
+CREATE TABLE IF NOT EXISTS Comments (
+    commentID INT AUTO_INCREMENT,
+    name VARCHAR(225),
+    email VARCHAR(225),
+    comment TEXT,
+    PRIMARY KEY (commentID);
+)
