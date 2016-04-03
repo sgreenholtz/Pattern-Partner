@@ -12,11 +12,29 @@
     CommentViewer comments = new CommentViewer();
 %>
 <jsp:include page="header.jsp" />
-<%
-    for (Map<String, String> comment : comments.getComments()) {
-        out.print(comment.get("name"));
-    }
-%>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#home" data-toggle="tab">Unread</a></li>
+    <li><a href="#profile" data-toggle="tab">All</a></li>
+</ul>
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade active in" id="home">
+        <%
+            for (Map<String, String> comment : comments.getComments()) {
+                if (comment.get("reviewed").equals("0")) {
+                    //print comment if unviewed
+                }
+            }
+        %>
+    </div>
+    <div class="tab-pane fade" id="profile">
+    <%
+        for (Map<String, String> comment : comments.getComments()) {
+            //print all
+        }
+    %>
+    </div>
+</div>
 <jsp:include page="footer.jsp" />
 <%
     } else {
