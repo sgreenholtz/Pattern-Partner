@@ -29,8 +29,8 @@
     function setRow(i) {
         var idA = "a" + i.toString();
         if (document.getElementById(i).className == "") {
-            document.getElementById(i).className = ${classSet};
-            document.getElementById(idA).value = ${classSet};
+            document.getElementById(i).className = "${classSet}";
+            document.getElementById(idA).value = "${classSet}";
         } else {
             document.getElementById(i).className = "";
             document.getElementById(idA).value = "";

@@ -14,8 +14,8 @@
 
         ViewPattern.updateActiveRowByPatternID(patternid, row);
 
-        response.sendRedirect("patternLibrary.jsp"); 
-    } else { 
-        response.sendRedirect("logIn.jsp"); 
-    } 
+        response.sendRedirect("patternLibrary.jsp");
+    } else {
+        response.sendRedirect("logIn.jsp");
+    }
 %>
