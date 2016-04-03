@@ -10,11 +10,9 @@
 <%@ page import="com.patternpartner.ViewPattern" %>
 <%@ page import="com.patternpartner.Pattern" %>
 <%@ page import="com.patternpartner.LoadProperties" %>
-<%@ page import="java.util.*" %>
 <% if (!(session.getAttribute("username") == null || session.isNew())) { %>
 <jsp:include page="header.jsp"/>
 <%
-    String title = request.getParameter("title");
     Integer id = Integer.valueOf(request.getParameter("id"));
 
     ViewPattern viewer = new ViewPattern((String) session.getAttribute("username"));
@@ -25,7 +23,8 @@
 
     Integer savedActive = 0;
 %>
-    <h1><% out.print(title); %></h1>
+    <h1>${param.title}</h1>
+    <a href="editTitle.jsp?title=${param.title}&id=${param.id}" class="btn btn-default">Edit</a>
     <h5><% out.print(pattern.getDescription().get(0)); %></h5>
     <table class="table table-hover ">
         <tbody>

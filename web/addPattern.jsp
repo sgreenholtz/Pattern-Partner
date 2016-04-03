@@ -1,6 +1,9 @@
 <%--
   Pattern Partner: Add Pattern
 
+  Initial table for adding title, file to upload, and choosing knit vs crochet
+  radio boxes
+
   User: Kolya
   Date: 2016-02-21
   Time: 2:33 PM
