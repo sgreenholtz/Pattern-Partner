@@ -2,11 +2,12 @@ package com.patternpartner.Servlets;
 
 import java.io.*;
 import java.sql.*;
-import java.time.*;
-import java.time.format.*;
+import java.util.Date;
+import java.text.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
+import com.patternpartner.ConfigureEnvVars;
 import org.apache.commons.lang3.StringEscapeUtils;
 
 /**
@@ -30,8 +31,9 @@ public class SendCommentServlet extends HttpServlet {
         String name = StringEscapeUtils.escapeEcmaScript(request.getParameter("name"));
         String email = StringEscapeUtils.escapeEcmaScript(request.getParameter("inputEmail"));
         String comment = StringEscapeUtils.escapeEcmaScript(request.getParameter("comment"));
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuu-MM-dd HH:mm:ss");
-        String timestamp = formatter.format(LocalDateTime.now());
+        Date date = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        String timestamp = dateFormat.format(date);
 
         String sql = "INSERT INTO Comments "
                 + "(name, email, comment, timestamp) "
@@ -41,15 +43,19 @@ public class SendCommentServlet extends HttpServlet {
                 + comment + "' ,'"
                 + timestamp + "')";
 
-        response.setContentType("text/html");
-        PrintWriter  out  = response.getWriter();
-        out.print("<HTML>");
-        out.print("<HEAD></HEAD>");
-        out.print("<BODY>");
-        out.print(sql);
-        out.print("</BODY>");
-        out.print("</HTML>");
-        out.close();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            ConfigureEnvVars vars = new ConfigureEnvVars();
+            Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
+            Statement insertStatement = conn.createStatement();
+            insertStatement.executeUpdate(sql);
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (SQLException exS) {
+            exS.printStackTrace();
+        } finally {
+            response.sendRedirect("home.jsp");
+        }
 
     }
 }

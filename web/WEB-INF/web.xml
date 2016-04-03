@@ -83,7 +83,7 @@
 
     <servlet-mapping>
         <servlet-name>SendComment</servlet-name>
-        <url-pattern>/sentComment</url-pattern>
+        <url-pattern>/sendComment</url-pattern>
     </servlet-mapping>
 
     <!-- ********************************************************************* -->

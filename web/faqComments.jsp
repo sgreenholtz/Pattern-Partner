@@ -33,9 +33,11 @@ will include uploading patterns directly from a website URL and Word documents. 
 <p>Currently, Pattern Partner only allows one image per pattern. If there is only one chart in your pattern,
 you can use that chart image as your library image for the pattern. Future developments will allow you to
 include multiple images in your pattern, so check back for changes!</p>
+<br />
 
 <h3>I'm not sure how to upload my pattern!</h3>
 <p>Check out the <a href="tutorial">tutorial page</a> for instructions on using Pattern Partner.</p>
+<br />
 
 <h3>I want to leave feedback for the developer.</h3>
 <form class="form-horizontal" action="sendComment" method="post">
