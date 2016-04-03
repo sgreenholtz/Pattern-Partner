@@ -59,12 +59,12 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <ul class="nav navbar-nav">
             <li><a class="navbar-brand" href="/">Home</a></li>
-            <li><a href="patternLibrary.jsp">Pattern Library</a></li>
-            <li><a href="addPattern.jsp">Add Pattern</a></li>
+            <li><a href="pattern-library">Pattern Library</a></li>
+            <li><a href="add-pattern">Add Pattern</a></li>
               <% if (session.isNew() || session.getAttribute("username") == null) { %>
-              <li><a href="logIn.jsp">Log In</a></li>
+              <li><a href="login">Log In</a></li>
               <% } else { %>
-              <li><a href="logOut.jsp">Log Out</a></li>
+              <li><a href="logout">Log Out</a></li>
               <% } %>
             <li><a href="faq-comments">FAQ and Comments</a></li>
             <li><a href="tutorial">Tutorial</a></li>

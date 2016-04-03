@@ -16,14 +16,18 @@ public class CommentViewer {
      */
     public CommentViewer() {
         comments = new ArrayList<Map<String, String>>();
-        getComments();
+        getCommentsFromDatabase();
+    }
+
+    public ArrayList<Map<String, String>> getComments() {
+        return comments;
     }
 
     /**
      * Gets ResultSet of comments from the Comments table and sends that to
      * createCommentsList() for further processing
      */
-    public void getComments() {
+    public void getCommentsFromDatabase() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             ConfigureEnvVars vars = new ConfigureEnvVars();
@@ -42,16 +46,18 @@ public class CommentViewer {
     /**
      * Creates an ArrayList of Maps out of the results from the Comments table
      * so comments can be access in a similar manner as to how they are stored in the database.
-     * Fields: Name, Email, Comment, Timestamp, Read? 0 or 1
+     * Fields: Name, Email, Comment, Timestamp, Reviewed? 0 or 1
      * @param results ResultSet from the database select
      */
     public void createCommentsList(ResultSet results) throws SQLException {
         while (results.next()) {
-            results.getString("name");
-            results.getString("email");
-            results.getString("comment");
-            results.getString("timestamp");
-            results.getInt("reviewed");
+            Map<String, String> resultMap = new HashMap<>();
+            resultMap.put("name", results.getString("name"));
+            resultMap.put("email", results.getString("email"));
+            resultMap.put("comment", results.getString("comment"));
+            resultMap.put("timestamp", results.getString("timestamp"));
+            resultMap.put("reviewed", results.getString("reviewed"));
+            comments.add(resultMap);
         }
 
     }

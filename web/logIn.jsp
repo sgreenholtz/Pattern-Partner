@@ -36,7 +36,7 @@
     </form>
 
     <% } else { %>
-    <h3>You are logged in as <% session.getAttribute("username"); %></h3>
+    <h3>You are logged in as <%= session.getAttribute("username") %></h3>
     <a href="logOut.jsp" class="btn btn-primary btn-lg">Log Out</a>
 
     <% } %>
