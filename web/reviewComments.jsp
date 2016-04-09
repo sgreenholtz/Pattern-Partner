@@ -19,18 +19,45 @@
 </ul>
 <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade active in" id="home">
+        <form action="updateRead" method="post" class="form-horizontal">
         <%
             for (Map<String, String> comment : comments.getComments()) {
                 if (comment.get("reviewed").equals("0")) {
-                    //print comment if unviewed
+        %>
+                    <fieldset>
+                        <label class="col-lg-2 control-label">Name</label>
+                        <div class="col-lg-10">
+                            <p><% out.print(comment.get("name")); %></p>
+                        </div>
+                        <label class="col-lg-2 control-label">Email</label>
+                        <div class="col-lg-10">
+                            <p><% out.print(comment.get("email")); %></p>
+                        </div>
+                        <label class="col-lg-2 control-label">Comment</label>
+                        <div class="col-lg-10">
+                            <p><% out.print(comment.get("comment")); %></p>
+                        </div>
+                        <label class="col-lg-2 control-label">Timestamp</label>
+                        <div class="col-lg-10">
+                            <p><% out.print(comment.get("timestamp")); %></p>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="read" id="<%= comment.get("id") %>"> Mark Read?
+                            </label>
+                        </div>
+                    </fieldset>
+        <%
                 }
             }
         %>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
     <div class="tab-pane fade" id="profile">
     <%
         for (Map<String, String> comment : comments.getComments()) {
-            //print all
+            out.print(comment.get("comment"));
         }
     %>
     </div>

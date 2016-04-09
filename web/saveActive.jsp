@@ -1,6 +1,8 @@
 <%--
   Save Active Row
 
+  REPLACED WITH SERVLET
+
   User: Kolya
   Date: 2016-03-26
   Time: 8:09 AM

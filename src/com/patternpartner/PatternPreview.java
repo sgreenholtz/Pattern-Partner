@@ -10,10 +10,21 @@ import java.util.*;
  */
 public class PatternPreview {
 
+    private static Properties PROPERTIES;
     private String title;
     private String knitOrCrochet;
     private ArrayList<String> lines;
     private ArrayList<String> lineClass;
+
+    // Constructor
+
+    /**
+     * Set up properties
+     */
+    public PatternPreview() {
+        LoadProperties propLoader = new LoadProperties();
+        PROPERTIES = propLoader.loadProperties("patternpreview.properties");
+    }
 
     // Getters and Setters
 
@@ -36,9 +47,22 @@ public class PatternPreview {
      */
     public void setLines(ArrayList<String> lines) {
         this.lines = lines;
+        setLineClass();
+    }
+
+    /**
+     * Instantiates lineClass to blank values, or to row
+     * highlight value if the row starts with "row" or "round"
+     */
+    private void setLineClass() {
         lineClass = new ArrayList<>();
         for (String line : lines) {
-            lineClass.add("");
+            if (line.toLowerCase().startsWith("row") ||
+                    line.toLowerCase().startsWith("round")) {
+                lineClass.add("warning");
+            } else {
+                lineClass.add("");
+            }
         }
     }
 
@@ -53,7 +77,7 @@ public class PatternPreview {
     // Methods
 
     /**
-     * Creates a new ArrayList
+     * Creates a new ArrayList to represent each section of the pattern
      * @param className the class associated with a particular color of line
      *                  preview
      * @return new ArrayList with the specified lines

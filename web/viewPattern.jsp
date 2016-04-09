@@ -63,7 +63,7 @@
     }
 </script>
 
-<form action="saveActive.jsp">
+<form action="saveActive" method="get">
     <input type="hidden" id="active" name="active" value="<%= savedActive %>"/>
     <input type="hidden" id="id" name="id" value="<%= id %>"/>
     <input type="submit" value="Save and Return to Library" class="btn btn-default btn-lg btn-block" />
@@ -71,6 +71,6 @@
 <jsp:include page="footer.jsp"/>
 <%
 } else {
-    response.sendRedirect("logIn.jsp");
+    response.sendRedirect("login");
 }
 %>

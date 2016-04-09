@@ -52,6 +52,7 @@ public class CommentViewer {
     public void createCommentsList(ResultSet results) throws SQLException {
         while (results.next()) {
             Map<String, String> resultMap = new HashMap<>();
+            resultMap.put("id", results.getString("id"));
             resultMap.put("name", results.getString("name"));
             resultMap.put("email", results.getString("email"));
             resultMap.put("comment", results.getString("comment"));

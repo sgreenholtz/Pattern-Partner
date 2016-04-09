@@ -73,6 +73,11 @@
     </servlet>
 
     <servlet>
+        <servlet-name>ViewPattern</servlet-name>
+        <jsp-file>/viewPattern.jsp</jsp-file>
+    </servlet>
+
+    <servlet>
         <servlet-name>UpdateTitle</servlet-name>
         <servlet-class>com.patternpartner.Servlets.UpdateTitleServlet</servlet-class>
     </servlet>
@@ -81,6 +86,12 @@
         <servlet-name>SendComment</servlet-name>
         <servlet-class>com.patternpartner.Servlets.SendCommentServlet</servlet-class>
     </servlet>
+
+    <servlet>
+        <servlet-name>SaveActive</servlet-name>
+        <servlet-class>com.patternpartner.Servlets.SaveActiveServlet</servlet-class>
+    </servlet>
+
 
     <!-- ********************************************************************* -->
     <!-- Servlet Mappings **************************************************** -->
@@ -136,6 +147,15 @@
         <url-pattern>/sendComment</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>ViewPattern</servlet-name>
+        <url-pattern>/viewPattern</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SaveActive</servlet-name>
+        <url-pattern>/saveActive</url-pattern>
+    </servlet-mapping>
     <!-- ********************************************************************* -->
     <!-- Home Page *********************************************************** -->
     <!-- ********************************************************************* -->

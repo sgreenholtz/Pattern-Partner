@@ -21,9 +21,9 @@
             colorClass = viewer.getProperties().getProperty("knit.class");
         }
 %>
-<div class="col-xs-4">
+<div class="col-xs-6">
     <div class="panel panel-<%= colorClass %>">
-        <a href="viewPattern.jsp?title=<%= pattern.getValue() %>&id=<%= pattern.getKey() %>">
+        <a href="viewPattern?title=<%= pattern.getValue() %>&id=<%= pattern.getKey() %>">
             <div class="panel-heading">
                 <h3 class="panel-title"><% out.print(pattern.getValue()); %></h3>
             </div>
@@ -38,5 +38,5 @@
 %>
 <jsp:include page="footer.jsp"/>
 <% } else {
-    response.sendRedirect("logIn.jsp");
+    response.sendRedirect("login");
 } %>
