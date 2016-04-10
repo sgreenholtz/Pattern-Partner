@@ -29,7 +29,7 @@
     </context-param>
 
     <!-- ********************************************************************* -->
-    <!-- Servlet and JSP Configurations ************************************** -->
+    <!-- JSP Configurations ************************************************** -->
     <!-- ********************************************************************* -->
 
     <servlet>
@@ -78,6 +78,30 @@
     </servlet>
 
     <servlet>
+        <servlet-name>SetDescription</servlet-name>
+        <jsp-file>/setDescription.jsp</jsp-file>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SetMaterials</servlet-name>
+        <jsp-file>/setMaterials.jsp</jsp-file>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SetPatternRows</servlet-name>
+        <jsp-file>/setPatternRows.jsp</jsp-file>
+    </servlet>
+
+    <servlet>
+        <servlet-name>FinalPreview</servlet-name>
+        <jsp-file>/finalPreview.jsp</jsp-file>
+    </servlet>
+
+    <!-- ********************************************************************* -->
+    <!-- Servlet Configurations ********************************************** -->
+    <!-- ********************************************************************* -->
+
+    <servlet>
         <servlet-name>UpdateTitle</servlet-name>
         <servlet-class>com.patternpartner.Servlets.UpdateTitleServlet</servlet-class>
     </servlet>
@@ -114,12 +138,12 @@
 
     <servlet-mapping>
         <servlet-name>PatternLibrary</servlet-name>
-        <url-pattern>/pattern-library</url-pattern>
+        <url-pattern>/patternLibrary</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>AddPattern</servlet-name>
-        <url-pattern>/add-pattern</url-pattern>
+        <url-pattern>/addPattern</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
@@ -155,6 +179,26 @@
     <servlet-mapping>
         <servlet-name>SaveActive</servlet-name>
         <url-pattern>/saveActive</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SetDescription</servlet-name>
+        <url-pattern>/setDescription</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SetMaterials</servlet-name>
+        <url-pattern>/setMaterials</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SetPatternRows</servlet-name>
+        <url-pattern>/setPatternRows</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>FinalPreview</servlet-name>
+        <url-pattern>/finalPreview</url-pattern>
     </servlet-mapping>
     <!-- ********************************************************************* -->
     <!-- Home Page *********************************************************** -->

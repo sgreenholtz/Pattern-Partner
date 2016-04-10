@@ -11,13 +11,13 @@
 
     Properties properties = new LoadProperties().loadProperties("patternpartner.properties");
     session.setAttribute("classSet", properties.getProperty("description.class"));
-    session.setAttribute("nextPage", "setPatternRows.jsp");
-    session.setAttribute("lastPage", "setMaterials.jsp"); %>
+    session.setAttribute("nextPage", "setPatternRows");
+    session.setAttribute("lastPage", "setMaterials"); %>
 
     <jsp:include page="header.jsp"/>
     <h2>Select Description</h2>
     <jsp:include page="patternTable.jsp"/>
     <jsp:include page="footer.jsp"/>
 <% } else {
-    response.sendRedirect("addPattern.jsp");
+    response.sendRedirect("addPattern");
 } %>

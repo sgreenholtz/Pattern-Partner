@@ -7,5 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="header.jsp" />
-<h1>UNDER CONSTRUCTION</h1>
+<h1>Tutorial</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_sXI5ejtaMI" frameborder="0" allowfullscreen></iframe>
 <jsp:include page="footer.jsp" />

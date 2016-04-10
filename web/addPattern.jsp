@@ -53,6 +53,6 @@
         </fieldset>
     </form>
 <% } else {
-    response.sendRedirect("logIn.jsp");
+    response.sendRedirect("login");
     } %>
 <jsp:include page="footer.jsp" />

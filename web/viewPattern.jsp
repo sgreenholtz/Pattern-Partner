@@ -15,10 +15,10 @@
 <% if (!(session.getAttribute("username") == null || session.isNew())) { %>
 <jsp:include page="header.jsp"/>
 <%
-    Integer id = Integer.valueOf(request.getParameter("id"));
+    Integer patternID = Integer.valueOf(request.getParameter("id"));
 
     ViewPattern viewer = new ViewPattern((String) session.getAttribute("username"));
-    Pattern pattern = viewer.getPattern(id);
+    Pattern pattern = viewer.getPattern(patternID);
 
     LoadProperties propertiesLoader = new LoadProperties();
     String active = propertiesLoader.loadProperties("patternpartner.properties").getProperty("is.active");
@@ -54,18 +54,19 @@
 <script>
     function setActiveRow(i) {
         // Reset the no-longer-active row to no highlight
-        var oldID = document.getElementById("active").value;
+        var oldID = document.getElementById("oldActive").value;
         document.getElementById(oldID).className = "";
 
         // Set the new active row to highlight and save value
         document.getElementById(i).className = "<%= active %>";
-        document.getElementById("active").value = i;
+        document.getElementById("newActive").value = i;
     }
 </script>
 
 <form action="saveActive" method="get">
-    <input type="hidden" id="active" name="active" value="<%= savedActive %>"/>
-    <input type="hidden" id="id" name="id" value="<%= id %>"/>
+    <input type="hidden" id="oldActive" name="oldActive" value="<%= savedActive %>"/>
+    <input type="hidden" id="newActive" name="newActive" value=""/>
+    <input type="hidden" name="patternID" value="<%= patternID %>" />
     <input type="submit" value="Save and Return to Library" class="btn btn-default btn-lg btn-block" />
 </form>
 <jsp:include page="footer.jsp"/>

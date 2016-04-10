@@ -12,7 +12,7 @@
     uploader.uploadFile(request, application);
     session.setAttribute("preview", uploader.getPreviewer());
 
-    response.sendRedirect("setMaterials.jsp");
+    response.sendRedirect("setMaterials");
 
 } else {
     response.sendRedirect("logIn.jsp");

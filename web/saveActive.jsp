@@ -14,7 +14,7 @@
         Integer row = new Integer(request.getParameter("active"));
         Integer patternid = new Integer(request.getParameter("id"));
 
-        ViewPattern.updateActiveRowByPatternID(patternid, row);
+//        ViewPattern.updateActiveRowByPatternID(patternid, row);
 
         response.sendRedirect("patternLibrary.jsp");
     } else {

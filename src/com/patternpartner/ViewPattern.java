@@ -139,26 +139,4 @@ public class ViewPattern {
         return pat;
     }
 
-    /**
-     * Updates the active row to the given row number of the pattern with a given id
-     * @param id patternID of the pattern to change the active row
-     * @param row number of the row to change to the active row
-     */
-    public static void updateActiveRowByPatternID(Integer id, Integer row) {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            ConfigureEnvVars vars = new ConfigureEnvVars();
-            Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
-            Statement update = conn.createStatement();
-
-            String sql = "UPDATE PatternRows SET ";
-
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-    }
-
 }

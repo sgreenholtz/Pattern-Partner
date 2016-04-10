@@ -11,13 +11,13 @@
 <div class="jumbotron">
     <h1>View Pattern Library</h1>
     <p>View your existing patterns and keep on hooking!</p>
-    <p><a href="patternLibrary.jsp" class="btn btn-primary btn-lg">View</a></p>
+    <p><a href="patternLibrary" class="btn btn-primary btn-lg">View</a></p>
 </div>
 
 <div class="jumbotron">
     <h1>Add a Pattern</h1>
     <p>Add a new pattern to your pattern library.</p>
-    <p><a href="addPattern.jsp" class="btn btn-primary btn-lg">Add</a></p>
+    <p><a href="addPattern" class="btn btn-primary btn-lg">Add</a></p>
 </div>
 
 <jsp:include page="footer.jsp" />
