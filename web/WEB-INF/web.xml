@@ -97,6 +97,11 @@
         <jsp-file>/finalPreview.jsp</jsp-file>
     </servlet>
 
+    <servlet>
+        <servlet-name>ConfirmDelete</servlet-name>
+        <jsp-file>/confirmDelete.jsp</jsp-file>
+    </servlet>
+
     <!-- ********************************************************************* -->
     <!-- Servlet Configurations ********************************************** -->
     <!-- ********************************************************************* -->
@@ -114,6 +119,16 @@
     <servlet>
         <servlet-name>SaveActive</servlet-name>
         <servlet-class>com.patternpartner.Servlets.SaveActiveServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DeletePattern</servlet-name>
+        <servlet-class>com.patternpartner.Servlets.DeletePatternServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DownloadText</servlet-name>
+        <servlet-class>com.patternpartner.Servlets.DownloadTextServlet</servlet-class>
     </servlet>
 
 
@@ -200,6 +215,22 @@
         <servlet-name>FinalPreview</servlet-name>
         <url-pattern>/finalPreview</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DeletePattern</servlet-name>
+        <url-pattern>/deletePattern</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DownloadText</servlet-name>
+        <url-pattern>/downloadText</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ConfirmDelete</servlet-name>
+        <url-pattern>/confirmDelete</url-pattern>
+    </servlet-mapping>
+
     <!-- ********************************************************************* -->
     <!-- Home Page *********************************************************** -->
     <!-- ********************************************************************* -->
