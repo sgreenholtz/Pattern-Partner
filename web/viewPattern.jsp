@@ -26,7 +26,12 @@
     Integer savedActive = 0;
 %>
     <h1>${param.title}</h1>
-    <a href="editTitle.jsp?title=${param.title}&id=${param.id}" class="btn btn-default">Edit Title</a>
+
+    <div class="btn-group btn-group-justified">
+        <a href="editTitle.jsp?title=${param.title}&id=${param.id}" class="btn btn-default">Edit Title</a>
+        <a href="downloadText?id=${param.id}" class="btn btn-default">Download Text</a>
+        <a href="confirmDelete?title=${param.title}&id=${param.id}" class="btn btn-default">Delete Pattern</a>
+    </div>
     <h5><% out.print(pattern.getDescription().get(0)); %></h5>
     <table class="table table-hover ">
         <tbody>
