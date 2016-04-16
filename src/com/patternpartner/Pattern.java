@@ -52,7 +52,9 @@ public class Pattern {
      * Sets only the part of the pattern needed for reading the pattern:
      * description, materials, pattern rows and is Active
      */
-    public Pattern(String name, String description, ArrayList<String> materials,
+    public Pattern(String name,
+                   String description,
+                   ArrayList<String> materials,
                    ArrayList<String> patternRows,
                    ArrayList<Boolean> isActiveRow) {
         this.name = name;
@@ -68,7 +70,7 @@ public class Pattern {
      * @return name with quotation marks around it for single quote preservation
      */
     public String getName() {
-        return "\'" + name + "\'";
+        return name;
     }
 
     /**
@@ -182,7 +184,13 @@ public class Pattern {
      * Outputs human readable information about pattern
      * @return Name of pattern
      */
+    @Override
     public String toString() {
-        return "Name: " + name;
+        return "Pattern{" +
+                "name='" + name + '\'' +
+                ", description=" + description +
+                ", materials=" + materials +
+                ", patternRows=" + patternRows +
+                '}';
     }
 }

@@ -27,39 +27,26 @@ public class DownloadTextServlet extends HttpServlet {
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException {
-        Integer patternID = Integer.getInteger(request.getParameter("patternID"));
-
+        Integer patternID = new Integer(request.getParameter("id"));
         ViewPattern patternViewer = new ViewPattern();
-
         Pattern pattern = patternViewer.getPattern(patternID);
 
-//        try (PrintWriter writer = new PrintWriter(new BufferedWriter
-//                (new FileWriter(pattern.getName() + ".txt")))) {
-            try {
+        try (PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(
+                        System.getProperty("java.io.tmpdir") + "/"
+                        + pattern.getName().replace(" ", "") + ".txt")))) {
+            writer.println(pattern.getName());
+            writer.println(pattern.listToString(pattern.getDescription()));
+            writer.println("Materials");
+            for (String material : pattern.getMaterials()) {
+                writer.println(material);
+            }
+            writer.println("Instructions");
+            for (String row : pattern.getPatternRows()) {
+                writer.println(row);
+            }
 
-                response.setContentType("text/html");
-                PrintWriter out = response.getWriter();
-                out.println("<html>");
-                out.println("<head>");
-                out.println("</head>");
-                out.println("<body>");
-//                out.println("<p>Name: " + pattern.getName() + "</p>");
-//                out.println("<p>Description" + pattern.listToString(pattern.getDescription()) + "</p>");
-                out.println("<p>Text</p>gi");
-                out.println("</body>");
-//            writer.println(pattern.getName());
-//            writer.println(pattern.listToString(pattern.getDescription()));
-//            writer.println("Materials");
-//            for (String material : pattern.getMaterials()) {
-//                writer.println(material);
-//            }
-//            writer.println("Instructions");
-//            for (String row : pattern.getPatternRows()) {
-//                writer.println(row);
-//            }
-
-//            String url = "patternLibrary";
-//            response.sendRedirect(url);
+            String url = "patternLibrary";
+            response.sendRedirect(url);
 
         } catch (IOException ex) {
             ex.printStackTrace();

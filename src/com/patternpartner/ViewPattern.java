@@ -125,14 +125,16 @@ public class ViewPattern {
                 materialsList.add(materialsResult.getString("material"));
             }
 
-            String description = "select title, description, knitOrCrochet "
+            String description = "select title, description "
                                 + "from Patterns where patternID='" + patternID + "'";
             ResultSet descriptionResult = selectStatement.executeQuery(description);
 
             while (descriptionResult.next()) {
                 pat = new Pattern(descriptionResult.getString("title"),
                         descriptionResult.getString("description"),
-                        materialsList, patternRowsList, isActive);
+                        materialsList,
+                        patternRowsList,
+                        isActive);
             }
         } catch (ClassNotFoundException cNFex) {
             cNFex.printStackTrace();
