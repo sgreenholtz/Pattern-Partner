@@ -165,7 +165,7 @@ public class Pattern {
      * @param list ArrayList to convert to string
      * @return completed string
      */
-    private String listToString(ArrayList<String> list) {
+    public String listToString(ArrayList<String> list) {
         String output = "";
         for (String line : list) {
             line = StringEscapeUtils.escapeEcmaScript(line);

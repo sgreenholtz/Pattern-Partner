@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0eb8982-d7d9-455c-9cd2-3c60b50632bc" name="Default" comment="Created class to communicate on the command line.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/Pattern.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/Pattern.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/Servlets/DownloadTextServlet.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/Servlets/DownloadTextServlet.java" />
     </list>
@@ -54,8 +55,8 @@
       <file leaf-file-name="DeletePatternServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Servlets/DeletePatternServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="55" selection-end-column="9" />
+            <state relative-caret-position="58">
+              <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="49" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#DeletePatternServlet#0" expanded="false" />
@@ -67,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DownloadTextServlet.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DownloadTextServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Servlets/DownloadTextServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="313">
+              <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pattern.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Pattern.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Pattern.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            <state relative-caret-position="118">
+              <caret line="167" column="10" selection-start-line="167" selection-start-column="10" selection-end-line="167" selection-end-column="10" />
               <folding>
                 <element signature="e#3289#3290#0" expanded="true" />
                 <element signature="e#3321#3322#0" expanded="true" />
@@ -173,8 +174,8 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/Servlets/DeletePatternServlet.java" />
-        <option value="$PROJECT_DIR$/src/com/patternpartner/Servlets/DownloadTextServlet.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/Pattern.java" />
+        <option value="$PROJECT_DIR$/src/com/patternpartner/Servlets/DownloadTextServlet.java" />
       </list>
     </option>
   </component>
@@ -865,12 +866,12 @@
       <workItem from="1460299987978" duration="226000" />
       <workItem from="1460302123404" duration="4851000" />
       <workItem from="1460769522373" duration="5278000" />
-      <workItem from="1460811609232" duration="2228000" />
+      <workItem from="1460811609232" duration="2641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152018000" />
+    <option name="totallyTimeSpent" value="152431000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="819" extended-state="6" />
@@ -1320,34 +1321,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Servlets/DeletePatternServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="55" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#DeletePatternServlet#0" expanded="false" />
-            <marker date="1460813584000" expanded="true" signature="1040:1080" placeholder="DELETE FROM " />
-            <marker date="1460813584000" expanded="true" signature="1283:1324" placeholder="DELETE FROM " />
-            <marker date="1460813584000" expanded="true" signature="1509:1552" placeholder="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Servlets/DownloadTextServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Pattern.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="118">
+          <caret line="167" column="10" selection-start-line="167" selection-start-column="10" selection-end-line="167" selection-end-column="10" />
           <folding>
             <element signature="e#3289#3290#0" expanded="true" />
             <element signature="e#3321#3322#0" expanded="true" />
@@ -1361,6 +1338,30 @@
             <element signature="e#4242#4243#0" expanded="true" />
             <element signature="e#4426#4427#0" expanded="true" />
             <element signature="e#4476#4477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Servlets/DeletePatternServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="49" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#DeletePatternServlet#0" expanded="false" />
+            <marker date="1460813584000" expanded="true" signature="1040:1080" placeholder="DELETE FROM " />
+            <marker date="1460813584000" expanded="true" signature="1283:1324" placeholder="DELETE FROM " />
+            <marker date="1460813584000" expanded="true" signature="1509:1552" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Servlets/DownloadTextServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
