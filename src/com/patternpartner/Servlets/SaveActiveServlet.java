@@ -47,16 +47,6 @@ public class SaveActiveServlet extends HttpServlet {
             update.executeUpdate(changeInactive);
             update.executeUpdate(changeActive);
 
-//            response.setContentType("text/html");
-//            PrintWriter out = response.getWriter();
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<p>" + changeActive + "</p>");
-//            out.println("<p>" + changeInactive + "</p>");
-//            out.println("</body>");
-
             String url = "patternLibrary";
             response.sendRedirect(url);
 
