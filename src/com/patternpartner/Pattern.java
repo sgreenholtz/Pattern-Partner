@@ -39,7 +39,8 @@ public class Pattern {
      * Constructor sets each of the instance variables
      */
     public Pattern(String name, ArrayList<String> descriptionList,
-                   ArrayList<String> materialList, ArrayList<String> rowList, String kOrC) {
+                   ArrayList<String> materialList, ArrayList<String> rowList,
+                   String kOrC) {
         this.name = name;
         description = descriptionList;
         materials = materialList;
@@ -51,8 +52,10 @@ public class Pattern {
      * Sets only the part of the pattern needed for reading the pattern:
      * description, materials, pattern rows and is Active
      */
-    public Pattern(String description, ArrayList<String> materials, ArrayList<String> patternRows,
+    public Pattern(String name, String description, ArrayList<String> materials,
+                   ArrayList<String> patternRows,
                    ArrayList<Boolean> isActiveRow) {
+        this.name = name;
         this.description = new ArrayList<String>();
         this.description.add(description);
         this.materials = materials;

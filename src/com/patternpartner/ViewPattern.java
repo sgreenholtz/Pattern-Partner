@@ -99,6 +99,7 @@ public class ViewPattern {
         ArrayList<String> patternRowsList = new ArrayList<String>();
         ArrayList<String> materialsList = new ArrayList<String>();
         ArrayList<Boolean> isActive = new ArrayList<Boolean>();
+        String name = "";
         try {
             Class.forName("com.mysql.jdbc.Driver");
             ConfigureEnvVars vars = new ConfigureEnvVars();
@@ -124,11 +125,13 @@ public class ViewPattern {
                 materialsList.add(materialsResult.getString("material"));
             }
 
-            String description = "select description from Patterns where patternID='" + patternID + "'";
+            String description = "select title, description, knitOrCrochet "
+                                + "from Patterns where patternID='" + patternID + "'";
             ResultSet descriptionResult = selectStatement.executeQuery(description);
 
             while (descriptionResult.next()) {
-                pat = new Pattern(descriptionResult.getString("description"),
+                pat = new Pattern(descriptionResult.getString("title"),
+                        descriptionResult.getString("description"),
                         materialsList, patternRowsList, isActive);
             }
         } catch (ClassNotFoundException cNFex) {

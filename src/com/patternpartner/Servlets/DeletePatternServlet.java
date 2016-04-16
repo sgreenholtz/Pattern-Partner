@@ -56,14 +56,4 @@ public class DeletePatternServlet extends HttpServlet {
         }
     }
 
-
-//            response.setContentType("text/html");
-//            PrintWriter out = response.getWriter();
-//            out.println("<html>");
-//            out.println("<head>");
-//            out.println("</head>");
-//            out.println("<body>");
-//            out.println("<p>" + changeActive + "</p>");
-//            out.println("<p>" + changeInactive + "</p>");
-//            out.println("</body>");
 }

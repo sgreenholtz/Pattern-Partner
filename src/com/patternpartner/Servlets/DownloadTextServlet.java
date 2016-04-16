@@ -1,12 +1,16 @@
 package com.patternpartner.Servlets;
 
-import com.patternpartner.ViewPattern;
 import com.patternpartner.Pattern;
+import com.patternpartner.ViewPattern;
 
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.sql.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Allows users to download the pattern as a TXT file for editing and re-uploading
@@ -23,27 +27,39 @@ public class DownloadTextServlet extends HttpServlet {
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException {
-        Integer patternID = new Integer(request.getParameter("patternID"));
+        Integer patternID = Integer.getInteger(request.getParameter("patternID"));
 
         ViewPattern patternViewer = new ViewPattern();
 
         Pattern pattern = patternViewer.getPattern(patternID);
 
-        try (PrintWriter writer = new PrintWriter(new BufferedWriter
-                (new FileWriter("temp/" + pattern.getName() + ".txt")))) {
-            writer.println(pattern.getName());
-            writer.println(pattern.listToString(pattern.getDescription()));
-            writer.println("Materials");
-            for (String material : pattern.getMaterials()) {
-                writer.println(material);
-            }
-            writer.println("Instructions");
-            for (String row : pattern.getPatternRows()) {
-                writer.println(row);
-            }
+//        try (PrintWriter writer = new PrintWriter(new BufferedWriter
+//                (new FileWriter(pattern.getName() + ".txt")))) {
+            try {
 
-            String url = "patternLibrary";
-            response.sendRedirect(url);
+                response.setContentType("text/html");
+                PrintWriter out = response.getWriter();
+                out.println("<html>");
+                out.println("<head>");
+                out.println("</head>");
+                out.println("<body>");
+//                out.println("<p>Name: " + pattern.getName() + "</p>");
+//                out.println("<p>Description" + pattern.listToString(pattern.getDescription()) + "</p>");
+                out.println("<p>Text</p>gi");
+                out.println("</body>");
+//            writer.println(pattern.getName());
+//            writer.println(pattern.listToString(pattern.getDescription()));
+//            writer.println("Materials");
+//            for (String material : pattern.getMaterials()) {
+//                writer.println(material);
+//            }
+//            writer.println("Instructions");
+//            for (String row : pattern.getPatternRows()) {
+//                writer.println(row);
+//            }
+
+//            String url = "patternLibrary";
+//            response.sendRedirect(url);
 
         } catch (IOException ex) {
             ex.printStackTrace();
