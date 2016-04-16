@@ -9,6 +9,8 @@ import org.apache.commons.lang3.StringEscapeUtils;
  * Method listToString creates a single String for the parts of the pattern that will not be saved as individual lines
  * in the database, materials and description.
  * <br />
+ * Getters and Setters have been added to allow usage of Pattern as a bean
+ * <br />
  * TO DO : implement image handling
  *
  * @author Sebastian Greenholtz
@@ -105,11 +107,65 @@ public class Pattern {
     }
 
     /**
+     * Sets name to given value
+     *
+     * @param name value to set instance variable to
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Sets description to given value
+     *
+     * @param description value to set instance variable to
+     */
+    public void setDescription(ArrayList<String> description) {
+        this.description = description;
+    }
+
+    /**
+     * Sets materials to given value
+     *
+     * @param materials value to set instance variable to
+     */
+    public void setMaterials(ArrayList<String> materials) {
+        this.materials = materials;
+    }
+
+    /**
+     * Sets patternRows to given value
+     *
+     * @param patternRows value to set instance variable to
+     */
+    public void setPatternRows(ArrayList<String> patternRows) {
+        this.patternRows = patternRows;
+    }
+
+    /**
+     * Sets isActiveRow to given value
+     *
+     * @param isActiveRow value to set instance variable to
+     */
+    public void setIsActiveRow(ArrayList<Boolean> isActiveRow) {
+        this.isActiveRow = isActiveRow;
+    }
+
+    /**
+     * Sets knitOrCrochet to given value
+     *
+     * @param knitOrCrochet value to set instance variable to
+     */
+    public void setKnitOrCrochet(String knitOrCrochet) {
+        this.knitOrCrochet = knitOrCrochet;
+    }
+
+    /**
      * Converts array lists to a single string with a space delimiter
      * @param list ArrayList to convert to string
      * @return completed string
      */
-    public String listToString(ArrayList<String> list) {
+    private String listToString(ArrayList<String> list) {
         String output = "";
         for (String line : list) {
             line = StringEscapeUtils.escapeEcmaScript(line);
