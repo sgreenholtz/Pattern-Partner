@@ -24,7 +24,7 @@ public class DeletePatternServlet extends HttpServlet {
      */
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
-        String patternID = request.getParameter("patternID");
+        String patternID = request.getParameter("id");
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -33,18 +33,20 @@ public class DeletePatternServlet extends HttpServlet {
             String sql = "DELETE FROM Patterns WHERE patternID = ?";
             PreparedStatement preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, patternID);
-            preparedStatement.executeUpdate();
+            int rows = preparedStatement.executeUpdate();
+            System.out.println("********** Patterns: " + rows);
 
             sql = "DELETE FROM Materials WHERE patternID = ?";
             preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, patternID);
-            preparedStatement.executeUpdate();
+            rows = preparedStatement.executeUpdate();
+            System.out.println("********** Materials: " + rows);
 
             sql = "DELETE FROM PatternRows WHERE patternID = ?";
             preparedStatement = conn.prepareStatement(sql);
             preparedStatement.setString(1, patternID);
-            preparedStatement.executeUpdate();
-
+            rows = preparedStatement.executeUpdate();
+            System.out.println("********** PatternRows: " + rows);
 
             String url = "patternLibrary";
             response.sendRedirect(url);
