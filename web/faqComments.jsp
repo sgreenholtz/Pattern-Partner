@@ -39,6 +39,14 @@ include multiple images in your pattern, so check back for changes!</p>
 <p>Check out the <a href="tutorial">tutorial page</a> for instructions on using Pattern Partner.</p>
 <br />
 
+<h3>What do I do if the formatting of my pattern looks weird?</h3>
+<p>This is especially common with PDF patterns. Because the PDF is read line by line, any unusual line breaks
+or columns will end up looking less than optimal when loaded into Pattern Partner. But don't fret! You can hit the
+download button under the title to download a version of the pattern in plain text, then open that up in your
+text editor and move the text around so it reads as you want it. Then delete the pattern in your library and
+upload the edited text version.</p>
+<br />
+
 <h3>I want to leave feedback for the developer.</h3>
 <form class="form-horizontal" action="sendComment" method="post">
     <div class="form-group">

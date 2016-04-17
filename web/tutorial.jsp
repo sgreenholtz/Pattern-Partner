@@ -9,4 +9,10 @@
 <jsp:include page="header.jsp" />
 <h1>Tutorial</h1>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_sXI5ejtaMI" frameborder="0" allowfullscreen></iframe>
+<h3>Edit 04-17-2016: Download and Delete</h3>
+<p>If you are unhappy with the way the text loaded into Pattern Partner, you can download the pattern as a
+plain text file to be edited in your favorite text editor. Then delete the pattern from your library and upload
+the edited text file for a perfect formatting. Download and Delete buttons can be found under the title on the
+"View Pattern" page.</p>
+<br />
 <jsp:include page="footer.jsp" />
