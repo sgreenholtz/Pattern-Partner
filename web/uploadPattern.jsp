@@ -9,7 +9,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="com.patternpartner.PatternPreview" %>
 <%@ page import="com.patternpartner.PatternUploader" %>
-<%@ page import="java.sql.SQLException" %>
 <% if (!(session.getAttribute("username") == null || session.isNew())) { %>
     <% if (session.getAttribute("preview") != null) {
 
@@ -17,11 +16,8 @@
         PatternUploader upload = new PatternUploader(previewer,
                 (String) session.getAttribute("username"));
 
-        try {
-            upload.upload();
-        } catch (SQLException sqlEx) {
-            response.sendRedirect("error.jsp");
-        }
+
+        upload.upload();
 
         response.sendRedirect("home.jsp");
 
