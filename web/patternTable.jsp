@@ -12,6 +12,10 @@
     PatternPreview previewer = (PatternPreview) session.getAttribute("preview");
     int size = previewer.getLines().size();
 %>
+<div class="btn-group btn-group-justified">
+    <a class="btn btn-default" onclick="selectAll(<%= size %>)">Select All</a>
+    <a class="btn btn-default" onclick="unselectAll(<%= size %>)">Unselect All</a>
+</div>
 <table class="table table-hover ">
     <tbody>
     <% int i = 0;
@@ -34,6 +38,26 @@
         } else {
             document.getElementById(i).className = "";
             document.getElementById(idA).value = "";
+        }
+    }
+
+    function selectAll(size) {
+        for (i=0; i<size; i++) {
+            var idA = "a" + i.toString();
+            if (document.getElementById(i).className == "") {
+                document.getElementById(i).className = "${classSet}";
+                document.getElementById(idA).value = "${classSet}";
+            }
+        }
+    }
+
+    function unselectAll(size) {
+        for (i=0; i<size; i++) {
+            var idA = "a" + i.toString();
+            if (document.getElementById(i).className == "${classSet}") {
+                document.getElementById(i).className = "";
+                document.getElementById(idA).value = "";
+            }
         }
     }
 
