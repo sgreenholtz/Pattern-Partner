@@ -29,8 +29,8 @@
 
     <div class="btn-group btn-group-justified">
         <a href="editTitle.jsp?title=${param.title}&id=${param.id}" class="btn btn-default">Edit Title</a>
-        <a href="downloadText?id=${param.id}" class="btn btn-default">Download Text</a>
-        <a href="confirmDelete?title=${param.title}&id=${param.id}" class="btn btn-default">Delete Pattern</a>
+        <a href="downloadText?id=${param.id}" class="btn btn-default">Download</a>
+        <a href="confirmDelete?title=${param.title}&id=${param.id}" class="btn btn-default">Delete</a>
     </div>
     <h5><% out.print(pattern.getDescription().get(0)); %></h5>
     <table class="table table-hover ">
@@ -43,17 +43,17 @@
         </tbody>
     </table>
 
-<table class="table table-hover ">
-    <tbody>
+        <h5>Row Repeat Counter</h5>
         <div class="btn-toolbar">
             <div class="btn-group">
-                <a href="#" class="btn btn-default" onclick="increase()">+</a>
-                <div id="repeat">12</div>
-                <a href="#" class="btn btn-default" onclick="decrease()">-</a>
-                <a href="#" class="btn btn-default" onclick="clearRepeat()">Clear</a>
+                <div class="btn btn-default" onclick="increase()">+</div>
+                <div class="btn btn-default" id="repeat">12</div>
+                <div class="btn btn-default" onclick="decrease()">-</div>
+                <div class="btn btn-default" onclick="clearRepeat()">Clear</div>
             </div>
-
         </div>
+<table class="table table-hover ">
+    <tbody>
         <tr><th>Instructions</th></tr>
         <% int i = 0;
             for (i=0; i<pattern.getPatternRows().size(); i++) {

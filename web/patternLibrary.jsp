@@ -16,7 +16,7 @@
     for (Entry<Integer, ArrayList<String>> pattern : viewer.getTitlesAndDescriptions().entrySet()) {
 %>
 <div class="col-sm-6">
-    <div class="panel-default">
+    <div class="panel panel-default">
         <a href="viewPattern?title=<%= pattern.getValue().get(0) %>&id=<%= pattern.getKey() %>">
             <div class="panel-heading">
                 <h3 class="panel-title"><% out.print(pattern.getValue().get(0)); %></h3>

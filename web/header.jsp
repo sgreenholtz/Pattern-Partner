@@ -58,7 +58,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
           <ul class="nav navbar-nav">
-            <li><a class="navbar-brand" href="/">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="patternLibrary">Pattern Library</a></li>
             <li><a href="addPattern">Add Pattern</a></li>
               <% if (session.isNew() || session.getAttribute("username") == null) { %>

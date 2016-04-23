@@ -20,7 +20,7 @@
     } else {
 %>
 
-<a href="logIn.jsp" class="btn btn-primary">Try Loggin In Again</a>
+<a href="login" class="btn btn-primary">Try Loggin In Again</a>
 <a href="register.jsp" class="btn btn-success">Register New User</a>
 
 <% } %>

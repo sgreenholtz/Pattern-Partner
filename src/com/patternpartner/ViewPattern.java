@@ -100,7 +100,8 @@ public class ViewPattern {
 
     /**
      * Creates a map where the patternID is mapped to an array list with the first
-     * item as the title and the second item as the description
+     * item as the title and the second item as the description. Due to the length,
+     * only the first 140 characters of a description is saved in this view
      * @return Map of patternID mapped to Array list of title and description
      */
     public Map<Integer, ArrayList<String>> getTitlesAndDescriptions() {
@@ -111,7 +112,11 @@ public class ViewPattern {
         for (Entry<Integer, String> entry : titles.entrySet()) {
             ArrayList<String> list = new ArrayList<>();
             list.add(entry.getValue());
-            list.add(descriptions.get(entry.getKey()));
+            if (descriptions.get(entry.getKey()).length() > 140) {
+                list.add(descriptions.get(entry.getKey()).substring(0, 139));
+            } else {
+                list.add(descriptions.get(entry.getKey()));
+            }
             finalMap.put(entry.getKey(), list);
         }
 
