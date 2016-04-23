@@ -8,12 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c0eb8982-d7d9-455c-9cd2-3c60b50632bc" name="Default" comment="Created class to communicate on the command line.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/header.jsp" afterPath="$PROJECT_DIR$/web/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/logIn.jsp" afterPath="$PROJECT_DIR$/web/logIn.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/loginAttempt.jsp" afterPath="$PROJECT_DIR$/web/loginAttempt.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/patternLibrary.jsp" afterPath="$PROJECT_DIR$/web/patternLibrary.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/viewPattern.jsp" afterPath="$PROJECT_DIR$/web/viewPattern.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/tutorial.jsp" afterPath="$PROJECT_DIR$/web/tutorial.jsp" />
     </list>
     <ignored path="Pattern-Partner.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +31,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="viewPattern.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="viewPattern.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/viewPattern.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="383">
               <caret line="32" column="98" selection-start-line="32" selection-start-column="98" selection-end-line="32" selection-end-column="98" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tutorial.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/tutorial.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -124,7 +129,6 @@
         <option value="$PROJECT_DIR$/src/com/patternpartner/Servlets/DownloadTextServlet.java" />
         <option value="$PROJECT_DIR$/web/confirmDelete.jsp" />
         <option value="$PROJECT_DIR$/web/faqComments.jsp" />
-        <option value="$PROJECT_DIR$/web/tutorial.jsp" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/Servlets/DeletePatternServlet.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/PatternUploader2.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/PatternUploader.java" />
@@ -137,6 +141,7 @@
         <option value="$PROJECT_DIR$/web/header.jsp" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java" />
         <option value="$PROJECT_DIR$/web/viewPattern.jsp" />
+        <option value="$PROJECT_DIR$/web/tutorial.jsp" />
       </list>
     </option>
   </component>
@@ -833,12 +838,12 @@
       <workItem from="1460941165783" duration="3348000" />
       <workItem from="1460945055096" duration="326000" />
       <workItem from="1461110484901" duration="36000" />
-      <workItem from="1461425502829" duration="5853000" />
+      <workItem from="1461425502829" duration="6101000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172805000" />
+    <option name="totallyTimeSpent" value="173053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="6" />
@@ -854,7 +859,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886985" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35763413" sideWeight="0.49427754" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777777" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32777777" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23175965" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1133,13 +1138,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/tutorial.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/faqComments.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -1283,6 +1281,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
           <caret line="32" column="98" selection-start-line="32" selection-start-column="98" selection-end-line="32" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/tutorial.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>

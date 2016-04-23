@@ -15,4 +15,10 @@ plain text file to be edited in your favorite text editor. Then delete the patte
 the edited text file for a perfect formatting. Download and Delete buttons can be found under the title on the
 "View Pattern" page.</p>
 <br />
+
+<h3>Edit 04-23-2016: Repeat Buttons</h3>
+<p>If your pattern has a "repeat" in it (ie. repeat row 13 seven times), you now can keep track of what repeat
+you are on right on the pattern page! Just press the plus button to add a row, minus to remove, and clear to set
+the repeat to 0. Your repeat value will be saved along with the current row and will load up next time you open the pattern.</p>
+<br />
 <jsp:include page="footer.jsp" />
