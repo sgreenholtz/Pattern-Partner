@@ -13,19 +13,16 @@
 
 <jsp:include page="header.jsp"/>
 <% ViewPattern viewer = new ViewPattern((String) session.getAttribute("username"));
-    Map<Integer, String> titles = viewer.getAllPatternTitles();
-    Map<Integer, String> kOrC = viewer.getKnitOrCrochet();
-    String colorClass = viewer.getProperties().getProperty("crochet.class");
-    for (Entry<Integer, String> pattern : titles.entrySet()) {
-        if (kOrC.get(pattern.getKey()).equals("k")) {
-            colorClass = viewer.getProperties().getProperty("knit.class");
-        }
+    for (Entry<Integer, ArrayList<String>> pattern : viewer.getTitlesAndDescriptions().entrySet()) {
 %>
 <div class="col-sm-6">
-    <div class="panel panel-<%= colorClass %>">
-        <a href="viewPattern?title=<%= pattern.getValue() %>&id=<%= pattern.getKey() %>">
+    <div class="panel-default">
+        <a href="viewPattern?title=<%= pattern.getValue().get(0) %>&id=<%= pattern.getKey() %>">
             <div class="panel-heading">
-                <h3 class="panel-title"><% out.print(pattern.getValue()); %></h3>
+                <h3 class="panel-title"><% out.print(pattern.getValue().get(0)); %></h3>
+            </div>
+            <div class="panel-body">
+                <% out.print(pattern.getValue().get(1)); %>
             </div>
         </a>
     </div>

@@ -1,6 +1,7 @@
 package com.patternpartner;
 
 import java.util.*;
+import java.util.Map.*;
 import java.sql.*;
 
 /**
@@ -48,19 +49,21 @@ public class ViewPattern {
 
     /**
      * Selects all pattern titles from the database for a specified user
-     * @return Map where the patternID is mapped to the title
+     * @return Map where the patternID is mapped to the title and description
      */
     public Map<Integer, String> getAllPatternTitles() {
         Map<Integer, String> titles = new HashMap<>();
         try {
             Connection conn = getConnection();
-            Statement selectStatement = conn.createStatement();
+            String sql = "SELECT patternID, title "
+                    + "FROM Patterns "
+                    + "WHERE username = ?";
+            PreparedStatement statement = conn.prepareStatement(sql);
+            statement.setString(1, username);
+            ResultSet results = statement.executeQuery();
 
-            String selectSQL = "select patternID, title from Patterns where username='" + username + "'";
-            ResultSet patternsResult = selectStatement.executeQuery(selectSQL);
-
-            while (patternsResult.next()) {
-                titles.put(patternsResult.getInt("patternID"), patternsResult.getString("title"));
+            while (results.next()) {
+                titles.put(results.getInt("patternID"), results.getString("title"));
             }
         } catch (ClassNotFoundException cNFex) {
             cNFex.printStackTrace();
@@ -69,6 +72,52 @@ public class ViewPattern {
         }
         return titles;
     }
+
+    /**
+     * Selects all descriptions from the patterns for a specified user
+     * @return Map of patternID, description
+     */
+    public Map<Integer, String> getAllDescriptions() {
+        Map<Integer, String> descriptions = new HashMap<>();
+        try {
+            Connection conn = getConnection();
+            String sql = "SELECT patternID, description "
+                    + "FROM Patterns "
+                    + "WHERE username = ?";
+            PreparedStatement statement = conn.prepareStatement(sql);
+            statement.setString(1, username);
+            ResultSet results = statement.executeQuery();
+            while (results.next()) {
+                descriptions.put(results.getInt("patternID"), results.getString("description"));
+            }
+        } catch (ClassNotFoundException cNFex) {
+            cNFex.printStackTrace();
+        } catch (SQLException sqlEx) {
+            sqlEx.printStackTrace();
+        }
+        return descriptions;
+    }
+
+    /**
+     * Creates a map where the patternID is mapped to an array list with the first
+     * item as the title and the second item as the description
+     * @return Map of patternID mapped to Array list of title and description
+     */
+    public Map<Integer, ArrayList<String>> getTitlesAndDescriptions() {
+        Map<Integer, ArrayList<String>> finalMap = new HashMap<>();
+        Map<Integer, String> titles = getAllPatternTitles();
+        Map<Integer, String> descriptions = getAllDescriptions();
+
+        for (Entry<Integer, String> entry : titles.entrySet()) {
+            ArrayList<String> list = new ArrayList<>();
+            list.add(entry.getValue());
+            list.add(descriptions.get(entry.getKey()));
+            finalMap.put(entry.getKey(), list);
+        }
+
+        return finalMap;
+    }
+
 
     /**
      * Selects all patterns from database for specified user and returns a Map with the patternID of the pattern
