@@ -35,16 +35,25 @@ public class ViewPattern {
     }
 
     /**
+     * Creates a connection with the database
+     * @return Connection
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
+    private Connection getConnection() throws ClassNotFoundException, SQLException {
+        Class.forName("com.mysql.jdbc.Driver");
+        ConfigureEnvVars vars = new ConfigureEnvVars();
+        return DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
+    }
+
+    /**
      * Selects all pattern titles from the database for a specified user
      * @return Map where the patternID is mapped to the title
      */
     public Map<Integer, String> getAllPatternTitles() {
         Map<Integer, String> titles = new HashMap<>();
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            ConfigureEnvVars vars = new ConfigureEnvVars();
-            Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
-
+            Connection conn = getConnection();
             Statement selectStatement = conn.createStatement();
 
             String selectSQL = "select patternID, title from Patterns where username='" + username + "'";
@@ -69,9 +78,7 @@ public class ViewPattern {
     public Map<Integer, String> getKnitOrCrochet() {
         Map<Integer, String> titles = new HashMap<>();
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            ConfigureEnvVars vars = new ConfigureEnvVars();
-            Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
+            Connection conn = getConnection();
             Statement selectStatement = conn.createStatement();
 
             String selectSQL = "select patternID, knitOrCrochet from Patterns where username='" + username + "'";
@@ -101,9 +108,7 @@ public class ViewPattern {
         ArrayList<Boolean> isActive = new ArrayList<Boolean>();
         String name = "";
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            ConfigureEnvVars vars = new ConfigureEnvVars();
-            Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
+            Connection conn = getConnection();
             Statement selectStatement = conn.createStatement();
 
             String patternRows = "select lineText, isActive from PatternRows where patternID='" + patternID + "'";

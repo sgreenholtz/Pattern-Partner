@@ -40,6 +40,20 @@
         <tr><td><% out.print(material); %></td></tr>
         <%
             } %>
+        </tbody>
+    </table>
+
+<table class="table table-hover ">
+    <tbody>
+        <div class="btn-toolbar">
+            <div class="btn-group">
+                <a href="#" class="btn btn-default" onclick="increase()">+</a>
+                <div id="repeat">12</div>
+                <a href="#" class="btn btn-default" onclick="decrease()">-</a>
+                <a href="#" class="btn btn-default" onclick="clearRepeat()">Clear</a>
+            </div>
+
+        </div>
         <tr><th>Instructions</th></tr>
         <% int i = 0;
             for (i=0; i<pattern.getPatternRows().size(); i++) {
@@ -66,12 +80,28 @@
         document.getElementById(i).className = "<%= active %>";
         document.getElementById("newActive").value = i;
     }
+
+    function clearRepeat() {
+        document.getElementById("repeat").innerHTML = 0;
+        document.getElementById("repeatForm").value = 0;
+    }
+
+    function increase() {
+        document.getElementById("repeat").innerHTML++;
+        document.getElementById("repeatForm").value++;
+    }
+
+    function decrease() {
+        document.getElementById("repeat").innerHTML--;
+        document.getElementById("repeatForm").value--;
+    }
 </script>
 
 <form action="saveActive" method="get">
     <input type="hidden" id="oldActive" name="oldActive" value="<%= savedActive %>"/>
     <input type="hidden" id="newActive" name="newActive" value=""/>
     <input type="hidden" name="patternID" value="<%= patternID %>" />
+    <input type="hidden" name="repeat" id="repeatForm" value="" />
     <input type="submit" value="Save and Return to Library" class="btn btn-default btn-lg btn-block" />
 </form>
 <jsp:include page="footer.jsp"/>
