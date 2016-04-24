@@ -9,6 +9,7 @@
     <list default="true" id="c0eb8982-d7d9-455c-9cd2-3c60b50632bc" name="Default" comment="Created class to communicate on the command line.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/viewPattern.jsp" afterPath="$PROJECT_DIR$/web/viewPattern.jsp" />
     </list>
     <ignored path="Pattern-Partner.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,8 +35,8 @@
       <file leaf-file-name="viewPattern.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/viewPattern.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="65" column="18" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+            <state relative-caret-position="248">
+              <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -44,14 +45,15 @@
       <file leaf-file-name="SaveActiveServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+            <state relative-caret-position="735">
+              <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
               <folding>
-                <marker date="1461510878000" expanded="true" signature="1244:1406" placeholder="UPDATE Patte... " />
-                <marker date="1461510878000" expanded="true" signature="1244:1407" placeholder="UPDATE Patte... " />
-                <marker date="1461510878000" expanded="true" signature="1244:1408" placeholder="UPDATE Patte... " />
-                <marker date="1461510878000" expanded="true" signature="1714:1860" placeholder="UPDATE Patte... " />
-                <marker date="1461510878000" expanded="true" signature="1714:1861" placeholder="UPDATE Patte... " />
+                <marker date="1461511553000" expanded="true" signature="1244:1388" placeholder="UPDATE Patte... " />
+                <marker date="1461511553000" expanded="true" signature="1244:1389" placeholder="UPDATE Patte... " />
+                <marker date="1461511553000" expanded="true" signature="1244:1390" placeholder="UPDATE Patte... " />
+                <marker date="1461511553000" expanded="true" signature="1645:1793" placeholder="UPDATE Patte... " />
+                <marker date="1461511553000" expanded="true" signature="2081:2227" placeholder="UPDATE Patte... " />
+                <marker date="1461511553000" expanded="true" signature="2081:2228" placeholder="UPDATE Patte... " />
               </folding>
             </state>
           </provider>
@@ -860,12 +862,12 @@
       <workItem from="1460945055096" duration="326000" />
       <workItem from="1461110484901" duration="36000" />
       <workItem from="1461425502829" duration="6186000" />
-      <workItem from="1461505530009" duration="4848000" />
+      <workItem from="1461505530009" duration="5413000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177986000" />
+    <option name="totallyTimeSpent" value="178551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="6" />
@@ -1307,22 +1309,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/viewPattern.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="65" column="18" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+        <state relative-caret-position="248">
+          <caret line="75" column="35" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
+        <state relative-caret-position="735">
+          <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
           <folding>
-            <marker date="1461510878000" expanded="true" signature="1244:1406" placeholder="UPDATE Patte... " />
-            <marker date="1461510878000" expanded="true" signature="1244:1407" placeholder="UPDATE Patte... " />
-            <marker date="1461510878000" expanded="true" signature="1244:1408" placeholder="UPDATE Patte... " />
-            <marker date="1461510878000" expanded="true" signature="1714:1860" placeholder="UPDATE Patte... " />
-            <marker date="1461510878000" expanded="true" signature="1714:1861" placeholder="UPDATE Patte... " />
+            <marker date="1461511553000" expanded="true" signature="1244:1388" placeholder="UPDATE Patte... " />
+            <marker date="1461511553000" expanded="true" signature="1244:1389" placeholder="UPDATE Patte... " />
+            <marker date="1461511553000" expanded="true" signature="1244:1390" placeholder="UPDATE Patte... " />
+            <marker date="1461511553000" expanded="true" signature="1645:1793" placeholder="UPDATE Patte... " />
+            <marker date="1461511553000" expanded="true" signature="2081:2227" placeholder="UPDATE Patte... " />
+            <marker date="1461511553000" expanded="true" signature="2081:2228" placeholder="UPDATE Patte... " />
           </folding>
         </state>
       </provider>

@@ -35,11 +35,21 @@ public class SaveActiveServlet extends HttpServlet {
             Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
 
             String changeActive = "UPDATE PatternRows "
-                    + "SET isActive = '1', repeatCount = ? "
+                    + "SET isActive = '1'"
                     + "WHERE patternID = ? "
                     + "AND lineID = ?";
 
             PreparedStatement statement = conn.prepareStatement(changeActive);
+            statement.setString(1, patternID);
+            statement.setString(2, newActiveRow);
+            statement.executeUpdate();
+
+            String updateRepeat = "UPDATE PatternRows "
+                    + "SET repeatCount = ? "
+                    + "WHERE patternID = ? "
+                    + "AND lineID = ?";
+
+            statement = conn.prepareStatement(updateRepeat);
             statement.setString(1, repeatCount);
             statement.setString(2, patternID);
             statement.setString(3, newActiveRow);
@@ -55,17 +65,17 @@ public class SaveActiveServlet extends HttpServlet {
             statement.setString(2, oldActiveRow);
             statement.executeUpdate();
 
-            response.setContentType("text/html");
-            PrintWriter out = response.getWriter();
-            out.println("<html><head></head>");
-            out.println("<body>");
-            out.println("<p>Pattern ID: " + patternID + "</p>");
-            out.println("<p>New Active Row: " + newActiveRow + "</p>");
-            out.println("<p>Repeat Count: " + repeatCount + "</p>");
-            out.println("</body></html>");
+//            response.setContentType("text/html");
+//            PrintWriter out = response.getWriter();
+//            out.println("<html><head></head>");
+//            out.println("<body>");
+//            out.println("<p>Pattern ID: " + patternID + "</p>");
+//            out.println("<p>New Active Row: " + newActiveRow + "</p>");
+//            out.println("<p>Repeat Count: " + repeatCount + "</p>");
+//            out.println("</body></html>");
 
-//            String url = "patternLibrary";
-//            response.sendRedirect(url);
+            String url = "patternLibrary";
+            response.sendRedirect(url);
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
