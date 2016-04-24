@@ -169,6 +169,24 @@ public class Pattern {
     }
 
     /**
+     * Gets the value of repeatCount.
+     *
+     * @return repeatCount
+     */
+    public ArrayList<Integer> getRepeatCount() {
+        return repeatCount;
+    }
+
+    /**
+     * Sets repeatCount to given value
+     *
+     * @param repeatCount value to set instance variable to
+     */
+    public void setRepeatCount(ArrayList<Integer> repeatCount) {
+        this.repeatCount = repeatCount;
+    }
+
+    /**
      * Converts array lists to a single string with a space delimiter
      * @param list ArrayList to convert to string
      * @return completed string
@@ -179,7 +197,6 @@ public class Pattern {
             line = StringEscapeUtils.escapeEcmaScript(line);
             output += line + " ";
         }
-        output = "\'" + output + "\'";
         return output;
     }
 

@@ -13,7 +13,6 @@
 <%@ page import="com.patternpartner.ViewPattern" %>
 <%@ page import="com.patternpartner.Pattern" %>
 <%@ page import="com.patternpartner.LoadProperties" %>
-<%--<% if (!(session.getAttribute("username") == null || session.isNew())) { %>--%>
 <c:choose>
 <c:when test="${username} == null">
     <% response.sendRedirect("login"); %>
@@ -30,6 +29,7 @@
     String active = propertiesLoader.loadProperties("patternpartner.properties").getProperty("is.active");
 
     Integer savedActive = 0;
+    Integer repeatCount = 0;
 %>
     <h1>${param.title}</h1>
 
@@ -67,6 +67,7 @@
                 if (pattern.getIsActiveRow().get(i)) {
                     color = active;
                     savedActive = i;
+                    repeatCount = pattern.getRepeatCount().get(i);
                 }
         %>
         <tr class="<%= color %>" id="<%= i %>" onclick="setActiveRow(<%= i %>)">
@@ -107,14 +108,9 @@
     <input type="hidden" id="oldActive" name="oldActive" value="<%= savedActive %>"/>
     <input type="hidden" id="newActive" name="newActive" value=""/>
     <input type="hidden" name="patternID" value="<%= patternID %>" />
-    <input type="hidden" name="repeat" id="repeatForm" value="" />
+    <input type="hidden" name="repeat" id="repeatForm" value="<%= repeatCount %>" />
     <input type="submit" value="Save and Return to Library" class="btn btn-default btn-lg btn-block" />
 </form>
 <jsp:include page="footer.jsp"/>
 </c:otherwise>
 </c:choose>
-<%--<%--%>
-<%--} else {--%>
-    <%--response.sendRedirect("login");--%>
-<%--}--%>
-<%--%>--%>
