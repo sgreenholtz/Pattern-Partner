@@ -30,7 +30,6 @@
 
     Integer savedActive = 0;
     Integer repeatCount = 0;
-    System.out.println("***********" + pattern.getIsActiveRow().indexOf(true) + "****************");
     if (pattern.getIsActiveRow().indexOf(true) != -1) {
         repeatCount = pattern.getRepeatCount().get(savedActive);
     }

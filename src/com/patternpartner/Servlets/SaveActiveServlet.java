@@ -34,15 +34,25 @@ public class SaveActiveServlet extends HttpServlet {
             ConfigureEnvVars vars = new ConfigureEnvVars();
             Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
 
-            String changeActive = "UPDATE PatternRows "
-                    + "SET isActive = '1'"
+            String changeInactive = "UPDATE PatternRows "
+                    + "SET isActive = '0' "
                     + "WHERE patternID = ? "
                     + "AND lineID = ?";
 
-            PreparedStatement statement = conn.prepareStatement(changeActive);
+            PreparedStatement statement = conn.prepareStatement(changeInactive);
+            statement.setString(1, patternID);
+            statement.setString(2, oldActiveRow);
+            statement.executeUpdate();
+
+            String changeActive = "UPDATE PatternRows "
+                    + "SET isActive = '1' "
+                    + "WHERE patternID = ? "
+                    + "AND lineID = ?";
+
+            statement = conn.prepareStatement(changeActive);
             statement.setString(1, patternID);
             statement.setString(2, newActiveRow);
-            statement.executeUpdate();
+            Integer updated = statement.executeUpdate();
 
             String updateRepeat = "UPDATE PatternRows "
                     + "SET repeatCount = ? "
@@ -55,25 +65,6 @@ public class SaveActiveServlet extends HttpServlet {
             statement.setString(3, newActiveRow);
             statement.executeUpdate();
 
-            String changeInactive = "UPDATE PatternRows "
-                    + "SET isActive = '0' "
-                    + "WHERE patternID = ? "
-                    + "AND lineID = ?";
-
-            statement = conn.prepareStatement(changeInactive);
-            statement.setString(1, patternID);
-            statement.setString(2, oldActiveRow);
-            statement.executeUpdate();
-
-//            response.setContentType("text/html");
-//            PrintWriter out = response.getWriter();
-//            out.println("<html><head></head>");
-//            out.println("<body>");
-//            out.println("<p>Pattern ID: " + patternID + "</p>");
-//            out.println("<p>New Active Row: " + newActiveRow + "</p>");
-//            out.println("<p>Repeat Count: " + repeatCount + "</p>");
-//            out.println("</body></html>");
-
             String url = "patternLibrary";
             response.sendRedirect(url);
 
@@ -83,6 +74,5 @@ public class SaveActiveServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-
 
 }
