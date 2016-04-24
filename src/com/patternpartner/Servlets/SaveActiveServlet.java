@@ -55,8 +55,17 @@ public class SaveActiveServlet extends HttpServlet {
             statement.setString(2, oldActiveRow);
             statement.executeUpdate();
 
-            String url = "patternLibrary";
-            response.sendRedirect(url);
+            response.setContentType("text/html");
+            PrintWriter out = response.getWriter();
+            out.println("<html><head></head>");
+            out.println("<body>");
+            out.println("<p>" + patternID + "</p>");
+            out.println("<p>" + newActiveRow + "</p>");
+            out.println("<p>" + repeatCount + "</p>");
+            out.println("</body></html>");
+
+//            String url = "patternLibrary";
+//            response.sendRedirect(url);
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

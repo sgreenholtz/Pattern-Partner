@@ -28,9 +28,9 @@
     LoadProperties propertiesLoader = new LoadProperties();
     String active = propertiesLoader.loadProperties("patternpartner.properties").getProperty("is.active");
 
-    Integer savedActive = pattern.getIsActiveRow().indexOf(true);
+    Integer savedActive = 0;
     Integer repeatCount = 0;
-    if (savedActive != -1) {
+    if (pattern.getIsActiveRow().indexOf(true) != -1) {
         repeatCount = pattern.getRepeatCount().get(savedActive);
     }
 
@@ -57,9 +57,11 @@
         <h5>Row Repeat Counter</h5>
         <div class="btn-toolbar">
             <div class="btn-group">
-                <div class="btn btn-default" onclick="increase()">+</div>
-                <div class="btn btn-default" id="repeat"><%= repeatCount %></div>
                 <div class="btn btn-default" onclick="decrease()">-</div>
+                <div class="btn btn-default" id="repeat"><%= repeatCount %></div>
+                <div class="btn btn-default" onclick="increase()">+</div>
+            </div>
+            <div class="btn-group">
                 <div class="btn btn-default" onclick="clearRepeat()">Clear</div>
             </div>
         </div>
