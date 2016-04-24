@@ -7,10 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0eb8982-d7d9-455c-9cd2-3c60b50632bc" name="Default" comment="Created class to communicate on the command line.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Pattern-Partner/com/patternpartner/Servlets/SaveActiveServlet.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/viewPattern.jsp" afterPath="$PROJECT_DIR$/web/viewPattern.jsp" />
     </list>
     <ignored path="Pattern-Partner.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,14 +44,14 @@
       <file leaf-file-name="SaveActiveServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="66" column="43" selection-start-line="66" selection-start-column="43" selection-end-line="67" selection-end-column="41" />
+            <state relative-caret-position="156">
+              <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
               <folding>
-                <marker date="1461510466000" expanded="true" signature="1252:1414" placeholder="UPDATE Patte... " />
-                <marker date="1461510466000" expanded="true" signature="1252:1415" placeholder="UPDATE Patte... " />
-                <marker date="1461510466000" expanded="true" signature="1252:1416" placeholder="UPDATE Patte... " />
-                <marker date="1461510466000" expanded="true" signature="1722:1868" placeholder="UPDATE Patte... " />
-                <marker date="1461510466000" expanded="true" signature="1722:1869" placeholder="UPDATE Patte... " />
+                <marker date="1461510878000" expanded="true" signature="1244:1406" placeholder="UPDATE Patte... " />
+                <marker date="1461510878000" expanded="true" signature="1244:1407" placeholder="UPDATE Patte... " />
+                <marker date="1461510878000" expanded="true" signature="1244:1408" placeholder="UPDATE Patte... " />
+                <marker date="1461510878000" expanded="true" signature="1714:1860" placeholder="UPDATE Patte... " />
+                <marker date="1461510878000" expanded="true" signature="1714:1861" placeholder="UPDATE Patte... " />
               </folding>
             </state>
           </provider>
@@ -862,12 +860,12 @@
       <workItem from="1460945055096" duration="326000" />
       <workItem from="1461110484901" duration="36000" />
       <workItem from="1461425502829" duration="6186000" />
-      <workItem from="1461505530009" duration="4641000" />
+      <workItem from="1461505530009" duration="4848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177779000" />
+    <option name="totallyTimeSpent" value="177986000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="6" />
@@ -882,7 +880,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35763413" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886985" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777777" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32777777" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23175965" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1317,14 +1315,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="66" column="43" selection-start-line="66" selection-start-column="43" selection-end-line="67" selection-end-column="41" />
+        <state relative-caret-position="156">
+          <caret line="63" column="42" selection-start-line="63" selection-start-column="42" selection-end-line="63" selection-end-column="42" />
           <folding>
-            <marker date="1461510466000" expanded="true" signature="1252:1414" placeholder="UPDATE Patte... " />
-            <marker date="1461510466000" expanded="true" signature="1252:1415" placeholder="UPDATE Patte... " />
-            <marker date="1461510466000" expanded="true" signature="1252:1416" placeholder="UPDATE Patte... " />
-            <marker date="1461510466000" expanded="true" signature="1722:1868" placeholder="UPDATE Patte... " />
-            <marker date="1461510466000" expanded="true" signature="1722:1869" placeholder="UPDATE Patte... " />
+            <marker date="1461510878000" expanded="true" signature="1244:1406" placeholder="UPDATE Patte... " />
+            <marker date="1461510878000" expanded="true" signature="1244:1407" placeholder="UPDATE Patte... " />
+            <marker date="1461510878000" expanded="true" signature="1244:1408" placeholder="UPDATE Patte... " />
+            <marker date="1461510878000" expanded="true" signature="1714:1860" placeholder="UPDATE Patte... " />
+            <marker date="1461510878000" expanded="true" signature="1714:1861" placeholder="UPDATE Patte... " />
           </folding>
         </state>
       </provider>

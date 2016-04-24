@@ -59,9 +59,9 @@ public class SaveActiveServlet extends HttpServlet {
             PrintWriter out = response.getWriter();
             out.println("<html><head></head>");
             out.println("<body>");
-            out.println("<p>" + patternID + "</p>");
-            out.println("<p>" + newActiveRow + "</p>");
-            out.println("<p>" + repeatCount + "</p>");
+            out.println("<p>Pattern ID: " + patternID + "</p>");
+            out.println("<p>New Active Row: " + newActiveRow + "</p>");
+            out.println("<p>Repeat Count: " + repeatCount + "</p>");
             out.println("</body></html>");
 
 //            String url = "patternLibrary";
