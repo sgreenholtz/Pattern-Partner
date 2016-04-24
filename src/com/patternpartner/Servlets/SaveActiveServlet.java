@@ -35,7 +35,7 @@ public class SaveActiveServlet extends HttpServlet {
             Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
 
             String changeActive = "UPDATE PatternRows "
-                    + "SET isActive = '1', 'repeat' = ? "
+                    + "SET isActive = '1', repeatCount = ? "
                     + "WHERE patternID = ? "
                     + "AND lineID = ?";
 

@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS PatternRows (
     lineID INT,
     lineText TEXT,
     isActive TINYINT DEFAULT 0,
-    'repeat' INT DEFAULT 0,
+    repeatCount INT DEFAULT 0,
     PRIMARY KEY (patternID, lineID)
 );
 

@@ -166,7 +166,7 @@ public class ViewPattern {
             Connection conn = getConnection();
             Statement selectStatement = conn.createStatement();
 
-            String patternRows = "select lineText, isActive, 'repeat' from PatternRows where patternID='" + patternID + "'";
+            String patternRows = "select lineText, isActive, repeatCount from PatternRows where patternID='" + patternID + "'";
             ResultSet patternRowsResult = selectStatement.executeQuery(patternRows);
 
             while (patternRowsResult.next()) {
@@ -176,7 +176,7 @@ public class ViewPattern {
                 } else {
                     isActive.add(true);
                 }
-                repeat.add(patternRowsResult.getInt("repeat"));
+                repeat.add(new Integer(patternRowsResult.getString("repeatCount")));
             }
 
             String materials = "select material from Materials where patternID='" + patternID + "'";

@@ -28,8 +28,13 @@
     LoadProperties propertiesLoader = new LoadProperties();
     String active = propertiesLoader.loadProperties("patternpartner.properties").getProperty("is.active");
 
-    Integer savedActive = 0;
+    Integer savedActive = pattern.getIsActiveRow().indexOf(true);
     Integer repeatCount = 0;
+    if (savedActive != -1) {
+        repeatCount = pattern.getRepeatCount().get(savedActive);
+    }
+
+
 %>
     <h1>${param.title}</h1>
 
@@ -53,7 +58,7 @@
         <div class="btn-toolbar">
             <div class="btn-group">
                 <div class="btn btn-default" onclick="increase()">+</div>
-                <div class="btn btn-default" id="repeat">12</div>
+                <div class="btn btn-default" id="repeat"><%= repeatCount %></div>
                 <div class="btn btn-default" onclick="decrease()">-</div>
                 <div class="btn btn-default" onclick="clearRepeat()">Clear</div>
             </div>
@@ -67,7 +72,6 @@
                 if (pattern.getIsActiveRow().get(i)) {
                     color = active;
                     savedActive = i;
-                    repeatCount = pattern.getRepeatCount().get(i);
                 }
         %>
         <tr class="<%= color %>" id="<%= i %>" onclick="setActiveRow(<%= i %>)">
