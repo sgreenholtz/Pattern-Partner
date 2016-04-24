@@ -9,10 +9,16 @@
   Time: 1:50 PM
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="com.patternpartner.ViewPattern" %>
 <%@ page import="com.patternpartner.Pattern" %>
 <%@ page import="com.patternpartner.LoadProperties" %>
-<% if (!(session.getAttribute("username") == null || session.isNew())) { %>
+<%--<% if (!(session.getAttribute("username") == null || session.isNew())) { %>--%>
+<c:choose>
+<c:when test="${username} == null">
+    <% response.sendRedirect("login"); %>
+</c:when>
+<c:otherwise>
 <jsp:include page="header.jsp"/>
 <%
     Integer patternID = Integer.valueOf(request.getParameter("id"));
@@ -105,8 +111,10 @@
     <input type="submit" value="Save and Return to Library" class="btn btn-default btn-lg btn-block" />
 </form>
 <jsp:include page="footer.jsp"/>
-<%
-} else {
-    response.sendRedirect("login");
-}
-%>
+</c:otherwise>
+</c:choose>
+<%--<%--%>
+<%--} else {--%>
+    <%--response.sendRedirect("login");--%>
+<%--}--%>
+<%--%>--%>

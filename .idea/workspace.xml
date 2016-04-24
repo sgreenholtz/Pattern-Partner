@@ -7,8 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0eb8982-d7d9-455c-9cd2-3c60b50632bc" name="Default" comment="Created class to communicate on the command line.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/jstl_api_1_2.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Baby_Sophisticate.pdf" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Pattern_Partner_Web.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Pattern_Partner_Web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/ROOT.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/ROOT.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/tutorial.jsp" afterPath="$PROJECT_DIR$/web/tutorial.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pattern-Partner.iml" afterPath="$PROJECT_DIR$/Pattern-Partner.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PatternPartnerDatabase.sql" afterPath="$PROJECT_DIR$/PatternPartnerDatabase.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java" afterPath="$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/viewPattern.jsp" afterPath="$PROJECT_DIR$/web/viewPattern.jsp" />
     </list>
     <ignored path="Pattern-Partner.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,19 +41,25 @@
       <file leaf-file-name="viewPattern.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/viewPattern.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="32" column="98" selection-start-line="32" selection-start-column="98" selection-end-line="32" selection-end-column="98" />
+            <state relative-caret-position="252">
+              <caret line="113" column="14" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tutorial.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/tutorial.jsp">
+      <file leaf-file-name="SaveActiveServlet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="141">
+              <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+              <folding>
+                <marker date="1461507047000" expanded="true" signature="1244:1403" placeholder="UPDATE Patte... " />
+                <marker date="1461507047000" expanded="true" signature="1244:1404" placeholder="UPDATE Patte... " />
+                <marker date="1461507047000" expanded="true" signature="1244:1405" placeholder="UPDATE Patte... " />
+                <marker date="1461507047000" expanded="true" signature="1711:1857" placeholder="UPDATE Patte... " />
+                <marker date="1461507047000" expanded="true" signature="1711:1858" placeholder="UPDATE Patte... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,7 +67,7 @@
       <file leaf-file-name="ViewPattern.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-898">
+            <state relative-caret-position="1470">
               <caret line="102" column="58" selection-start-line="102" selection-start-column="58" selection-end-line="102" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -91,7 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pattern-partner.xml" />
         <option value="$PROJECT_DIR$/Sample2.txt" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/ConfigureEnvVars.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/UserVerification.java" />
@@ -123,7 +135,6 @@
         <option value="$PROJECT_DIR$/src/com/patternpartner/GraphicsDemo.java" />
         <option value="$PROJECT_DIR$/web/appletTest.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/Pattern.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/ErrorTester.java" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/Servlets/DownloadTextServlet.java" />
@@ -140,8 +151,10 @@
         <option value="$PROJECT_DIR$/web/patternLibrary.jsp" />
         <option value="$PROJECT_DIR$/web/header.jsp" />
         <option value="$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java" />
-        <option value="$PROJECT_DIR$/web/viewPattern.jsp" />
         <option value="$PROJECT_DIR$/web/tutorial.jsp" />
+        <option value="$PROJECT_DIR$/web/viewPattern.jsp" />
+        <option value="$PROJECT_DIR$/PatternPartnerDatabase.sql" />
+        <option value="$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java" />
       </list>
     </option>
   </component>
@@ -203,7 +216,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -327,20 +339,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="pattern-partner" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/chap15" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jstl-impl-1.2.jar!/" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
@@ -838,12 +851,13 @@
       <workItem from="1460941165783" duration="3348000" />
       <workItem from="1460945055096" duration="326000" />
       <workItem from="1461110484901" duration="36000" />
-      <workItem from="1461425502829" duration="6101000" />
+      <workItem from="1461425502829" duration="6186000" />
+      <workItem from="1461505530009" duration="1263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173053000" />
+    <option name="totallyTimeSpent" value="174401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="6" />
@@ -858,7 +872,6 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35763413" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886985" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35763413" sideWeight="0.49427754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32777777" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -869,13 +882,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39889959" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292517" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39889959" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35763413" sideWeight="0.49427754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1117,13 +1131,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/appletTest.jsp" />
     <entry file="file://$PROJECT_DIR$/src/com/patternpartner/GraphicsDemo.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="57" column="5" selection-start-line="16" selection-start-column="4" selection-end-line="57" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/patternpartner/ErrorTester.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1171,7 +1178,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1205,14 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PatternPartnerDatabase.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/loginAttempt.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -1241,7 +1239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="564">
           <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1263,7 +1260,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/patternpartner/ViewPattern.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-898">
+        <state relative-caret-position="1470">
           <caret line="102" column="58" selection-start-line="102" selection-start-column="58" selection-end-line="102" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1277,19 +1274,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/viewPattern.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="32" column="98" selection-start-line="32" selection-start-column="98" selection-end-line="32" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/tutorial.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/viewPattern.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="113" column="14" selection-start-line="113" selection-start-column="14" selection-end-line="113" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PatternPartnerDatabase.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/patternpartner/Servlets/SaveActiveServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+          <folding>
+            <marker date="1461507047000" expanded="true" signature="1244:1403" placeholder="UPDATE Patte... " />
+            <marker date="1461507047000" expanded="true" signature="1244:1404" placeholder="UPDATE Patte... " />
+            <marker date="1461507047000" expanded="true" signature="1244:1405" placeholder="UPDATE Patte... " />
+            <marker date="1461507047000" expanded="true" signature="1711:1857" placeholder="UPDATE Patte... " />
+            <marker date="1461507047000" expanded="true" signature="1711:1858" placeholder="UPDATE Patte... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1371,7 +1390,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>servlet-api</last-edited>
+          <last-edited>jstl-api-1.2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

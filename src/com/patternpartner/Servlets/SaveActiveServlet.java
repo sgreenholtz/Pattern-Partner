@@ -27,25 +27,33 @@ public class SaveActiveServlet extends HttpServlet {
         String newActiveRow = request.getParameter("newActive");
         String oldActiveRow = request.getParameter("oldActive");
         String patternID = request.getParameter("patternID");
+        String repeatCount = request.getParameter("repeat");
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
             ConfigureEnvVars vars = new ConfigureEnvVars();
             Connection conn = DriverManager.getConnection(vars.getURL(), vars.getUsername(), vars.getPassword());
-            Statement update = conn.createStatement();
 
             String changeActive = "UPDATE PatternRows "
-                    + "SET isActive = '1' "
-                    + "WHERE patternID = '" + patternID + "' "
-                    + "AND lineID = '" + newActiveRow + "'";
+                    + "SET isActive = '1', 'repeat' = ? "
+                    + "WHERE patternID = ? "
+                    + "AND lineID = ?";
+
+            PreparedStatement statement = conn.prepareStatement(changeActive);
+            statement.setString(1, repeatCount);
+            statement.setString(2, patternID);
+            statement.setString(3, newActiveRow);
+            statement.executeUpdate();
 
             String changeInactive = "UPDATE PatternRows "
                     + "SET isActive = '0' "
-                    + "WHERE patternID = '" + patternID + "' "
-                    + "AND lineID = '" + oldActiveRow + "'";
+                    + "WHERE patternID = ? "
+                    + "AND lineID = ?";
 
-            update.executeUpdate(changeInactive);
-            update.executeUpdate(changeActive);
+            statement = conn.prepareStatement(changeInactive);
+            statement.setString(1, patternID);
+            statement.setString(2, oldActiveRow);
+            statement.executeUpdate();
 
             String url = "patternLibrary";
             response.sendRedirect(url);
