@@ -160,12 +160,13 @@ public class ViewPattern {
         ArrayList<String> patternRowsList = new ArrayList<String>();
         ArrayList<String> materialsList = new ArrayList<String>();
         ArrayList<Boolean> isActive = new ArrayList<Boolean>();
+        ArrayList<Integer> repeat = new ArrayList<Integer>();
         String name = "";
         try {
             Connection conn = getConnection();
             Statement selectStatement = conn.createStatement();
 
-            String patternRows = "select lineText, isActive from PatternRows where patternID='" + patternID + "'";
+            String patternRows = "select lineText, isActive, 'repeat' from PatternRows where patternID='" + patternID + "'";
             ResultSet patternRowsResult = selectStatement.executeQuery(patternRows);
 
             while (patternRowsResult.next()) {
@@ -175,6 +176,7 @@ public class ViewPattern {
                 } else {
                     isActive.add(true);
                 }
+                repeat.add(patternRowsResult.getInt("repeat"));
             }
 
             String materials = "select material from Materials where patternID='" + patternID + "'";
@@ -193,7 +195,8 @@ public class ViewPattern {
                         descriptionResult.getString("description"),
                         materialsList,
                         patternRowsList,
-                        isActive);
+                        isActive,
+                        repeat);
             }
         } catch (ClassNotFoundException cNFex) {
             cNFex.printStackTrace();

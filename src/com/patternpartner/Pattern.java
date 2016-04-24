@@ -23,6 +23,7 @@ public class Pattern {
     private ArrayList<String> patternRows;
     private ArrayList<Boolean> isActiveRow;
     private String knitOrCrochet;
+    private ArrayList<Integer> repeatCount;
     // private Image image;
 
     /**
@@ -50,19 +51,21 @@ public class Pattern {
 
     /**
      * Sets only the part of the pattern needed for reading the pattern:
-     * description, materials, pattern rows and is Active
+     * description, materials, pattern rows, is Active and repeat count
      */
     public Pattern(String name,
                    String description,
                    ArrayList<String> materials,
                    ArrayList<String> patternRows,
-                   ArrayList<Boolean> isActiveRow) {
+                   ArrayList<Boolean> isActiveRow,
+                   ArrayList<Integer> repeatCount) {
         this.name = name;
         this.description = new ArrayList<String>();
         this.description.add(description);
         this.materials = materials;
         this.patternRows = patternRows;
         this.isActiveRow = isActiveRow;
+        this.repeatCount = repeatCount;
     }
 
     /**
