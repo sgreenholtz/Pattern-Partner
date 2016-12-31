@@ -1,4 +1,4 @@
-package com.patternpartner;
+package com.patternpartner.entities;
 import java.util.*;
 import org.apache.commons.lang3.StringEscapeUtils;
 

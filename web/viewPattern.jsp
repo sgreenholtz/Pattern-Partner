@@ -11,7 +11,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="com.patternpartner.ViewPattern" %>
-<%@ page import="com.patternpartner.Pattern" %>
+<%@ page import="com.patternpartner.entities.Pattern" %>
 <%@ page import="com.patternpartner.LoadProperties" %>
 <c:choose>
 <c:when test="${username} == null">

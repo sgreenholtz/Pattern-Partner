@@ -1,5 +1,7 @@
 package com.patternpartner;
 
+import com.patternpartner.entities.Pattern;
+
 import java.util.*;
 import java.util.Map.*;
 import java.sql.*;

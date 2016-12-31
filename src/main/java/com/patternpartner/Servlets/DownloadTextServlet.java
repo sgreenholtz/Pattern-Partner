@@ -1,6 +1,6 @@
 package com.patternpartner.Servlets;
 
-import com.patternpartner.Pattern;
+import com.patternpartner.entities.Pattern;
 import com.patternpartner.ViewPattern;
 
 import javax.servlet.*;

@@ -1,4 +1,6 @@
 package com.patternpartner;
+import com.patternpartner.entities.Pattern;
+
 import java.sql.*;
 import java.util.*;
 

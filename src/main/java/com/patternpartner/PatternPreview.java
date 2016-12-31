@@ -1,5 +1,7 @@
 package com.patternpartner;
 
+import com.patternpartner.entities.Pattern;
+
 import java.util.*;
 
 /**
@@ -55,7 +57,7 @@ public class PatternPreview {
      * highlight value if the row starts with "row" or "round"
      */
     private void setLineClass() {
-        lineClass = new ArrayList<>();
+        lineClass = new ArrayList<String>();
         for (String line : lines) {
             if (line.toLowerCase().startsWith("row") ||
                     line.toLowerCase().startsWith("round")) {
@@ -106,7 +108,7 @@ public class PatternPreview {
     public String toString() {
         String output = "";
         for (String line : lines) {
-            output += line + System.lineSeparator();
+            output += line + "\n";
         }
         return output;
     }
