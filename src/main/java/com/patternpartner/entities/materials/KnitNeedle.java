@@ -1,4 +1,4 @@
-package com.patternpartner.entities;
+package com.patternpartner.entities.materials;
 
 /**
  * Represents a knitting needle

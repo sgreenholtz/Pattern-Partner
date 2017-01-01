@@ -1,4 +1,4 @@
-package com.patternpartner.entities;
+package com.patternpartner.entities.images;
 
 /**
  * An image from the web, hosted on someone else's server

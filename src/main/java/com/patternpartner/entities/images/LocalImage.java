@@ -1,4 +1,4 @@
-package com.patternpartner.entities;
+package com.patternpartner.entities.images;
 
 /**
  * Image saved to the local image server

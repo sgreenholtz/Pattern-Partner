@@ -1,4 +1,6 @@
-package com.patternpartner.entities;
+package com.patternpartner.entities.yarns;
+
+import com.patternpartner.entities.materials.Material;
 
 /**
  * A kind of yarn

@@ -1,5 +1,8 @@
 package com.patternpartner.entities;
 import java.util.*;
+
+import com.patternpartner.entities.images.Image;
+import com.patternpartner.entities.materials.Material;
 import org.apache.commons.lang3.StringEscapeUtils;
 
 /**

@@ -1,4 +1,4 @@
-package com.patternpartner.entities;
+package com.patternpartner.entities.images;
 
 /**
  * An image embedded either in a specific pattern row or assigned to the pattern as a whole.

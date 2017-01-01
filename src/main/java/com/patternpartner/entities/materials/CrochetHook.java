@@ -1,10 +1,10 @@
-package com.patternpartner.entities;
+package com.patternpartner.entities.materials;
 
 /**
  * Represents a crochet hook
  * @author Sebastian Greenholtz
  */
-public class CrochetHook extends Material{
+public class CrochetHook extends Material {
 
     private CrochetHookSizes size;
     private CrochetHookTypes type;

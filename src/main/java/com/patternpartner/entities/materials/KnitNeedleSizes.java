@@ -1,4 +1,4 @@
-package com.patternpartner.entities;
+package com.patternpartner.entities.materials;
 
 /**
  * Enum for common knitting needle sizes. The Enum values are the US names spelled out,

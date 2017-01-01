@@ -1,5 +1,7 @@
 package com.patternpartner.entities;
 
+import com.patternpartner.entities.images.Image;
+
 /**
  * A row of pattern text
  * @author Sebastian Greenholtz

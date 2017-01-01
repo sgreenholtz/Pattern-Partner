@@ -1,4 +1,4 @@
-package com.patternpartner.entities;
+package com.patternpartner.entities.yarns;
 
 /**
  * Enum of common units for amounts of yarn

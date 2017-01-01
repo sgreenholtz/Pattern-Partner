@@ -1,4 +1,4 @@
-package com.patternpartner.entities;
+package com.patternpartner.entities.yarns;
 
 /**
  * Specifies a double value for the amount and an enum for the unit

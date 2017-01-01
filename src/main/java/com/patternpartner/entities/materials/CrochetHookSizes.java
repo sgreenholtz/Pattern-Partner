@@ -1,4 +1,4 @@
-package com.patternpartner.entities;
+package com.patternpartner.entities.materials;
 
 /**
  * Enum of common crochet hook sizes. The Enum values are the US letter values,
