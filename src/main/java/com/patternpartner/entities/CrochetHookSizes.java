@@ -6,7 +6,7 @@ package com.patternpartner.entities;
  * <p>Based on <a href="http://www.craftyarncouncil.com/hooks.html">Craft Yarn Council - Hook Sizes</a></p>
  * @author Sebastian Greenholtz
  */
-public enum CrochetHooks {
+public enum CrochetHookSizes {
     B(2.25),
     C(2.75),
     D(3.25),
@@ -26,7 +26,7 @@ public enum CrochetHooks {
 
     private final double millimeterMeasure;
 
-    CrochetHooks(double mm) {
+    CrochetHookSizes(double mm) {
         this.millimeterMeasure = mm;
     }
 

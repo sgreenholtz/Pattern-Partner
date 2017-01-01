@@ -4,7 +4,7 @@ package com.patternpartner.entities;
  * Represents some kind of material for a pattern
  * @author Sebastian Greenholtz
  */
-public abstract class Material {
+public class Material {
 
     private String name;
     private int quantity;

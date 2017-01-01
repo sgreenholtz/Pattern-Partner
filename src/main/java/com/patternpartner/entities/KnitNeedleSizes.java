@@ -6,7 +6,7 @@ package com.patternpartner.entities;
  * <p>Based on <a href="http://www.craftyarncouncil.com/hooks.html">Craft Yarn Council - Hook Sizes</a></p>
  * @author Sebastian Greenholtz
  */
-public enum KnitNeedles {
+public enum KnitNeedleSizes {
     ONE(2.25),
     TWO(2.75),
     THREE(3.25),
@@ -27,7 +27,7 @@ public enum KnitNeedles {
 
     private final double millimeterMeasure;
 
-    KnitNeedles(double mm) {
+    KnitNeedleSizes(double mm) {
         this.millimeterMeasure = mm;
     }
 

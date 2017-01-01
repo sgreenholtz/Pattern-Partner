@@ -10,9 +10,6 @@ import org.apache.commons.lang3.StringEscapeUtils;
  * in the database, materials and description.
  * <br />
  * Getters and Setters have been added to allow usage of Pattern as a bean
- * <br />
- * TO DO : implement image handling
- *
  * @author Sebastian Greenholtz
  */
 public class Pattern {
@@ -22,7 +19,7 @@ public class Pattern {
     private ArrayList<Material> materials;
     private ArrayList<PatternRow> patternRows;
     private PatternType patternType;
-    // private Image image;
+    private Image image;
 
     /**
      * No arg constructor, initiates ArrayLists

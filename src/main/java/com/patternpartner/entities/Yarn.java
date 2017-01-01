@@ -8,6 +8,7 @@ public class Yarn extends Material {
     private String color;
     private YarnAmount amount;
     private YarnWeight weight;
+    private String fiber;
 
     public String getColor() {
         return color;
@@ -31,5 +32,13 @@ public class Yarn extends Material {
 
     public void setWeight(YarnWeight weight) {
         this.weight = weight;
+    }
+
+    public String getFiber() {
+        return fiber;
+    }
+
+    public void setFiber(String fiber) {
+        this.fiber = fiber;
     }
 }
