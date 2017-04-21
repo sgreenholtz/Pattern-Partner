@@ -4,7 +4,8 @@
   "description": "Pattern Partner",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d lib"
+    "build": "webpack",
+    "start": "webpack-dev-server"
   },
   "author": "Sebastian Greenholtz",
   "license": "ISC",
@@ -14,9 +15,11 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-loader": "^6.4.1",
     "babel-preset-env": "^1.4.0",
     "babel-preset-react": "^6.24.1",
     "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.2"
   }
 }
