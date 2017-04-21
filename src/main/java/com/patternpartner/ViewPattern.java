@@ -1,6 +1,7 @@
 package com.patternpartner;
 
 import com.patternpartner.entities.Pattern;
+import com.patternpartner.utilities.Logger;
 
 import java.util.*;
 import java.util.Map.*;
@@ -144,10 +145,8 @@ public class ViewPattern {
             while (patternsResult.next()) {
                 titles.put(patternsResult.getInt("patternID"), patternsResult.getString("knitOrCrochet"));
             }
-        } catch (ClassNotFoundException cNFex) {
-            cNFex.printStackTrace();
-        } catch (SQLException sqlEx) {
-            sqlEx.printStackTrace();
+        } catch (Exception e) {
+            Logger.error(e);
         }
         return titles;
     }
@@ -200,10 +199,8 @@ public class ViewPattern {
                         isActive,
                         repeat);
             }
-        } catch (ClassNotFoundException cNFex) {
-            cNFex.printStackTrace();
-        } catch (SQLException sqlEx) {
-            sqlEx.printStackTrace();
+        } catch (Exception e) {
+            Logger.error(e);
         }
         return pat;
     }

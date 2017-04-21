@@ -1,5 +1,7 @@
 package com.patternpartner;
 
+import com.patternpartner.utilities.Logger;
+
 import java.util.*;
 import java.sql.*;
 
@@ -36,10 +38,8 @@ public class CommentViewer {
             String sql = "SELECT * FROM Comments";
             ResultSet results = selectStatement.executeQuery(sql);
             createCommentsList(results);
-        } catch (ClassNotFoundException ex) {
-            ex.printStackTrace();
-        } catch (SQLException sqlEx) {
-            sqlEx.printStackTrace();
+        } catch (Exception ex) {
+            Logger.error(ex);
         }
     }
 

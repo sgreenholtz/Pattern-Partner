@@ -10,6 +10,8 @@ import org.apache.commons.fileupload.*;
 import org.apache.commons.fileupload.servlet.*;
 import org.apache.commons.fileupload.disk.*;
 
+import com.patternpartner.utilities.Logger;
+
 /**
  * This class implements the FileUploader API to assist in file uploads
  * @author Sebastian Greenholtz
@@ -47,8 +49,8 @@ public class FileUploader extends HttpServlet {
             try {
                 List<FileItem> items = upload.parseRequest(request);
                 processFile(items);
-            } catch (FileUploadException ex) {
-                ex.printStackTrace();
+            } catch (Exception ex) {
+                Logger.error(ex);
             }
 
         }
@@ -113,8 +115,8 @@ public class FileUploader extends HttpServlet {
                 }
             }
             previewer.setLines(lines);
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (Exception ex) {
+            Logger.error(ex);
         }
     }
 }

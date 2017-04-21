@@ -1,4 +1,4 @@
-package com.patternpartner;
+package com.patternpartner.test;
 
 import java.util.*;
 import java.io.*;
